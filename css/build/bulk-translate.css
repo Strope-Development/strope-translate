@@ -1,0 +1,57 @@
+.bulk-translate-save .button {
+	margin-right: 20px;
+}
+
+#wpbody-content #strope-translate .strope-bulk-translate-fields-wrapper {
+	display: flex;
+}
+
+#wpbody-content #strope-translate fieldset {
+	flex-basis: fit-content;
+	margin-right: 10%;
+}
+
+#strope-translate .strope-translation-flag {
+	margin: auto 10px auto 7px;
+}
+
+.rtl #strope-translate .strope-translation-flag {
+	margin: auto 7px auto 10px;
+}
+
+#strope-translate .title {
+	display: block;
+	line-height: 2.5;
+}
+
+#strope-translate label {
+	display: flex;
+	align-items: center;
+}
+
+#strope-translate label span.description{
+	line-height: normal;
+}
+
+#strope-translate label[for="strope-select-format"] {
+	padding-left: 18px;
+}
+
+#strope-translate #strope-select-format {
+	margin-left: 0.5rem;
+}
+
+@supports(selector(:has(*))) {
+	#strope-translate label[for="strope-select-format"] {
+		display: none;
+	}
+	#strope-translate label:has([name="translate"][value="strope_export_post"]:checked) ~ [for="strope-select-format"] {
+		display: flex;
+	}
+}
+
+@media screen and ( max-width: 782px ) {
+	#wpbody-content #strope-translate .strope-bulk-translate-fields-wrapper {
+		flex-direction: column;
+	}
+}

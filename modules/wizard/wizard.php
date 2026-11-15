@@ -1,0 +1,748 @@
+<?php
+/**
+ * @package Strope-Translate
+ */
+
+defined( 'ABSPATH' ) || exit;
+
+/**
+ * Main class for Strope Translate wizard.
+ *
+ * @since 2.7
+ */
+class Strope_Wizard {
+	/**
+	 * Reference to the model object
+	 *
+	 * @var Strope_Admin_Model
+	 */
+	protected $model;
+
+	/**
+	 * Reference to the Strope Translate options array.
+	 *
+	 * @var array
+	 */
+	protected $options;
+
+	/**
+	 * List of steps.
+	 *
+	 * @var array $steps {
+	 *     @type string   $name    I18n string which names the step.
+	 *     @type callable $view    The callback function use to display the step content.
+	 *     @type callable $handler The callback function use to process the step after it is submitted.
+	 *     @type array    $scripts List of scripts handle needed by the step.
+	 *     @type array    $styles  The list of styles handle needed by the step.
+	 * }
+	 */
+	protected $steps = array();
+
+	/**
+	 * The current step.
+	 *
+	 * @var string|null
+	 */
+	protected $step;
+
+	/**
+	 * List of WordPress CSS file handles.
+	 *
+	 * @var string[]
+	 */
+	protected $styles = array();
+
+	/**
+	 * Constructor
+	 *
+	 * @param object $strope_translate Reference to Strope Translate global object.
+	 * @since 2.7
+	 */
+	public function __construct( &$strope_translate ) {
+		$this->options = &$strope_translate->options;
+		$this->model   = &$strope_translate->model;
+
+		// Display Wizard page before any other action to ensure displaying it outside the WordPress admin context.
+		// Hooked on admin_init with priority 40 to ensure Strope_Wizard_Home_Page is correctly initialized.
+		add_action( 'admin_init', array( $this, 'setup_wizard_page' ), 40 );
+		// Add Wizard submenu.
+		add_filter( 'strope_settings_tabs', array( $this, 'settings_tabs' ), 10, 1 );
+		// Add filter to select screens where to display the notice.
+		add_filter( 'strope_can_display_notice', array( $this, 'can_display_notice' ), 10, 2 );
+
+		// Default steps.
+		add_filter( 'strope_wizard_steps', array( $this, 'add_step_languages' ), 200 );
+		add_filter( 'strope_wizard_steps', array( $this, 'add_step_media' ), 300 );
+		add_filter( 'strope_wizard_steps', array( $this, 'add_step_untranslated_contents' ), 400 );
+		add_filter( 'strope_wizard_steps', array( $this, 'add_step_home_page' ), 500 );
+		add_filter( 'strope_wizard_steps', array( $this, 'add_step_last' ), 999 );
+	}
+
+	/**
+	 * Save an activation transient when Strope Translate is activating to redirect to the wizard
+	 *
+	 * @since 2.7
+	 *
+	 * @param bool $network_wide if activated for all sites in the network.
+	 * @return void
+	 */
+	public static function start_wizard( $network_wide ) {
+		$options = get_option( 'strope_translate' );
+
+		if ( wp_doing_ajax() || $network_wide || ! empty( $options ) ) {
+			return;
+		}
+		set_transient( 'strope_activation_redirect', 1, 30 );
+	}
+
+	/**
+	 * Redirect to the wizard depending on the context
+	 *
+	 * @since 2.7
+	 *
+	 * @return void
+	 */
+	public function redirect_to_wizard() {
+		if ( get_transient( 'strope_activation_redirect' ) ) {
+			$do_redirect = true;
+			if ( ( isset( $_GET['page'] ) && 'mlang_wizard' === sanitize_key( $_GET['page'] ) || isset( $_GET['activate-multi'] ) ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Recommended
+				delete_transient( 'strope_activation_redirect' );
+				$do_redirect = false;
+			}
+
+			if ( $do_redirect ) {
+				wp_safe_redirect(
+					esc_url_raw(
+						add_query_arg(
+							array(
+								'page' => 'mlang_wizard',
+							),
+							admin_url( 'admin.php' )
+						)
+					)
+				);
+				exit;
+			}
+		}
+	}
+
+	/**
+	 * Add an admin Strope Translate submenu to access the wizard
+	 *
+	 * @since 2.7
+	 *
+	 * @param string[] $tabs Submenus list.
+	 * @return string[] Submenus list updated.
+	 */
+	public function settings_tabs( $tabs ) {
+		$tabs['wizard'] = esc_html__( 'Setup', 'strope-translate' );
+		return $tabs;
+	}
+
+	/**
+	 * Returns true if the media step is displayable, false otherwise.
+	 *
+	 * @since 2.7
+	 *
+	 * @param Strope_Language[] $languages List of language objects.
+	 * @return bool
+	 */
+	public function is_media_step_displayable( $languages ) {
+		$media = array();
+		// If there is no language or only one the media step is displayable.
+		if ( ! $languages || count( $languages ) < 2 ) {
+			return true;
+		}
+		foreach ( $languages as $language ) {
+			$media[ $language->slug ] = $this->model->count_posts(
+				$language,
+				array(
+					'post_type'   => array( 'attachment' ),
+					'post_status' => 'inherit',
+				)
+			);
+		}
+		return count( array_filter( $media ) ) === 0;
+	}
+
+
+	/**
+	 * Setup the wizard page
+	 *
+	 * @since 2.7
+	 *
+	 * @return void
+	 */
+	public function setup_wizard_page() {
+
+		Strope_Admin_Notices::add_notice( 'wizard', $this->wizard_notice() );
+
+		$this->redirect_to_wizard();
+		if ( ! Strope_Translate::is_wizard() ) {
+			return;
+		}
+		if ( ! current_user_can( 'manage_languages' ) ) {
+			wp_die( esc_html__( 'Sorry, you are not allowed to manage options for this site.', 'strope-translate' ) );
+		}
+
+		// Enqueue scripts and styles especially for the wizard.
+		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+
+		$this->steps = apply_filters( 'strope_wizard_steps', $this->steps );
+		$step  = isset( $_GET['step'] ) ? sanitize_key( $_GET['step'] ) : false; // phpcs:ignore WordPress.Security.NonceVerification
+
+		$this->step = $step && array_key_exists( $step, $this->steps ) ? $step : current( array_keys( $this->steps ) );
+
+		$has_languages = $this->model->has_languages();
+
+		if ( ! $has_languages && ! in_array( $this->step, array( 'languages' ) ) ) {
+			wp_safe_redirect( esc_url_raw( $this->get_step_link( 'languages' ) ) );
+			exit;
+		}
+
+		if ( $has_languages && $this->model->get_objects_with_no_lang( 1 ) && ! in_array( $this->step, array( 'languages', 'media', 'untranslated-contents' ) ) ) {
+			wp_safe_redirect( esc_url_raw( $this->get_step_link( 'untranslated-contents' ) ) );
+			exit;
+		}
+
+		// Call the handler of the step for going to the next step.
+		// Be careful nonce verification with check_admin_referer must be done in each handler.
+		if ( ! empty( $_POST['save_step'] ) && isset( $this->steps[ $this->step ]['handler'] ) ) { // phpcs:ignore WordPress.Security.NonceVerification.Missing
+			call_user_func( $this->steps[ $this->step ]['handler'] );
+		}
+
+		$this->display_wizard_page();
+		// Ensure nothing is done after including the page.
+		exit;
+	}
+
+	/**
+	 * Adds some admin screens where to display the wizard notice
+	 *
+	 * @since 2.7
+	 *
+	 * @param bool   $can_display_notice Whether the notice can be displayed.
+	 * @param string $notice             The notice name.
+	 * @return bool
+	 */
+	public function can_display_notice( $can_display_notice, $notice ) {
+		if ( ! $can_display_notice && 'wizard' === $notice ) {
+			$screen = get_current_screen();
+			$can_display_notice = ! empty( $screen ) && in_array(
+				$screen->base,
+				array(
+					'edit',
+					'upload',
+					'options-general',
+				)
+			);
+		}
+		return $can_display_notice;
+	}
+
+	/**
+	 * Return html code of the wizard notice
+	 *
+	 * @since 2.7
+	 *
+	 * @return string
+	 */
+	public function wizard_notice() {
+		ob_start();
+		include __DIR__ . '/html-wizard-notice.php';
+		return ob_get_clean();
+	}
+
+	/**
+	 * Display the wizard page
+	 *
+	 * @since 2.7
+	 *
+	 * @return void
+	 */
+	public function display_wizard_page() {
+		set_current_screen( 'strope-wizard' );
+		include __DIR__ . '/view-wizard-page.php';
+	}
+
+	/**
+	 * Enqueue scripts and styles for the wizard
+	 *
+	 * @since 2.7
+	 *
+	 * @return void
+	 */
+	public function enqueue_scripts() {
+		wp_enqueue_style( 'strope_translate_admin', plugins_url( '/css/build/admin' . $this->get_suffix() . '.css', STROPE_TRANSLATE_FILE ), array(), STROPE_TRANSLATE_VERSION );
+		wp_enqueue_style( 'strope-wizard', plugins_url( '/css/build/wizard' . $this->get_suffix() . '.css', STROPE_TRANSLATE_FILE ), array( 'dashicons', 'install', 'common', 'forms' ), STROPE_TRANSLATE_VERSION );
+
+		$this->styles = array( 'strope_translate_admin', 'strope-wizard' );
+	}
+
+	/**
+	 * Get the suffix to enqueue non minified files in a Debug context
+	 *
+	 * @since 2.7
+	 *
+	 * @return string Empty when SCRIPT_DEBUG equal to true
+	 *                otherwise .min
+	 */
+	public function get_suffix() {
+		return defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
+	}
+
+	/**
+	 * Get the URL for the step's screen.
+	 *
+	 * @since 2.7
+	 *
+	 * @param string $step  slug (default: current step).
+	 * @return string       URL for the step if it exists.
+	 *                      Empty string on failure.
+	 */
+	public function get_step_link( $step = '' ) {
+		if ( ! $step ) {
+			$step = $this->step;
+		}
+
+		$keys = array_keys( $this->steps );
+
+		$step_index = array_search( $step, $keys, true );
+		if ( false === $step_index ) {
+			return '';
+		}
+
+		return add_query_arg( 'step', $keys[ $step_index ], remove_query_arg( 'activate_error' ) );
+	}
+
+	/**
+	 * Get the URL for the next step's screen.
+	 *
+	 * @since 2.7
+	 *
+	 * @param string $step  slug (default: current step).
+	 * @return string       URL for next step if a next step exists.
+	 *                      Admin URL if it's the last step.
+	 *                      Empty string on failure.
+	 */
+	public function get_next_step_link( $step = '' ) {
+		if ( ! $step ) {
+			$step = $this->step;
+		}
+
+		$keys = array_keys( $this->steps );
+		if ( end( $keys ) === $step ) {
+			return admin_url();
+		}
+
+		$step_index = array_search( $step, $keys, true );
+		if ( false === $step_index ) {
+			return '';
+		}
+
+		return add_query_arg( 'step', $keys[ $step_index + 1 ], remove_query_arg( 'activate_error' ) );
+	}
+
+
+
+
+
+	/**
+	 * Add languages step to the wizard
+	 *
+	 * @since 2.7
+	 *
+	 * @param array $steps List of steps.
+	 * @return array List of steps updated.
+	 */
+	public function add_step_languages( $steps ) {
+		// The wp-ajax-response and postbox dependencies is useless in wizard steps especially postbox which triggers a javascript error otherwise.
+		// To be really loaded the script need to be passed to the $steps['languages']['scripts'] array below with the same handle than in wp_enqueue_script().
+		wp_enqueue_script( 'strope_admin', plugins_url( '/js/build/admin' . $this->get_suffix() . '.js', STROPE_TRANSLATE_FILE ), array( 'jquery', 'jquery-ui-selectmenu' ), STROPE_TRANSLATE_VERSION, true );
+		wp_localize_script( 'strope_admin', 'strope_admin', array( 'dismiss_notice' => esc_html__( 'Dismiss this notice.', 'strope-translate' ) ) );
+		wp_register_script( 'strope-wizard-languages', plugins_url( '/js/build/languages-step' . $this->get_suffix() . '.js', STROPE_TRANSLATE_FILE ), array( 'jquery', 'jquery-ui-dialog' ), STROPE_TRANSLATE_VERSION, true );
+		wp_localize_script(
+			'strope-wizard-languages',
+			'strope_wizard_params',
+			array(
+				'i18n_no_language_selected'   => esc_html__( 'You need to select a language to be added.', 'strope-translate' ),
+				'i18n_language_already_added' => esc_html__( 'You already added this language.', 'strope-translate' ),
+				'i18n_no_language_added'      => esc_html__( 'You need to add at least one language.', 'strope-translate' ),
+				'i18n_add_language_needed'    => esc_html__( 'You selected a language, however, to be able to continue, you need to add it.', 'strope-translate' ),
+				'i18n_strope_add_language'       => esc_html__( 'Impossible to add the language.', 'strope-translate' ),
+				'i18n_strope_invalid_locale'     => esc_html__( 'Enter a valid WordPress locale', 'strope-translate' ),
+				'i18n_strope_invalid_slug'       => esc_html__( 'The language code contains invalid characters', 'strope-translate' ),
+				'i18n_strope_non_unique_slug'    => esc_html__( 'The language code must be unique', 'strope-translate' ),
+				'i18n_strope_invalid_name'       => esc_html__( 'The language must have a name', 'strope-translate' ),
+				'i18n_strope_invalid_flag'       => esc_html__( 'The flag does not exist', 'strope-translate' ),
+				'i18n_dialog_title'           => esc_html__( "A language wasn't added.", 'strope-translate' ),
+				'i18n_dialog_yes_button'      => esc_html__( 'Yes', 'strope-translate' ),
+				'i18n_dialog_no_button'       => esc_html__( 'No', 'strope-translate' ),
+				'i18n_dialog_ignore_button'   => esc_html__( 'Ignore', 'strope-translate' ),
+				'i18n_remove_language_icon'   => esc_html__( 'Remove this language', 'strope-translate' ),
+			)
+		);
+		wp_enqueue_script( 'strope-wizard-languages' );
+		wp_enqueue_style( 'strope-wizard-selectmenu', plugins_url( '/css/build/selectmenu' . $this->get_suffix() . '.css', STROPE_TRANSLATE_FILE ), array( 'dashicons', 'install', 'common', 'wp-jquery-ui-dialog' ), STROPE_TRANSLATE_VERSION );
+		$steps['languages'] = array(
+			'name'    => esc_html__( 'Languages', 'strope-translate' ),
+			'view'    => array( $this, 'display_step_languages' ),
+			'handler' => array( $this, 'save_step_languages' ),
+			'scripts' => array( 'strope-wizard-languages', 'strope_admin' ),
+			'styles'  => array( 'strope-wizard-selectmenu' ),
+		);
+		return $steps;
+	}
+
+	/**
+	 * Display the languages step form
+	 *
+	 * @since 2.7
+	 *
+	 * @return void
+	 */
+	public function display_step_languages() {
+		include __DIR__ . '/view-wizard-step-languages.php';
+	}
+
+	/**
+	 * Execute the languages step
+	 *
+	 * @since 2.7
+	 *
+	 * @return void
+	 */
+	public function save_step_languages() {
+		check_admin_referer( 'strope-wizard', '_strope_nonce' );
+
+		$all_languages   = include STROPE_TRANSLATE_DIR . '/settings/languages.php';
+		$languages       = isset( $_POST['languages'] ) && is_array( $_POST['languages'] ) ? array_map( 'sanitize_locale_name', $_POST['languages'] ) : false;
+		$saved_languages = array();
+
+		// If there is no language added or defined.
+		if ( empty( $languages ) && ! $this->model->has_languages() ) {
+			// Stay on this step with an error.
+			wp_safe_redirect(
+				esc_url_raw(
+					add_query_arg(
+						array(
+							'step'           => $this->step,
+							'activate_error' => 'i18n_no_language_added',
+						)
+					)
+				)
+			);
+			exit;
+		}
+
+		// Otherwise process the languages to add or skip the step if no language has been added.
+		if ( ! empty( $languages ) ) {
+			require_once ABSPATH . 'wp-admin/includes/translation-install.php';
+			// Remove duplicate values.
+			$languages = array_unique( $languages );
+			// For each language add it in Strope Translate settings.
+			foreach ( $languages as $locale ) {
+				$saved_languages = $all_languages[ $locale ];
+
+				$saved_languages['slug'] = $saved_languages['code'];
+				$saved_languages['rtl'] = (int) ( 'rtl' === $saved_languages['dir'] );
+				$saved_languages['term_group'] = 0; // Default term_group.
+
+				$language_added = $this->model->add_language( $saved_languages );
+
+				if ( $language_added instanceof WP_Error && array_key_exists( 'strope_non_unique_slug', $language_added->errors ) ) {
+					// Get the slug from the locale : lowercase and dash instead of underscore.
+					$saved_languages['slug'] = strtolower( str_replace( '_', '-', $saved_languages['locale'] ) );
+					$language_added = $this->model->add_language( $saved_languages );
+				}
+
+				if ( $language_added instanceof WP_Error ) {
+					// Stay on this step with an error.
+					$error_keys = array_keys( $language_added->errors );
+					wp_safe_redirect(
+						esc_url_raw(
+							add_query_arg(
+								array(
+									'step'           => $this->step,
+									'activate_error' => 'i18n_' . reset( $error_keys ),
+								)
+							)
+						)
+					);
+					exit;
+				}
+
+				if ( 'en_US' !== $locale && current_user_can( 'install_languages' ) ) {
+					wp_download_language_pack( $locale );
+				}
+			}
+		}
+		wp_safe_redirect( esc_url_raw( $this->get_next_step_link() ) );
+		exit;
+	}
+
+	/**
+	 * Add the media step to the wizard.
+	 *
+	 * @since 2.7
+	 *
+	 * @param array $steps List of steps.
+	 * @return array List of steps updated.
+	 */
+	public function add_step_media( $steps ) {
+		$languages = $this->model->get_languages_list();
+
+		if ( $this->is_media_step_displayable( $languages ) ) {
+			$steps['media'] = array(
+				'name'    => esc_html__( 'Media', 'strope-translate' ),
+				'view'    => array( $this, 'display_step_media' ),
+				'handler' => array( $this, 'save_step_media' ),
+				'scripts' => array(),
+				'styles'  => array(),
+			);
+		}
+		return $steps;
+	}
+
+	/**
+	 * Display the media step form
+	 *
+	 * @since 2.7
+	 *
+	 * @return void
+	 */
+	public function display_step_media() {
+		include __DIR__ . '/view-wizard-step-media.php';
+	}
+
+	/**
+	 * Execute the media step
+	 *
+	 * @since 2.7
+	 *
+	 * @return void
+	 */
+	public function save_step_media() {
+		check_admin_referer( 'strope-wizard', '_strope_nonce' );
+
+		$media_support = isset( $_POST['media_support'] ) ? sanitize_key( $_POST['media_support'] ) === 'yes' : false;
+
+		$this->options['media_support'] = $media_support;
+
+		update_option( 'strope_translate', $this->options );
+
+		wp_safe_redirect( esc_url_raw( $this->get_next_step_link() ) );
+		exit;
+	}
+
+	/**
+	 * Add untranslated contents step to the wizard
+	 *
+	 * @since 2.7
+	 *
+	 * @param array $steps List of steps.
+	 * @return array List of steps updated.
+	 */
+	public function add_step_untranslated_contents( $steps ) {
+		if ( ! $this->model->has_languages() || $this->model->get_objects_with_no_lang( 1 ) ) {
+			// Even if strope_admin is already enqueued with the same dependencies by the languages step, it is interesting to keep that it's also useful for the untranslated-contents step.
+			// To be really loaded the script need to be passed to the $steps['untranslated-contents']['scripts'] array below with the same handle than in wp_enqueue_script().
+			wp_enqueue_script( 'strope_admin', plugins_url( '/js/build/admin' . $this->get_suffix() . '.js', STROPE_TRANSLATE_FILE ), array( 'jquery', 'jquery-ui-selectmenu' ), STROPE_TRANSLATE_VERSION, true );
+			wp_localize_script( 'strope_admin', 'strope_admin', array( 'dismiss_notice' => esc_html__( 'Dismiss this notice.', 'strope-translate' ) ) );
+			wp_enqueue_style( 'strope-wizard-selectmenu', plugins_url( '/css/build/selectmenu' . $this->get_suffix() . '.css', STROPE_TRANSLATE_FILE ), array( 'dashicons', 'install', 'common' ), STROPE_TRANSLATE_VERSION );
+			$steps['untranslated-contents'] = array(
+				'name'    => esc_html__( 'Content', 'strope-translate' ),
+				'view'    => array( $this, 'display_step_untranslated_contents' ),
+				'handler' => array( $this, 'save_step_untranslated_contents' ),
+				'scripts' => array( 'strope_admin' ),
+				'styles'  => array( 'strope-wizard-selectmenu' ),
+			);
+		}
+		return $steps;
+	}
+
+	/**
+	 * Display the untranslated contents step form
+	 *
+	 * @since 2.7
+	 *
+	 * @return void
+	 */
+	public function display_step_untranslated_contents() {
+		include __DIR__ . '/view-wizard-step-untranslated-contents.php';
+	}
+
+	/**
+	 * Execute the untranslated contents step
+	 *
+	 * @since 2.7
+	 *
+	 * @return void
+	 */
+	public function save_step_untranslated_contents() {
+		check_admin_referer( 'strope-wizard', '_strope_nonce' );
+
+		$lang = ! empty( $_POST['language'] ) && is_string( $_POST['language'] ) ? sanitize_locale_name( $_POST['language'] ) : false;
+
+		if ( empty( $lang ) ) {
+			$lang = $this->options['default_lang'];
+		}
+
+		$language = $this->model->get_language( $lang );
+
+		if ( $language instanceof Strope_Language ) {
+			$this->model->set_language_in_mass( $language );
+		}
+
+		wp_safe_redirect( esc_url_raw( $this->get_next_step_link() ) );
+		exit;
+	}
+
+	/**
+	 * Add home page step to the wizard
+	 *
+	 * @since 2.7
+	 *
+	 * @param array $steps List of steps.
+	 * @return array List of steps updated.
+	 */
+	public function add_step_home_page( $steps ) {
+		$languages = $this->model->get_languages_list();
+		$home_page_id = get_option( 'page_on_front' );
+
+		$translations = $this->model->post->get_translations( $home_page_id );
+
+		if ( $home_page_id > 0 && ( ! $languages || count( $languages ) === 1 || count( $translations ) !== count( $languages ) ) ) {
+			$steps['home-page'] = array(
+				'name'    => esc_html__( 'Homepage', 'strope-translate' ),
+				'view'    => array( $this, 'display_step_home_page' ),
+				'handler' => array( $this, 'save_step_home_page' ),
+				'scripts' => array(),
+				'styles'  => array(),
+			);
+		}
+		return $steps;
+	}
+
+	/**
+	 * Display the home page step form
+	 *
+	 * @since 2.7
+	 *
+	 * @return void
+	 */
+	public function display_step_home_page() {
+		include __DIR__ . '/view-wizard-step-home-page.php';
+	}
+
+	/**
+	 * Execute the home page step
+	 *
+	 * @since 2.7
+	 *
+	 * @return void
+	 */
+	public function save_step_home_page() {
+		check_admin_referer( 'strope-wizard', '_strope_nonce' );
+
+		$default_language = $this->model->has_languages() ? $this->options['default_lang'] : null;
+		$home_page = isset( $_POST['home_page'] ) ? sanitize_key( $_POST['home_page'] ) : false;
+		$home_page_title = isset( $_POST['home_page_title'] ) ? sanitize_text_field( wp_unslash( $_POST['home_page_title'] ) ) : esc_html__( 'Homepage', 'strope-translate' );
+		$home_page_language = isset( $_POST['home_page_language'] ) ? sanitize_key( $_POST['home_page_language'] ) : false;
+
+		$untranslated_languages = isset( $_POST['untranslated_languages'] ) ? array_map( 'sanitize_key', $_POST['untranslated_languages'] ) : array();
+
+		call_user_func(
+			apply_filters( 'strope_wizard_create_home_page_translations', array( $this, 'create_home_page_translations' ) ),
+			$default_language,
+			$home_page,
+			$home_page_title,
+			$home_page_language,
+			$untranslated_languages
+		);
+
+		$this->model->clean_languages_cache();
+
+		wp_safe_redirect( esc_url_raw( $this->get_next_step_link() ) );
+		exit;
+	}
+
+	/**
+	 * Create home page translations for each language defined.
+	 *
+	 * @since 2.7
+	 *
+	 * @param string   $default_language       Slug of the default language; null if no default language is defined.
+	 * @param int      $home_page              Post ID of the home page if it's defined, false otherwise.
+	 * @param string   $home_page_title        Home page title if it's defined, 'Homepage' otherwise.
+	 * @param string   $home_page_language     Slug of the home page if it's defined, false otherwise.
+	 * @param string[] $untranslated_languages Array of languages which needs to have a home page translated.
+	 * @return void
+	 */
+	public function create_home_page_translations( $default_language, $home_page, $home_page_title, $home_page_language, $untranslated_languages ) {
+		$translations = $this->model->post->get_translations( $home_page );
+
+		foreach ( $untranslated_languages as $language ) {
+			$language_properties = $this->model->get_language( $language );
+			if ( empty( $language_properties ) ) {
+				continue;
+			}
+			$id = wp_insert_post(
+				array(
+					'post_title'  => $home_page_title . ' - ' . $language_properties->name,
+					'post_type'   => 'page',
+					'post_status' => 'publish',
+				)
+			);
+			$translations[ $language ] = $id;
+			strope_set_post_language( $id, $language );
+		}
+		strope_save_post_translations( $translations );
+	}
+
+	/**
+	 * Add last step to the wizard
+	 *
+	 * @since 2.7
+	 *
+	 * @param array $steps List of steps.
+	 * @return array List of steps updated.
+	 */
+	public function add_step_last( $steps ) {
+		$steps['last'] = array(
+			'name'    => esc_html__( 'Ready!', 'strope-translate' ),
+			'view'    => array( $this, 'display_step_last' ),
+			'handler' => array( $this, 'save_step_last' ),
+			'scripts' => array(),
+			'styles'  => array(),
+		);
+		return $steps;
+	}
+
+	/**
+	 * Display the last step form
+	 *
+	 * @since 2.7
+	 *
+	 * @return void
+	 */
+	public function display_step_last() {
+		// We ran the wizard once. So we can dismiss its notice.
+		Strope_Admin_Notices::dismiss( 'wizard' );
+		include __DIR__ . '/view-wizard-step-last.php';
+	}
+
+	/**
+	 * Execute the last step
+	 *
+	 * @since 2.7
+	 *
+	 * @return void
+	 */
+	public function save_step_last() {
+		check_admin_referer( 'strope-wizard', '_strope_nonce' );
+
+		wp_safe_redirect( esc_url_raw( $this->get_next_step_link() ) );
+		exit;
+	}
+}

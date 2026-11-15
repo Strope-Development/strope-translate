@@ -1,0 +1,22 @@
+{
+	"name": "strope-translate",
+	"version": "1.0.0",
+	"private": true,
+	"description": "Build tooling for the Strope Translate WordPress plugin.",
+	"license": "GPL-3.0-or-later",
+	"type": "module",
+	"engines": {
+		"node": ">=18.18"
+	},
+	"scripts": {
+		"build": "node bin/build.mjs",
+		"watch": "node bin/build.mjs --watch",
+		"i18n:pot": "wp i18n make-pot . languages/strope-translate.pot --domain=strope-translate --exclude=js/src,css,flags,bin,tests,plans,node_modules,vendor,modules/machine-translation/vendor,modules/machine-translation/lib/wasm-worker/js,modules/block-visibility/js,modules/string-discovery/js,modules/translation-status/js && node bin/i18n-fix-paths.mjs",
+		"i18n:compile": "wp i18n update-po languages/strope-translate.pot languages && wp i18n make-mo languages && wp i18n make-php languages && wp i18n make-json languages --no-purge",
+		"i18n": "npm run build && npm run i18n:pot && npm run i18n:compile"
+	},
+	"devDependencies": {
+		"esbuild": "0.28.2",
+		"fzstd": "0.1.1"
+	}
+}

@@ -1,0 +1,1447 @@
+@charset "UTF-8";
+body {
+	margin: 65px auto 24px;
+	box-shadow: none;
+	background: #f1f1f1;
+	padding: 0;
+	border: 0; /* Override WP install.css */
+}
+
+#strope-logo {
+	border: 0;
+	margin: 0 0 24px;
+	padding: 0;
+	text-align: center;
+	font-family: sans-serif;
+	font-size: 64px;
+	text-transform: uppercase;
+	color: #000;
+	line-height: normal;
+}
+#strope-logo a {
+	display: flex;
+	justify-content: center;
+	color: #000;
+	text-decoration: none;
+}
+
+#strope-logo img {
+	max-width: 100%;
+	margin-right: 16px;
+}
+.rtl #strope-logo img {
+	margin-right: 0;
+	margin-left: 16px;
+}
+
+.strope-wizard-footer {
+	text-align: center
+}
+
+.strope-wizard .select2-container {
+	text-align: left;
+	width: auto
+}
+
+.strope-wizard .hidden {
+	display: none
+}
+
+.strope-wizard-content {
+	box-shadow: 0 1px 3px rgba(0, 0, 0, .13);
+	padding: 2em;
+	margin: 0 0 20px;
+	background: #fff;
+	overflow: hidden;
+	zoom: 1;
+	text-align: left;
+}
+.rtl .strope-wizard-content{
+	text-align: right;
+}
+
+.strope-wizard-content h1,
+.strope-wizard-content h2,
+.strope-wizard-content h3,
+.strope-wizard-content table {
+	margin: 0 0 20px;
+	border: 0;
+	padding: 0;
+	color: #666;
+	clear: none;
+	font-weight: 500
+}
+
+.strope-wizard-content p {
+	margin: 20px 0;
+	font-size: 1em;
+	line-height: 1.75em;
+	color: #666
+}
+
+.strope-wizard-content table {
+	font-size: 1em;
+	line-height: 1.75em;
+	color: #666;
+	width: 100%;
+	margin-top: 20px;
+}
+.strope-wizard-content table td span{
+	display: inline-block;
+}
+
+.strope-wizard-content table caption {
+	caption-side: bottom;
+	font-style: italic;
+	text-align: right;
+}
+.rtl .strope-wizard-content table caption {
+	text-align: left;
+}
+
+.strope-wizard-content table caption .icon-default-lang{
+	font-style: normal;
+}
+
+.strope-wizard-content a {
+	color: #a03f3f;
+}
+
+.strope-wizard-content a:focus,
+.strope-wizard-content a:hover,
+.strope-wizard-footer-links:hover {
+	color: #dd5454
+}
+
+.strope-wizard-content .strope-wizard-next-steps {
+	overflow: hidden;
+	margin: 0 0 24px;
+	padding-bottom: 2px
+}
+
+.strope-wizard-content .strope-wizard-next-steps h2 {
+	margin-bottom: 12px
+}
+
+.strope-wizard-content .strope-wizard-next-steps .strope-wizard-next-steps-first {
+	float: left;
+	width: 50%;
+	box-sizing: border-box
+}
+
+.strope-wizard-content .strope-wizard-next-steps .strope-wizard-next-steps-last {
+	float: right;
+	width: 50%;
+	box-sizing: border-box
+}
+
+.strope-wizard-content .strope-wizard-next-steps ul {
+	padding: 0 2em 0 0;
+	list-style: none outside;
+	margin: 0
+}
+
+.strope-wizard-content .strope-wizard-next-steps ul li a {
+	display: block;
+	padding: 0 0 .75em
+}
+
+.strope-wizard-content .strope-wizard-next-steps ul li a::before {
+	color: #82878c;
+	font: normal 20px/1 dashicons;
+	speak: none;
+	display: inline-block;
+	padding: 0 10px 0 0;
+	top: 1px;
+	position: relative;
+	text-decoration: none!important;
+	vertical-align: top
+}
+
+.strope-wizard-steps {
+	padding: 0 0 24px;
+	margin: 0;
+	list-style: none outside;
+	overflow: hidden;
+	color: #ccc;
+	width: 100%;
+	display: -webkit-inline-box;
+	display: -webkit-inline-flex;
+	display: inline-flex
+}
+
+.strope-wizard-steps li {
+	width: 100%;
+	float: left;
+	padding: 0 0 .8em;
+	margin: 0;
+	text-align: center;
+	position: relative;
+	border-bottom: 4px solid #ccc;
+	line-height: 1.4em
+}
+
+.strope-wizard-steps li a {
+	color: #a03f3f;
+	text-decoration: none;
+	padding: 1.5em;
+	margin: -1.5em;
+	position: relative;
+	z-index: 1
+}
+
+.strope-wizard-steps li a:focus,
+.strope-wizard-steps li a:hover {
+	color: #dd5454;
+	text-decoration: underline
+}
+
+.strope-wizard-steps li::before {
+	content: "";
+	border: 4px solid #ccc;
+	border-radius: 100%;
+	width: 4px;
+	height: 4px;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	margin-left: -6px;
+	margin-bottom: -8px;
+	background: #fff
+}
+
+.strope-wizard-steps li.active {
+	border-color: #a03f3f;
+	color: #a03f3f;
+	font-weight: 700
+}
+
+.strope-wizard-steps li.active::before {
+	border-color: #a03f3f
+}
+
+.strope-wizard-steps li.done {
+	border-color: #a03f3f;
+	color: #a03f3f
+}
+
+.strope-wizard-steps li.done::before {
+	border-color: #a03f3f;
+	background: #a03f3f
+}
+
+.strope-wizard .strope-wizard-actions {
+	overflow: hidden;
+	margin: 20px 0 0;
+	position: relative
+}
+
+.strope-wizard .strope-wizard-actions .button {
+	font-size: 16px;
+	font-weight: 300;
+	padding: 1em 2em;
+	line-height: 1em;
+	margin-right: .5em;
+	margin-bottom: 2px;
+	margin-top: 10px;
+	height: auto;
+	border-radius: 4px;
+	box-shadow: none;
+	min-width: auto;
+	border-color: #a03f3f;
+	color: #a03f3f;
+}
+
+.strope-wizard .strope-wizard-content .button {
+	border-color: #a03f3f;
+	color: #a03f3f;
+}
+
+.strope-wizard .strope-wizard-content .button-primary,
+.strope-wizard .strope-wizard-actions .button-primary {
+	background-color: #a03f3f;
+	border-color: #a03f3f;
+	color: #fff;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .25), 0 1px 0 #a03f3f;
+	text-shadow: 0 -1px 1px #a03f3f, 1px 0 1px #a03f3f, 0 1px 1px #a03f3f, -1px 0 1px #a03f3f;
+	margin: 0;
+	opacity: 1
+}
+
+.strope-wizard .strope-wizard-content .button-small .dashicons {
+	font-size: 15px;
+	height: auto;
+	vertical-align: middle;
+}
+
+.strope-wizard .button-primary:active,
+.strope-wizard .button-primary:focus,
+.strope-wizard input[type="checkbox"]:focus + label.button-primary,
+.strope-wizard .button-primary:hover {
+	background: #dd5454;
+	border-color: #dd5454;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .25), 0 1px 0 #dd5454
+}
+.strope-wizard .strope-wizard-actions .button-primary[disabled],
+.strope-wizard .strope-wizard-actions .button-primary:disabled,
+.strope-wizard .strope-wizard-actions .button-primary.disabled {
+	cursor: wait;
+	background-color: #bb5454 !important;
+	border-color: #bb5454 !important;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, .25), 0 1px 0 #bb5454  !important;
+	text-shadow: 0 -1px 1px #bb5454, 1px 0 1px #bb5454, 0 1px 1px #bb5454, -1px 0 1px #bb5454 !important;
+	color: #ffa3a3 !important;
+}
+.strope-wizard-content p:last-child {
+	margin-bottom: 0
+}
+
+.strope-wizard-footer-links {
+	font-size: .85em;
+	color: #7b7b7b;
+	margin: 1.18em auto;
+	display: inline-block;
+	text-align: center
+}
+
+.strope-wizard-services {
+	border: 1px solid #eee;
+	padding: 0;
+	margin: 0 0 1em;
+	list-style: none outside;
+	border-radius: 4px;
+	overflow: hidden
+}
+
+.strope-wizard-services p {
+	margin: 0 0 1em 0;
+	padding: 0;
+	font-size: 1em;
+	line-height: 1.5em
+}
+
+.strope-wizard-service-item {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	padding: 0;
+	border-bottom: 1px solid #eee;
+	color: #666;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center
+}
+
+.media-step .strope-wizard-service-item{
+	border: 0;
+}
+
+.media-step .strope-wizard-service-item:last-child{
+	display: block;
+}
+
+.media-step .strope-wizard-service-item .strope-wizard-service-enable{
+	padding-bottom: 0;
+}
+
+.strope-wizard-service-item:last-child {
+	border-bottom: 0
+}
+
+.strope-wizard-service-item .strope-wizard-service-name {
+	-webkit-flex-basis: 0;
+	flex-basis: 0;
+	min-width: 160px;
+	text-align: center;
+	font-weight: 700;
+	padding: 2em 0;
+	-webkit-align-self: stretch;
+	align-self: stretch;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: baseline;
+	-webkit-align-items: baseline;
+	align-items: baseline
+}
+
+.strope-wizard-service-item .strope-wizard-service-name img {
+	max-width: 75px
+}
+
+.strope-wizard-service-item .strope-wizard-service-description {
+	-webkit-box-flex: 1;
+	-webkit-flex-grow: 1;
+	flex-grow: 1;
+	padding: 20px
+}
+
+.strope-wizard-service-item .strope-wizard-service-example {
+	padding: 0 20px 20px
+}
+
+.strope-wizard-service-item .strope-wizard-service-example p{
+	text-align: right;
+}
+.rtl .strope-wizard-service-item .strope-wizard-service-example p{
+	text-align: left;
+}
+
+.strope-wizard-service-item .strope-wizard-service-description p {
+	margin-bottom: 1em
+}
+
+.strope-wizard-service-item .strope-wizard-service-description p:last-child {
+	margin-bottom: 0
+}
+
+.strope-wizard-service-item .strope-wizard-service-description .strope-wizard-service-settings-description {
+	display: block;
+	font-style: italic;
+	color: #999
+}
+
+.strope-wizard-service-item .strope-wizard-service-enable {
+	-webkit-flex-basis: 0;
+	flex-basis: 0;
+	min-width: 75px;
+	text-align: center;
+	cursor: pointer;
+	padding: 2em 0;
+	position: relative;
+	max-height: 1.5em;
+	-webkit-align-self: flex-start;
+	align-self: flex-start;
+	-webkit-box-ordinal-group: 4;
+	-webkit-order: 3;
+	order: 3
+}
+
+.strope-wizard-service-item .strope-wizard-service-toggle {
+	position: relative
+}
+
+.strope-wizard-service-item .strope-wizard-service-toggle input[type=checkbox] {
+	position:absolute;
+	opacity: 0;
+}
+
+.strope-wizard-service-item .strope-wizard-service-toggle input[type=checkbox] + label {
+	position: relative;
+	display: inline-block;
+	width: 44px;
+	height: 20px;
+	border-radius: 10em;
+	cursor: pointer;
+	text-indent: -9999px;
+}
+
+.strope-wizard-service-item .strope-wizard-service-toggle input[type=checkbox]:focus + label {
+	border:1px dashed #777;
+}
+
+.strope-wizard-service-item .strope-wizard-service-toggle input[type=checkbox] + label::before,
+.strope-wizard-service-item .strope-wizard-service-toggle input[type=checkbox] + label::after {
+	content: '';
+	position: absolute;
+}
+
+.strope-wizard-service-item .strope-wizard-service-toggle input[type=checkbox] + label::before {
+	left: 0;
+	top: 0;
+	width: 44px;
+	height: 20px;
+	background: #ddd;
+	border-radius: 10em;
+	transition: background-color .2s;
+}
+
+.strope-wizard-service-item .strope-wizard-service-toggle input[type=checkbox] + label::after {
+	width: 16px;
+	height: 16px;
+	transition: all .2s;
+	border-radius: 50%;
+	background: #fff;
+	margin: 2px;
+	top: 0;
+	left: 0;
+}
+
+.strope-wizard-service-item .strope-wizard-service-toggle input[type=checkbox]:checked + label::before {
+	background:#a03f3f;
+}
+
+.strope-wizard-service-item .strope-wizard-service-toggle input[type=checkbox]:checked + label::after {
+	right: 0;
+	left:auto;
+}
+
+.strope-wizard-service-item .strope-wizard-service-settings {
+	display: none;
+	margin-top: .75em;
+	margin-bottom: 0;
+	cursor: default
+}
+
+.strope-wizard-service-item .strope-wizard-service-settings.hide {
+	display: none
+}
+
+.strope-wizard-service-item.checked .strope-wizard-service-settings {
+	display: inline-block
+}
+
+.strope-wizard-service-item.checked .strope-wizard-service-settings.hide {
+	display: none
+}
+
+.strope-wizard-service-item.closed {
+	border-bottom: 0
+}
+
+.step {
+	text-align: center
+}
+
+.strope-wizard .button .dashicons{
+	vertical-align: middle;
+}
+.rtl .dashicons-arrow-right-alt2:before {
+	content: "\f341";
+}
+.strope-wizard .strope-wizard-actions .button:active,
+.strope-wizard .strope-wizard-actions .button:focus,
+.strope-wizard .strope-wizard-actions .button:hover {
+	box-shadow: none
+}
+
+.strope-wizard-next-steps {
+	border: 1px solid #eee;
+	border-radius: 4px;
+	list-style: none;
+	padding: 0
+}
+
+.strope-wizard-next-steps li {
+	padding: 0
+}
+
+.strope-wizard-next-steps .strope-wizard-next-step-item {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	border-top: 1px solid #eee
+}
+
+.strope-wizard-next-steps .strope-wizard-next-step-item.no-border,
+.strope-wizard-next-steps .strope-wizard-next-step-item:first-child {
+	border-top: 0
+}
+
+.strope-wizard-next-steps .strope-wizard-next-step-description {
+	-webkit-box-flex: 1;
+	-webkit-flex-grow: 1;
+	flex-grow: 1;
+	margin: 1.5em
+}
+
+.strope-wizard-next-steps .strope-wizard-next-step-action {
+	-webkit-box-flex: 0;
+	-webkit-flex-grow: 0;
+	flex-grow: 0;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center
+}
+
+.strope-wizard-next-steps .strope-wizard-next-step-action .button {
+	margin: 1em 1.5em
+}
+
+.strope-wizard-next-steps .strope-wizard-next-step-item.no-border .strope-wizard-next-step-description,
+.strope-wizard-next-steps .strope-wizard-next-step-item.no-border .strope-wizard-actions,
+.strope-wizard-next-steps .strope-wizard-next-step-item.no-border .strope-wizard-next-step-action .button{
+	margin-top: 0;
+}
+
+
+.strope-wizard-next-steps p.next-step-heading {
+	margin: 0;
+	font-size: .95em;
+	font-weight: 400;
+	font-variant: all-petite-caps
+}
+
+.strope-wizard-next-steps p.next-step-extra-info {
+	margin: 0
+}
+
+.strope-wizard-next-steps h3.next-step-description {
+	margin: 0;
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.strope-wizard-next-steps .strope-wizard-additional-steps {
+	border-top: 1px solid #eee;
+}
+
+.strope-wizard-next-steps .strope-wizard-additional-steps .strope-wizard-next-step-description {
+	margin-bottom: 0
+}
+
+.strope-wizard-next-steps .strope-wizard-additional-steps .strope-wizard-actions {
+	margin: 0 0 1.5em 0;
+}
+
+.strope-wizard-next-steps .strope-wizard-additional-steps .strope-wizard-actions .button {
+	font-size: 15px;
+	margin: 1em 0 1em 1.5em;
+}
+.rtl .strope-wizard-next-steps .strope-wizard-additional-steps .strope-wizard-actions .button {
+	margin: 1em 1.5em 1em 0;
+}
+
+.strope-wizard-next-steps .strope-wizard-additional-steps .strope-wizard-actions .button::last-child {
+	margin-right: 1.5em;
+}
+
+.strope-wizard-content img{
+	max-width: 100%;
+	margin-right: 0.5em;
+}
+.rtl .strope-wizard-content img{
+	margin-left: 0.5em;
+}
+
+.strope-wizard-content .form-field label{
+	margin-bottom: 5px;
+	display: block;
+}
+
+.strope-wizard-content .form-field select{
+	padding: 3px;
+}
+
+.strope-wizard-content .languages-step select,
+.strope-wizard-content .untranslated-contents-step select{
+	width: 100%;
+}
+
+.languages-step .form-field .button{
+	margin-left: 15px;
+}
+.languages-step .form-field .button > span{
+	margin-right: 0.3em;
+}
+.rtl .languages-step .form-field .button{
+	margin-left: 0;
+	margin-right: 15px;
+}
+.rtl .languages-step .form-field .button > span{
+	margin-left: 0.3em;
+	margin-right: 0;
+}
+
+.strope-wizard-content .languages-step .select-language-field{
+	display: flex;
+}
+
+.strope-wizard-content #languages{
+	display: none;
+}
+.strope-wizard-content #languages tr th:first-child{
+	width: 80%;
+}
+.strope-wizard-content #languages .dashicons{
+	color: #a03f3f;
+}
+.strope-wizard-content #languages img{
+	margin-right: 5px;
+}
+.strope-wizard-content .error{
+	color: #a03f3f;
+	font-weight: bold;
+}
+.strope-wizard-content #messages .error{
+	background: #fccfcf;
+	padding: 0.5rem;
+	border: 1px solid #a03f3f;
+	margin-bottom: 0.5rem;
+}
+
+.strope-wizard-content #slide-toggle{
+	position:absolute;
+	opacity: 0;
+}
+
+.strope-wizard-content #slide-toggle + label{
+	position:relative;
+}
+.strope-wizard-content #slide-toggle + label + span{
+	display: block;
+}
+
+.strope-wizard-content #slide-toggle + label .dashicons{
+	margin-right: 0.3em;
+}
+.rtl .strope-wizard-content #slide-toggle + label .dashicons{
+	margin-left: 0.3em;
+	margin-right: 0;
+}
+.strope-wizard-content #slide-toggle ~ #screenshot > img {
+	max-height: 500px;
+	margin-top: 10px;
+	-webkit-transition: all .5s cubic-bezier(0, 1, 0.5, 1);
+	transition: all .5s cubic-bezier(0, 1, 0.5, 1);
+}
+.strope-wizard-content #slide-toggle:checked ~ #screenshot > img {
+	max-height: 0;
+}
+.hide {
+	display: none;
+}
+
+input[type="text"].field-in-error,
+input[type="password"].field-in-error,
+input[type="checkbox"].field-in-error,
+input[type="color"].field-in-error,
+input[type="date"].field-in-error,
+input[type="datetime"].field-in-error,
+input[type="datetime-local"].field-in-error,
+input[type="email"].field-in-error,
+input[type="month"].field-in-error,
+input[type="number"].field-in-error,
+input[type="search"].field-in-error,
+input[type="radio"].field-in-error,
+input[type="tel"].field-in-error,
+input[type="text"].field-in-error,
+input[type="time"].field-in-error,
+input[type="url"].field-in-error,
+input[type="week"].field-in-error,
+select.field-in-error,
+textarea.field-in-error,
+span.field-in-error,
+.field-in-error{
+	border-color: #a03f3f;
+}
+
+input[type="text"].field-in-error:focus,
+input[type="password"].field-in-error:focus,
+input[type="checkbox"].field-in-error:focus,
+input[type="color"].field-in-error:focus,
+input[type="date"].field-in-error:focus,
+input[type="datetime"].field-in-error:focus,
+input[type="datetime-local"].field-in-error:focus,
+input[type="email"].field-in-error:focus,
+input[type="month"].field-in-error:focus,
+input[type="number"].field-in-error:focus,
+input[type="search"].field-in-error:focus,
+input[type="radio"].field-in-error:focus,
+input[type="tel"].field-in-error:focus,
+input[type="text"].field-in-error:focus,
+input[type="time"].field-in-error:focus,
+input[type="url"].field-in-error:focus,
+input[type="week"].field-in-error:focus,
+select.field-in-error:focus,
+textarea.field-in-error:focus,
+span.field-in-error:focus,
+.field-in-error:focus{
+	border: 1px solid #a03f3f;
+	box-shadow: 0 0 2px rgba(160, 63, 63, 0.8);
+	outline-color: #a03f3f;
+	outline-style: auto;
+	outline-width: thin;
+}
+
+/* override install styles by returning back to forms styles */
+.form-table input.regular-text{
+	width: 25em;
+}
+.form-table input.field-in-error{
+	border-color: #a03f3f;
+}
+.strope-wizard-content .documentation {
+	padding: 24px 24px 0;
+	margin: 0 0 24px;
+	overflow: hidden;
+	background: #f5f5f5
+}
+
+.strope-wizard-content .documentation p {
+	padding: 0;
+	margin: 0 0 12px;
+}
+.documentation-container {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.documentation-container .documentation-button-container {
+	-webkit-box-flex: 0;
+	-webkit-flex-grow: 0;
+	flex-grow: 0;
+}
+
+.wc-setup .wc-setup-actions .button.documentation-button {
+	height: 42px;
+	padding: 0 1em;
+	margin: 0;
+}
+#dialog{
+	display: none;
+}
+.strope-wizard .ui-dialog.ui-widget-content{
+	max-height: none;
+}
+.strope-wizard .ui-dialog-title::before{
+	content: "\f534";
+	font-family: dashicons;
+	display: inline-block;
+	line-height: 1;
+	font-weight: 400;
+	font-style: normal;
+	speak: none;
+	text-decoration: inherit;
+	text-transform: none;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	width: 20px;
+	height: 20px;
+	font-size: 20px;
+	vertical-align: middle;
+	text-align: center;
+	margin: 0 5px 5px 0;
+	transition: color 0.1s ease-in;
+}
+.rtl.strope-wizard .ui-dialog-title::before{
+	margin-right: 0;
+	margin-left: 5px;
+}
+.strope-wizard .ui-dialog ul{
+	list-style: disc;
+	padding-left: 20px;
+}
+.rtl.strope-wizard .ui-dialog ul{
+	padding-left: 0;
+	padding-right: 20px;
+}
+.strope-wizard li{
+	margin-bottom: 0;
+}
+#translations{
+	border-collapse: collapse;
+}
+#translations tbody:nth-child(odd){
+	background-color: #f9f9f9;
+}
+#translations.striped > tbody > :nth-child(odd) {
+	background-color: transparent; /* Override common WordPress style */
+}
+.strope-wizard-content mark{
+	background: transparent none;
+}
+.strope-wizard-content mark{
+	color: #7ad03a;
+}
+@media screen and (max-width: 782px) {
+	/* Override WordPress button css rules */
+	.languages-step .form-field .button{
+		font-size: 13px;
+		line-height: 26px;
+		height: 28px;
+		padding: 0 10px 1px;
+		vertical-align: top;
+	}
+
+}
+@media only screen and (max-width:620px) {
+	/* Override dialog width rule */
+	.ui-dialog{
+		width: 100% !important;
+	}
+
+}
+@media only screen and (max-width:500px) {
+	#strope-logo a,
+	.select-language-field{
+		flex-direction: column;
+	}
+	.select-language-field .action-buttons{
+		display: flex;
+		justify-content: flex-end;
+	}
+	.languages-step .form-field .button{
+		margin: 5px 0 0;
+	}
+}
+@media only screen and (max-width:400px) {
+	#strope-logo {
+		font-size: 56px;
+	}
+	.strope-wizard-steps {
+		display: none
+	}
+	.strope-wizard-service-item {
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap
+	}
+	.strope-wizard-service-item .strope-wizard-service-enable {
+		-webkit-box-ordinal-group: 3;
+		-webkit-order: 2;
+		order: 2;
+		padding: 20px 0 0
+	}
+	.strope-wizard-service-item .strope-wizard-service-description {
+		-webkit-box-ordinal-group: 4;
+		-webkit-order: 3;
+		order: 3
+	}
+	.strope-wizard-service-item .strope-wizard-service-name {
+		padding: 20px 20px 0;
+		text-align: left;
+		-webkit-box-pack: justify!important;
+		-webkit-justify-content: space-between!important;
+		justify-content: space-between!important
+	}
+	.strope-wizard-service-item .strope-wizard-service-name img {
+		margin: 0
+	}
+	.strope-wizard-next-steps .strope-wizard-next-step-item {
+		-webkit-flex-wrap: wrap;
+		flex-wrap: wrap
+	}
+	.strope-wizard-next-steps .strope-wizard-next-step-item .strope-wizard-next-step-description {
+		margin-bottom: 0
+	}
+	.strope-wizard-next-steps .strope-wizard-next-step-item .strope-wizard-next-step-action p {
+		margin: 0
+	}
+}
+@media only screen and (max-width:360px) {
+	#strope-logo {
+		font-size: 48px;
+	}
+}
+
+/*
+ * Strope style (strope.io): warm paper, cocoa outlines and text, caramel accents, as in the other Strope
+ * plugins. A layer over the rules above, scoped to the wizard page.
+ */
+body.strope-wizard {
+	--paper: #fbf6ee;
+	--sand: #f3e8d8;
+	--line: #e5d5bf;
+	--ink: #2a1e17;
+	--ink-soft: #6a5646;
+	--cocoa: #36271e;
+	--caramel: #ea8a1a;
+	--caramel-ink: #a5520a;
+	--toast: #dc730a;
+	--amber: #f9b12c;
+	--field: #fffdf9;
+	--ease: cubic-bezier(.22, .8, .3, 1);
+	max-width: 720px;
+	margin: 48px auto 32px;
+	padding: 0 16px;
+	background: var(--paper);
+	color: var(--ink);
+	font: 400 15px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+html:has(body.strope-wizard) {
+	background: #fbf6ee;
+}
+body.strope-wizard *,
+body.strope-wizard *::before,
+body.strope-wizard *::after {
+	box-sizing: border-box;
+}
+
+/* Header: emblem, name, eyebrow. */
+body.strope-wizard #strope-logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 14px;
+	margin: 0 0 28px;
+	font: 760 30px/1.1 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+	letter-spacing: -.02em;
+	text-transform: none;
+	text-align: left;
+	color: var(--ink);
+}
+body.strope-wizard.rtl #strope-logo {
+	text-align: right;
+}
+body.strope-wizard #strope-logo .strope-emblem {
+	flex: none;
+	width: auto;
+	height: 52px;
+	max-width: none;
+	margin: 0;
+}
+body.strope-wizard #strope-logo .strope-eyebrow {
+	display: block;
+	margin-top: 5px;
+	font: 560 11.5px/1 ui-monospace, "Cascadia Mono", Consolas, monospace;
+	letter-spacing: .14em;
+	text-transform: uppercase;
+	color: var(--ink-soft);
+}
+
+/* Steps: numbered dots on a line, the current one caramel, the done ones cocoa with a check. */
+body.strope-wizard .strope-wizard-steps {
+	display: flex;
+	counter-reset: strope-step;
+	padding: 0;
+	margin: 0 0 24px;
+	color: var(--ink-soft);
+	overflow: visible;
+}
+body.strope-wizard .strope-wizard-steps li {
+	counter-increment: strope-step;
+	flex: 1 1 0;
+	float: none;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 8px;
+	padding: 0;
+	border: 0;
+	font-size: 13.5px;
+	font-weight: 560;
+	line-height: 1.3;
+	position: relative;
+}
+body.strope-wizard .strope-wizard-steps li::before {
+	content: counter(strope-step);
+	position: relative;
+	left: auto;
+	bottom: auto;
+	z-index: 1;
+	order: -1;
+	display: grid;
+	place-items: center;
+	width: 30px;
+	height: 30px;
+	margin: 0;
+	border: 2px solid var(--line);
+	border-radius: 50%;
+	background: var(--field);
+	color: var(--ink-soft);
+	font: 600 13px/1 system-ui, sans-serif;
+}
+body.strope-wizard .strope-wizard-steps li::after {
+	content: "";
+	position: absolute;
+	top: 14px;
+	left: calc(-50% + 18px);
+	right: calc(50% + 18px);
+	height: 2px;
+	border-radius: 2px;
+	background: var(--line);
+}
+body.strope-wizard .strope-wizard-steps li:first-child::after {
+	display: none;
+}
+body.strope-wizard.rtl .strope-wizard-steps li::after {
+	left: calc(50% + 18px);
+	right: calc(-50% + 18px);
+}
+body.strope-wizard .strope-wizard-steps li.active {
+	color: var(--ink);
+	font-weight: 680;
+}
+body.strope-wizard .strope-wizard-steps li.active::before {
+	border-color: var(--cocoa);
+	background: var(--caramel);
+	color: var(--cocoa);
+	box-shadow: 0 2px 0 var(--cocoa);
+}
+body.strope-wizard .strope-wizard-steps li.done::before {
+	content: "\2713";
+	border-color: var(--cocoa);
+	background: var(--cocoa);
+	color: var(--paper);
+}
+body.strope-wizard .strope-wizard-steps li.done::after,
+body.strope-wizard .strope-wizard-steps li.active::after {
+	background: var(--cocoa);
+}
+body.strope-wizard .strope-wizard-steps li a {
+	color: var(--ink);
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+}
+body.strope-wizard .strope-wizard-steps li a:hover,
+body.strope-wizard .strope-wizard-steps li a:focus {
+	color: var(--caramel-ink);
+	text-decoration: underline;
+}
+
+/* The step card. */
+body.strope-wizard .strope-wizard-content {
+	background: var(--field);
+	border: 1.5px solid var(--line);
+	border-radius: 22px;
+	box-shadow: none;
+	padding: 28px 30px;
+	margin: 0 0 18px;
+	overflow: visible;
+}
+body.strope-wizard .strope-wizard-content h1,
+body.strope-wizard .strope-wizard-content h2,
+body.strope-wizard .strope-wizard-content h3 {
+	color: var(--ink);
+	font-weight: 700;
+	letter-spacing: -.01em;
+}
+body.strope-wizard .strope-wizard-content h2 {
+	font-size: 20px;
+	margin: 0 0 10px;
+}
+body.strope-wizard .strope-wizard-content p,
+body.strope-wizard .strope-wizard-content table {
+	color: var(--ink-soft);
+	font-size: 14.5px;
+	line-height: 1.6;
+}
+body.strope-wizard .strope-wizard-content p {
+	margin: 10px 0;
+}
+body.strope-wizard .strope-wizard-content a {
+	color: var(--caramel-ink);
+}
+body.strope-wizard .strope-wizard-content a:hover,
+body.strope-wizard .strope-wizard-content a:focus {
+	color: var(--cocoa);
+}
+body.strope-wizard .strope-wizard-content .form-field {
+	margin-top: 22px;
+}
+body.strope-wizard .strope-wizard-content .form-field label {
+	color: var(--ink);
+	font-weight: 600;
+	margin-bottom: 8px;
+}
+
+/* Fields, the language dropdown included. */
+body.strope-wizard .strope-wizard-content select,
+body.strope-wizard .ui-selectmenu-button.ui-button {
+	min-height: 42px;
+	border: 1.5px solid var(--line);
+	border-radius: 12px;
+	background-color: var(--field);
+	color: var(--ink);
+	box-shadow: none;
+	padding: 6px 12px;
+}
+body.strope-wizard .strope-wizard-content select:focus,
+body.strope-wizard .ui-selectmenu-button.ui-button:focus,
+body.strope-wizard .ui-selectmenu-button.ui-state-focus {
+	border-color: var(--cocoa);
+	box-shadow: 0 0 0 4px rgb(234 138 26 / .28);
+	outline: none;
+}
+body.strope-wizard .ui-selectmenu-button span.ui-selectmenu-text {
+	line-height: 26px;
+}
+body.strope-wizard .ui-selectmenu-menu .ui-menu {
+	border: 1.5px solid var(--line);
+	border-radius: 12px;
+	background: var(--field);
+	box-shadow: 0 10px 30px rgb(54 39 30 / .14);
+	overflow-x: hidden;
+}
+body.strope-wizard .ui-selectmenu-menu .ui-state-active,
+body.strope-wizard .ui-selectmenu-menu .ui-widget-content .ui-state-active {
+	background: var(--sand);
+	border-color: transparent;
+	color: var(--ink);
+}
+
+/* Buttons: a caramel cookie with a cocoa outline that presses in; secondary ones are outlined. */
+body.strope-wizard .strope-wizard-content .button,
+body.strope-wizard .strope-wizard-actions .button,
+body.strope-wizard .strope-wizard-content .button-primary,
+body.strope-wizard .strope-wizard-actions .button-primary {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 6px;
+	min-height: 42px;
+	height: auto;
+	margin: 0;
+	padding: 9px 20px;
+	border: 2px solid var(--cocoa);
+	border-radius: 99px;
+	background: transparent;
+	color: var(--cocoa);
+	box-shadow: none;
+	text-shadow: none;
+	font: 600 14.5px/1.2 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+	transition: transform .15s var(--ease), box-shadow .15s var(--ease), background-color .15s;
+}
+body.strope-wizard .strope-wizard-content .button-primary,
+body.strope-wizard .strope-wizard-actions .button-primary {
+	background: var(--caramel);
+	box-shadow: 0 3px 0 var(--cocoa);
+}
+body.strope-wizard .strope-wizard-content .button:hover,
+body.strope-wizard .strope-wizard-actions .button:hover {
+	background: var(--sand);
+	color: var(--cocoa);
+	border-color: var(--cocoa);
+}
+body.strope-wizard .strope-wizard-content .button-primary:hover,
+body.strope-wizard .strope-wizard-actions .button-primary:hover,
+body.strope-wizard .button-primary:focus,
+body.strope-wizard input[type="checkbox"]:focus + label.button-primary {
+	background: var(--amber);
+	color: var(--cocoa);
+	border-color: var(--cocoa);
+	box-shadow: 0 3px 0 var(--cocoa);
+}
+body.strope-wizard .strope-wizard-content .button-primary:active,
+body.strope-wizard .strope-wizard-actions .button-primary:active {
+	transform: translateY(3px);
+	box-shadow: 0 0 0 var(--cocoa);
+}
+body.strope-wizard .strope-wizard-content .button:focus-visible,
+body.strope-wizard .strope-wizard-actions .button:focus-visible {
+	outline: 2.5px solid var(--cocoa);
+	outline-offset: 3px;
+}
+body.strope-wizard .strope-wizard-actions .button-primary[disabled],
+body.strope-wizard .strope-wizard-actions .button-primary:disabled,
+body.strope-wizard .strope-wizard-actions .button-primary.disabled {
+	cursor: wait;
+	background: var(--sand) !important;
+	border-color: var(--line) !important;
+	box-shadow: none !important;
+	text-shadow: none !important;
+	color: var(--ink-soft) !important;
+}
+body.strope-wizard .button .dashicons {
+	width: 18px;
+	height: 18px;
+	font-size: 18px;
+	line-height: 1;
+	vertical-align: middle;
+}
+body.strope-wizard .strope-wizard-actions {
+	overflow: visible; /* The pressed-button shadow must not be clipped. */
+}
+body.strope-wizard .strope-wizard-actions.step {
+	margin-top: 26px;
+}
+body.strope-wizard .strope-wizard-actions .button-next {
+	padding: 11px 26px;
+	font-size: 15.5px;
+}
+body.strope-wizard .strope-wizard-content .button-small,
+body.strope-wizard .strope-wizard-content .button-small:hover,
+body.strope-wizard .strope-wizard-content .button-small:focus,
+body.strope-wizard .strope-wizard-content input[type="checkbox"]:focus + label.button-small {
+	min-height: 32px;
+	padding: 4px 12px;
+	font-size: 13px;
+	background: transparent;
+	box-shadow: none;
+}
+body.strope-wizard .strope-wizard-content .button-small:hover {
+	background: var(--sand);
+}
+body.strope-wizard .languages-step .form-field .button {
+	margin-left: 12px;
+	white-space: nowrap;
+}
+body.strope-wizard.rtl .languages-step .form-field .button {
+	margin-left: 0;
+	margin-right: 12px;
+}
+
+/* Language lists: rows on sand, the default language marked. */
+body.strope-wizard .strope-wizard-content table {
+	border-collapse: separate;
+	border-spacing: 0 6px;
+	margin-top: 22px;
+}
+body.strope-wizard .strope-wizard-content table th {
+	color: var(--ink-soft);
+	font: 560 11.5px/1.4 ui-monospace, "Cascadia Mono", Consolas, monospace;
+	letter-spacing: .12em;
+	text-transform: uppercase;
+	text-align: left;
+	padding: 0 12px 2px;
+}
+body.strope-wizard.rtl .strope-wizard-content table th {
+	text-align: right;
+}
+body.strope-wizard .strope-wizard-content table td {
+	background: var(--sand);
+	color: var(--ink);
+	padding: 9px 14px;
+	font-weight: 560;
+}
+body.strope-wizard .strope-wizard-content table td:first-child {
+	border-radius: 12px 0 0 12px;
+}
+body.strope-wizard .strope-wizard-content table td:last-child {
+	border-radius: 0 12px 12px 0;
+}
+body.strope-wizard .strope-wizard-content table td:only-child {
+	border-radius: 12px;
+}
+body.strope-wizard.rtl .strope-wizard-content table td:first-child {
+	border-radius: 0 12px 12px 0;
+}
+body.strope-wizard.rtl .strope-wizard-content table td:last-child {
+	border-radius: 12px 0 0 12px;
+}
+body.strope-wizard .strope-wizard-content table.striped > tbody > :nth-child(odd) {
+	background: transparent;
+}
+body.strope-wizard .strope-wizard-content table caption {
+	color: var(--ink-soft);
+	font-size: 13px;
+	padding-top: 4px;
+}
+body.strope-wizard .strope-wizard-content #languages .dashicons,
+body.strope-wizard .strope-wizard-content .icon-default-lang {
+	color: var(--caramel);
+}
+
+/* Media step: the option as a card with a caramel switch. */
+body.strope-wizard .strope-wizard-services {
+	border: 1.5px solid var(--line);
+	border-radius: 16px;
+	background: var(--paper);
+}
+body.strope-wizard .strope-wizard-service-item {
+	color: var(--ink);
+	border-color: var(--line);
+}
+body.strope-wizard .strope-wizard-service-item .strope-wizard-service-toggle input[type=checkbox] + label::before {
+	background: var(--line);
+}
+body.strope-wizard .strope-wizard-service-item .strope-wizard-service-toggle input[type=checkbox]:checked + label::before {
+	background: var(--caramel);
+	box-shadow: inset 0 0 0 2px var(--cocoa);
+}
+body.strope-wizard .strope-wizard-service-item .strope-wizard-service-toggle input[type=checkbox]:focus-visible + label {
+	border: 0;
+	outline: 2.5px solid var(--cocoa);
+	outline-offset: 3px;
+	border-radius: 99px;
+}
+body.strope-wizard .strope-wizard-content #slide-toggle ~ #screenshot > img {
+	border: 1.5px solid var(--line);
+	border-radius: 12px;
+}
+
+/* Last step: the next steps as cards. */
+body.strope-wizard .strope-wizard-next-steps {
+	border: 0;
+	display: grid;
+	gap: 12px;
+}
+body.strope-wizard .strope-wizard-next-steps .strope-wizard-next-step-item {
+	border: 1.5px solid var(--line);
+	border-radius: 16px;
+	background: var(--paper);
+}
+body.strope-wizard .strope-wizard-next-steps .strope-wizard-next-step-item:first-child {
+	border-top: 1.5px solid var(--line);
+}
+body.strope-wizard .strope-wizard-next-steps .strope-wizard-additional-steps {
+	border-top: 0;
+	text-align: center;
+}
+body.strope-wizard .strope-wizard-next-steps p.next-step-heading {
+	font: 560 11.5px/1.4 ui-monospace, "Cascadia Mono", Consolas, monospace;
+	font-variant: normal;
+	letter-spacing: .14em;
+	text-transform: uppercase;
+	color: var(--ink-soft);
+}
+body.strope-wizard .strope-wizard-next-steps .strope-wizard-next-step-action .strope-wizard-actions {
+	margin: 0 20px 0 8px;
+}
+body.strope-wizard.rtl .strope-wizard-next-steps .strope-wizard-next-step-action .strope-wizard-actions {
+	margin: 0 8px 0 20px;
+}
+body.strope-wizard .strope-wizard-next-steps .strope-wizard-next-step-action .button {
+	margin: 0;
+	white-space: nowrap;
+}
+body.strope-wizard .strope-wizard-next-steps .strope-wizard-additional-steps .strope-wizard-next-step-action {
+	justify-content: center;
+}
+body.strope-wizard .strope-wizard-next-steps .strope-wizard-additional-steps .strope-wizard-actions {
+	margin: 6px 0 0;
+}
+body.strope-wizard .strope-wizard-next-steps .strope-wizard-additional-steps .strope-wizard-actions .button {
+	margin: 0;
+	font-size: 14.5px;
+}
+body.strope-wizard .strope-wizard-next-steps h3.next-step-description {
+	color: var(--ink);
+	font-size: 17px;
+	margin: 2px 0 4px;
+}
+
+/* Messages. */
+body.strope-wizard .strope-wizard-content .error,
+body.strope-wizard .field-in-error {
+	border-color: #8a2f1c;
+	color: #8a2f1c;
+}
+body.strope-wizard .strope-wizard-content #messages .error {
+	background: #fbe7df;
+	border: 1.5px solid #e2a08c;
+	border-radius: 12px;
+	padding: 10px 14px;
+}
+body.strope-wizard .strope-wizard-content mark {
+	color: #3d6b2a;
+}
+
+/* Footer link. */
+body.strope-wizard .strope-wizard-footer-links {
+	color: var(--ink-soft);
+	font-size: 13.5px;
+}
+body.strope-wizard .strope-wizard-footer-links:hover,
+body.strope-wizard .strope-wizard-footer-links:focus {
+	color: var(--caramel-ink);
+}
+
+@media only screen and (max-width: 500px) {
+	body.strope-wizard .strope-wizard-content {
+		padding: 22px 18px;
+	}
+	body.strope-wizard .strope-wizard-steps li {
+		font-size: 12px;
+	}
+	body.strope-wizard .languages-step .form-field .button {
+		margin: 8px 0 0;
+	}
+}
+@media (prefers-reduced-motion: reduce) {
+	body.strope-wizard * {
+		transition: none !important;
+	}
+}

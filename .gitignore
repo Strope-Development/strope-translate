@@ -1,0 +1,14 @@
+/node_modules/
+
+# Only the plugin's own autoloader is committed in vendor/, so that the plugin works without running Composer.
+/vendor/*
+!/vendor/autoload.php
+!/vendor/composer/
+/vendor/composer/installers/
+/vendor/bin/
+/composer.lock
+
+# Development tools.
+/tests/vendor/
+/tests/composer.lock
+/tests/.phpunit.result.cache

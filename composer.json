@@ -1,0 +1,58 @@
+{
+	"name": "strope/strope-translate",
+	"description": "Makes WordPress multilingual: translate posts, pages, media, terms, menus, widgets and strings.",
+	"type": "wordpress-plugin",
+	"license": "GPL-3.0-or-later",
+	"keywords": [
+		"wordpress",
+		"wordpress-plugin",
+		"multilingual",
+		"translation",
+		"i18n"
+	],
+	"require": {
+		"php": ">=7.4",
+		"composer/installers": "^1.12 || ^2.0"
+	},
+	"autoload": {
+		"classmap": [
+			"admin/",
+			"frontend/",
+			"include/",
+			"install/",
+			"integrations/",
+			"modules/",
+			"services/",
+			"settings/"
+		]
+	},
+	"config": {
+		"optimize-autoloader": true,
+		"allow-plugins": {
+			"composer/installers": true
+		},
+		"prepend-autoloader": false
+	},
+	"extra": {
+		"installer-name": "strope-translate"
+	},
+	"archive": {
+		"exclude": [
+			"/bin",
+			"/node_modules",
+			"/package.json",
+			"/package-lock.json",
+			"/DEVELOPMENT.md",
+			"/README.md",
+			"/.distignore",
+			"/.gitattributes",
+			"/.gitignore",
+			"/tests",
+			"/.github",
+			"/.wordpress-org",
+			"/modules/machine-translation/lib/wasm-worker/js/node-worker.mjs",
+			"/modules/machine-translation/lib/wasm-worker/js/index.d.ts",
+			"/modules/machine-translation/lib/wasm-worker/js/package.json"
+		]
+	}
+}

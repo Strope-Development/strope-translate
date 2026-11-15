@@ -1,0 +1,114 @@
+Strope Translate - third-party notices
+======================================
+
+Strope Translate is free software, licensed under the GNU General Public
+License version 3 or later (see LICENSE). It is based on, and includes code
+from, the following works.
+
+1. Polylang and Polylang Pro
+----------------------------
+Copyright 2011-2019 Frédéric Demarle
+Copyright 2019-2026 WP SYNTEX
+https://polylang.pro - https://wordpress.org/plugins/polylang/
+License: GNU General Public License version 3 or later (see LICENSE).
+
+Strope Translate is a fork of Polylang Pro and of the Polylang core it
+includes, with fixes and functions taken from later Polylang releases. It was
+modified by Strope in 2026: rebranded, merged into a single edition, licensing
+and remote update code removed, security hardening and new features added.
+Strope Translate is not affiliated with or endorsed by WP SYNTEX.
+
+2. Composer autoloader (vendor/composer/)
+-----------------------------------------
+Copyright (c) Nils Adermann, Jordi Boggiano
+License: MIT, see vendor/composer/LICENSE.
+
+3. classnames (in js/build/sidebar*.js)
+---------------------------------------
+Copyright (c) 2018 Jed Watson.
+http://jedwatson.github.io/classnames
+License: MIT
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+4. fzstd 0.1.1 (in js/build/mt-worker*.js)
+------------------------------------------
+https://github.com/101arrowz/fzstd
+
+MIT License
+
+Copyright (c) 2020 Arjun Barrett
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+5. bergamot-translator JavaScript loader and WebAssembly binary v0.6.0
+   (modules/machine-translation/vendor/bergamot-translator/)
+-----------------------------------------------------------------------
+Copyright Mozilla Foundation and contributors.
+Source: https://github.com/mozilla/translations and
+https://github.com/mozilla-firefox/firefox
+License: Mozilla Public License 2.0, see the LICENSE file in that folder.
+bergamot-translator.js: the JavaScript loader, unmodified.
+bergamot-translator.wasm.zst: the WebAssembly binary of the same release (v0.6.0, record version 4.0), unmodified.
+
+6. Flag icons (flags/)
+----------------------
+Most of the flags come from famfamfam (http://famfamfam.com/) and are in the
+public domain. The set is the one distributed with Polylang.
+
+7. WASM worker kit 1.0.0 (modules/machine-translation/lib/wasm-worker/)
+----------------------------------------------------------------------
+The job queue of the machine translation, by the authors of Strope Translate.
+Copyright (c) 2026 Strope
+https://github.com/yari-dev/wasm-worker-kit
+License: MIT
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

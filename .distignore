@@ -1,0 +1,17 @@
+# Files not shipped in the distributed plugin zip (keep in sync with .gitattributes).
+/.git
+/.gitattributes
+/.gitignore
+/.distignore
+/node_modules
+/bin
+/package.json
+/package-lock.json
+/DEVELOPMENT.md
+/README.md
+/tests
+/.github
+/.wordpress-org
+/modules/machine-translation/lib/wasm-worker/js/node-worker.mjs
+/modules/machine-translation/lib/wasm-worker/js/index.d.ts
+/modules/machine-translation/lib/wasm-worker/js/package.json

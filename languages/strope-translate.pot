@@ -1,0 +1,4698 @@
+# Copyright (C) 2026 Strope
+# This file is distributed under the GPL v3 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Strope Translate 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/strope-translate\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-12T03:11:23+01:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: strope-translate\n"
+
+#. Plugin Name of the plugin
+#: strope-translate.php
+msgid "Strope Translate"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: strope-translate.php
+msgid "https://strope.io/downloads/strope-translate/"
+msgstr ""
+
+#. Description of the plugin
+#: strope-translate.php
+msgid "Translate your whole site into as many languages as you like, with private machine translation in your browser."
+msgstr ""
+
+#. Author of the plugin
+#: strope-translate.php
+msgid "Strope"
+msgstr ""
+
+#. Author URI of the plugin
+#: strope-translate.php
+msgid "https://strope.io/"
+msgstr ""
+
+#: admin/admin-base.php:127
+#: admin/admin-base.php:151
+#: admin/admin-classic-editor.php:77
+#: admin/admin-nav-menu.php:83
+#: admin/admin-nav-menu.php:86
+#: admin/admin-nav-menu.php:119
+#: admin/admin-notices.php:112
+#: include/nav-menu.php:73
+#: modules/block-editor/navigation-language-switcher-block.php:280
+#: modules/wizard/view-wizard-step-languages.php:28
+#: modules/wizard/wizard.php:388
+#: settings/settings.php:127
+#: js/build/block-visibility.js:147
+#: js/build/blocks.js:1125
+#: js/build/sidebar.js:1185
+#: js/build/sidebar.js:1205
+msgid "Languages"
+msgstr ""
+
+#: admin/admin-base.php:131
+#: admin/view-translations-media.php:13
+#: admin/view-translations-post.php:10
+#: admin/view-translations-term.php:14
+#: admin/view-translations-term.php:21
+#: integrations/acf/acf-sync-metas.php:64
+#: modules/machine-translation/view-machine-translation.php:88
+#: modules/rest/rest-translated-object.php:85
+#: modules/string-discovery/table-discovered-strings.php:93
+#: settings/table-string.php:168
+#: js/build/sidebar.js:3497
+msgid "Translations"
+msgstr ""
+
+#: admin/admin-base.php:134
+#: admin/admin.php:106
+#: settings/settings-module.php:152
+msgid "Settings"
+msgstr ""
+
+#: admin/admin-base.php:516
+msgid "Show all languages"
+msgstr ""
+
+#: admin/admin-base.php:525
+#: admin/admin-base.php:543
+msgid "Filters content by language"
+msgstr ""
+
+#: admin/admin-classic-editor.php:129
+#: admin/admin-filters-columns.php:236
+#: admin/admin-filters-media.php:64
+#: admin/admin-filters-term.php:140
+#: admin/admin-filters-term.php:213
+#: integrations/woocommerce/woocommerce-orders.php:448
+#: modules/frontend-editor/frontend-editor.php:307
+#: modules/rest/rest-translated-object.php:70
+#: modules/translation-status/translation-status-dashboard.php:118
+#: modules/translation-workflow/table-translation-jobs.php:242
+#: modules/wizard/view-wizard-step-languages.php:62
+#: js/build/sidebar.js:1311
+#: js/build/sidebar.js:3785
+#: js/build/sidebar.js:3790
+msgid "Language"
+msgstr ""
+
+#: admin/admin-classic-editor.php:245
+msgid "(no parent)"
+msgstr ""
+
+#: admin/admin-classic-editor.php:369
+msgid "Some taxonomies or metadata may be synchronized with existing translations that you are not allowed to modify."
+msgstr ""
+
+#: admin/admin-classic-editor.php:371
+msgid "If you attempt to modify them anyway, your changes will not be saved."
+msgstr ""
+
+#: admin/admin-default-term.php:137
+msgid "Uncategorized"
+msgstr ""
+
+#. translators: accessibility text, %s is a native language name
+#: admin/admin-filters-columns.php:175
+#: admin/admin-filters-columns.php:317
+msgid "Edit this item in %s"
+msgstr ""
+
+#. translators: accessibility text, %s is a native language name
+#. translators: accessibility text, %s is a native language name. For example Deutsch for German or Français for french.
+#: admin/admin-filters-columns.php:179
+#: admin/admin-filters-columns.php:321
+#: admin/admin-links.php:56
+#: js/build/sidebar.js:1753
+msgid "Edit the translation in %s"
+msgstr ""
+
+#. translators: accessibility text, %s is a native language name
+#: admin/admin-filters-columns.php:198
+#: admin/admin-filters-columns.php:335
+msgid "This item is in %s"
+msgstr ""
+
+#: admin/admin-filters-columns.php:222
+msgid "&mdash; No Change &mdash;"
+msgstr ""
+
+#: admin/admin-filters-media.php:94
+msgid "Sorry, you are not allowed to translate this media."
+msgstr ""
+
+#: admin/admin-filters-term.php:142
+#: admin/admin-filters-term.php:215
+msgid "Sets the language"
+msgstr ""
+
+#: admin/admin-filters-term.php:468
+#: modules/translation-workflow/translator-languages.php:644
+#: modules/translation-workflow/translator-languages.php:772
+msgid "None"
+msgstr ""
+
+#: admin/admin-filters.php:124
+msgid "Privacy Policy Page"
+msgstr ""
+
+#. translators: accessibility text, %s is a native language name
+#: admin/admin-links.php:29
+#: js/build/sidebar.js:1581
+msgid "Add a translation in %s"
+msgstr ""
+
+#: admin/admin-model.php:50
+#: modules/wizard/wizard.php:372
+msgid "Impossible to add the language."
+msgstr ""
+
+#: admin/admin-model.php:184
+msgid "The language does not seem to exist."
+msgstr ""
+
+#: admin/admin-model.php:369
+#: modules/wizard/wizard.php:373
+msgid "Enter a valid WordPress locale"
+msgstr ""
+
+#: admin/admin-model.php:374
+#: modules/wizard/wizard.php:374
+msgid "The language code contains invalid characters"
+msgstr ""
+
+#: admin/admin-model.php:380
+#: modules/wizard/wizard.php:375
+msgid "The language code must be unique"
+msgstr ""
+
+#: admin/admin-model.php:387
+#: modules/wizard/wizard.php:376
+msgid "The language must have a name"
+msgstr ""
+
+#: admin/admin-model.php:399
+#: modules/wizard/wizard.php:377
+msgid "The flag does not exist"
+msgstr ""
+
+#: admin/admin-nav-menu.php:62
+#: include/nav-menu.php:74
+#: include/widget-languages.php:23
+#: js/build/blocks.js:1306
+msgid "Language switcher"
+msgstr ""
+
+#: admin/admin-nav-menu.php:93
+msgid "Add to Menu"
+msgstr ""
+
+#. translators: accessibility text
+#: admin/admin-notices.php:209
+#: modules/wizard/wizard.php:362
+#: modules/wizard/wizard.php:551
+#: settings/settings.php:349
+msgid "Dismiss this notice."
+msgstr ""
+
+#: admin/admin-static-pages.php:54
+msgid "Front Page"
+msgstr ""
+
+#: admin/admin-static-pages.php:58
+msgid "Posts Page"
+msgstr ""
+
+#. translators: %s is a comma separated list of native language names
+#: admin/admin-static-pages.php:146
+msgid "You must translate your static front page in %s."
+msgstr ""
+
+#: admin/admin-strings.php:71
+msgid "Widget title"
+msgstr ""
+
+#: admin/admin-strings.php:72
+msgid "Widget text"
+msgstr ""
+
+#: admin/admin-strings.php:73
+msgid "Custom HTML widget content"
+msgstr ""
+
+#. translators: accessibility text
+#: admin/view-translations-post.php:57
+#: admin/view-translations-term.php:77
+#: modules/frontend-editor/frontend-editor.php:311
+#: modules/translation-workflow/table-translation-jobs.php:249
+#: modules/translation-workflow/translator-languages.php:632
+#: modules/translation-workflow/translator-languages.php:654
+#: js/build/sidebar.js:3010
+msgid "Translation"
+msgstr ""
+
+#. translators: Hidden accessibility text.
+#: frontend/frontend-filters-search.php:124
+#: frontend/frontend-filters-search.php:126
+msgid "Search"
+msgstr ""
+
+#: include/api.php:583
+#: include/api.php:610
+#: include/translated-post.php:459
+#: include/translated-term.php:409
+msgid "Please provide a valid language."
+msgstr ""
+
+#: include/filters-widgets-options.php:53
+#: modules/frontend-editor/frontend-editor.php:328
+#: modules/translation-workflow/table-translation-jobs.php:339
+#: modules/translation-workflow/translator-languages.php:761
+#: js/build/block-visibility.js:132
+#: js/build/blocks.js:1139
+msgid "All languages"
+msgstr ""
+
+#: include/filters-widgets-options.php:68
+msgid "The widget is displayed for:"
+msgstr ""
+
+#: include/filters.php:419
+msgid "Translated user descriptions"
+msgstr ""
+
+#. translators: %s is a language native name
+#: include/filters.php:443
+msgid "User description - %s"
+msgstr ""
+
+#: include/filters.php:452
+msgid "User"
+msgstr ""
+
+#. translators: 1: source string, 2: list of placeholders such as %s or %1$d
+#: include/string-placeholders.php:111
+msgid "The translation of \"%1$s\" was not saved: its placeholders must match those of the original text (%2$s)."
+msgstr ""
+
+#: include/string-placeholders.php:113
+msgid "none"
+msgstr ""
+
+#: include/switcher.php:48
+#: modules/switcher-extras/settings-floating-switcher.php:85
+msgid "Displays as a dropdown"
+msgstr ""
+
+#: include/switcher.php:49
+msgid "Displays language names"
+msgstr ""
+
+#: include/switcher.php:50
+msgid "Displays flags"
+msgstr ""
+
+#: include/switcher.php:51
+msgid "Forces link to front page"
+msgstr ""
+
+#: include/switcher.php:52
+#: modules/switcher-extras/settings-floating-switcher.php:86
+msgid "Hides the current language"
+msgstr ""
+
+#: include/switcher.php:53
+#: modules/switcher-extras/settings-floating-switcher.php:87
+msgid "Hides languages with no translation"
+msgstr ""
+
+#: include/translated-post.php:452
+#: modules/translation-status/translation-status-rest.php:184
+msgid "Invalid post ID."
+msgstr ""
+
+#: include/translated-term.php:401
+msgid "Invalid term ID."
+msgstr ""
+
+#. translators: Calendar caption: 1: Month name, 2: 4-digit year.
+#: include/widget-calendar.php:228
+msgctxt "calendar caption"
+msgid "%1$s %2$s"
+msgstr ""
+
+#: include/widget-calendar.php:305
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+#. translators: Post calendar label. %s: Date.
+#: include/widget-calendar.php:307
+msgid "Posts published on %s"
+msgstr ""
+
+#: include/widget-calendar.php:334
+msgid "Previous and next months"
+msgstr ""
+
+#: include/widget-languages.php:25
+msgid "Displays a language switcher"
+msgstr ""
+
+#: include/widget-languages.php:62
+#: modules/block-editor/language-switcher-block.php:56
+#: modules/switcher-extras/floating-switcher.php:274
+#: modules/switcher-extras/switcher-shortcode.php:102
+#: settings/view-tab-lang.php:53
+msgid "Choose a language"
+msgstr ""
+
+#: include/widget-languages.php:123
+msgid "Title:"
+msgstr ""
+
+#. translators: 1: Plugin name 2: Current PHP version 3: Required PHP version
+#: install/install.php:50
+msgid "%1$s has deactivated itself because you are using an old version of PHP. You are using using PHP %2$s. %1$s requires PHP %3$s."
+msgstr ""
+
+#. translators: 1: Plugin name 2: Current WordPress version 3: Required WordPress version
+#: install/install.php:72
+msgid "%1$s has deactivated itself because you are using an old version of WordPress. You are using using WordPress %2$s. %1$s requires at least WordPress %3$s."
+msgstr ""
+
+#: install/upgrade.php:89
+msgid "Strope Translate has been deactivated because you upgraded from a too old version."
+msgstr ""
+
+#. translators: %1$s and %2$s are Strope Translate version numbers
+#: install/upgrade.php:92
+msgid "Before upgrading to %2$s, please upgrade to %1$s."
+msgstr ""
+
+#: integrations/acf/acf-sync-metas.php:86
+#: modules/wizard/view-wizard-step-languages.php:131
+#: modules/wizard/wizard.php:381
+msgid "Ignore"
+msgstr ""
+
+#: integrations/acf/acf-sync-metas.php:87
+msgid "Copy once"
+msgstr ""
+
+#: integrations/acf/acf-sync-metas.php:88
+msgid "Synchronize"
+msgstr ""
+
+#: integrations/acf/acf-sync-metas.php:107
+#: modules/bulk-translate/bulk-translate.php:268
+#: modules/content-fallback/settings-content-fallback.php:53
+#: modules/machine-translation/view-machine-translation.php:83
+msgid "Translate"
+msgstr ""
+
+#: integrations/woocommerce/woocommerce-orders.php:394
+msgid "Language:"
+msgstr ""
+
+#: integrations/woocommerce/woocommerce-orders.php:396
+msgid "Not defined"
+msgstr ""
+
+#: integrations/wp-importer/wordpress-importer.php:47
+msgid "Import <strong>posts, pages, comments, custom fields, categories, and tags</strong> from a WordPress export file."
+msgstr ""
+
+#: modules/active-languages/active-languages.php:111
+msgid "Activate this language"
+msgstr ""
+
+#: modules/active-languages/active-languages.php:113
+#: settings/settings-module.php:164
+msgid "Activate"
+msgstr ""
+
+#: modules/active-languages/active-languages.php:119
+msgid "Deactivate this language"
+msgstr ""
+
+#: modules/active-languages/active-languages.php:121
+#: settings/settings-module.php:158
+msgid "Deactivate"
+msgstr ""
+
+#: modules/block-editor/navigation-language-switcher-block.php:232
+#: js/build/blocks.js:1308
+msgid "Language switcher settings"
+msgstr ""
+
+#. translators: %d is a number of posts
+#: modules/bulk-translate/bulk-translate-option.php:199
+msgid "%d translation created."
+msgid_plural "%d translations created."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d is a number of posts
+#: modules/bulk-translate/bulk-translate-option.php:211
+msgid "To avoid overwriting content, %d translation was not created."
+msgid_plural "To avoid overwriting content, %d translations were not created."
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/bulk-translate/bulk-translate.php:212
+msgid "No item has been selected. Please make sure to select at least one item to be translated."
+msgstr ""
+
+#: modules/bulk-translate/bulk-translate.php:222
+msgid "Error: No target language has been selected. Please make sure to select at least one target language."
+msgstr ""
+
+#: modules/bulk-translate/view-bulk-translate.php:17
+msgid "Bulk translate"
+msgstr ""
+
+#: modules/bulk-translate/view-bulk-translate.php:21
+#: modules/import-export/export/view-tab-export-strings.php:26
+#: modules/translation-workflow/translation-jobs-admin.php:563
+#: modules/translation-workflow/translation-jobs-admin.php:566
+msgid "Target languages"
+msgstr ""
+
+#: modules/bulk-translate/view-bulk-translate.php:36
+msgid "Action"
+msgstr ""
+
+#: modules/bulk-translate/view-bulk-translate.php:50
+#: modules/frontend-editor/frontend-editor.php:313
+#: modules/machine-translation/mt-admin.php:266
+#: modules/translation-workflow/translation-jobs-admin.php:180
+#: settings/settings-module.php:171
+#: js/build/block-editor.js:58
+#: js/build/classic-editor.js:58
+#: js/build/sidebar.js:1822
+#: js/build/sidebar.js:3312
+msgid "Cancel"
+msgstr ""
+
+#: modules/bulk-translate/view-bulk-translate.php:51
+msgid "Submit"
+msgstr ""
+
+#. translators: %s is a language name.
+#: modules/content-fallback/frontend-content-fallback.php:1744
+msgid "This content is not available in %s yet."
+msgstr ""
+
+#: modules/content-fallback/settings-content-fallback.php:33
+msgid "Content fallback"
+msgstr ""
+
+#: modules/content-fallback/settings-content-fallback.php:34
+msgid "Choose, per content type, whether content which is not translated in the visitor language is hidden or displayed in the default language. Visitors stay in their language (URLs, menus and interface), search engines are pointed to the original content."
+msgstr ""
+
+#: modules/content-fallback/settings-content-fallback.php:54
+msgid "Show default language content when not translated"
+msgstr ""
+
+#: modules/content-fallback/settings-content-fallback.php:59
+#: modules/switcher-extras/settings-also-available.php:51
+msgid "Post types"
+msgstr ""
+
+#: modules/content-fallback/settings-content-fallback.php:75
+#: modules/sync/settings-sync.php:104
+msgid "Taxonomies"
+msgstr ""
+
+#: modules/content-fallback/settings-content-fallback.php:92
+msgid "Display a notice above the content when it is not available in the visitor language"
+msgstr ""
+
+#: modules/content-fallback/settings-content-fallback.php:96
+msgid "The fallback requires the language to be set from the URL. Content displayed in the default language keeps its canonical URL in the default language, is marked with its real language and is not listed in the sitemaps of the other languages."
+msgstr ""
+
+#. translators: 1 is a post type or taxonomy label, 2 is a post type or taxonomy key.
+#: modules/content-fallback/settings-content-fallback.php:123
+#: settings/settings-cpt.php:117
+#: settings/settings-cpt.php:148
+msgctxt "content type setting choice"
+msgid "%1$s (%2$s)"
+msgstr ""
+
+#: modules/duplicate/duplicate.php:32
+msgid "Activate content duplication"
+msgstr ""
+
+#: modules/duplicate/duplicate.php:33
+msgid "Deactivate content duplication"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-blocks.php:201
+msgid "Citation"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-blocks.php:203
+msgid "Summary"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-blocks.php:205
+msgid "Caption"
+msgstr ""
+
+#. translators: %d is a table cell number.
+#: modules/frontend-editor/frontend-editor-blocks.php:208
+msgid "Cell %d"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-blocks.php:210
+#: modules/frontend-editor/frontend-editor-rest.php:648
+#: modules/frontend-editor/frontend-editor-rest.php:681
+#: modules/switcher-extras/settings-also-available.php:104
+msgid "Text"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:164
+#: modules/translation-status/translation-status.php:713
+#: modules/translation-status/translation-status.php:742
+#: modules/translation-status/translation-status.php:787
+#: modules/translation-status/translation-status.php:821
+msgid "Invalid post."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:168
+#: modules/translation-status/translation-status-rest.php:188
+msgid "Sorry, you are not allowed to edit this post."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:183
+#: modules/string-discovery/string-discovery-admin.php:195
+#: modules/string-discovery/string-discovery-admin.php:221
+#: modules/string-discovery/string-discovery-rest.php:150
+#: modules/string-discovery/string-discovery.php:100
+msgid "Sorry, you are not allowed to translate strings."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:285
+#: modules/frontend-editor/frontend-editor-rest.php:1167
+#: modules/string-discovery/string-discovery.php:105
+msgid "Invalid language."
+msgstr ""
+
+#. translators: %s is a language name.
+#: modules/frontend-editor/frontend-editor-rest.php:370
+msgid "This page is not translated in %s yet."
+msgstr ""
+
+#. translators: %s is a language name.
+#: modules/frontend-editor/frontend-editor-rest.php:383
+msgid "You are not allowed to edit the %s translation of this page."
+msgstr ""
+
+#. translators: %s is a language name.
+#: modules/frontend-editor/frontend-editor-rest.php:390
+msgid "This text was not found at the same place in the %s translation. Open the page to edit it."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:636
+msgid "No source post"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:652
+msgid "Title"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:652
+msgid "Excerpt"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:672
+msgid "This field was not found in the post. The post may have been modified, please reload the page."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:700
+msgid "No matching source field"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:709
+msgid "Classic content"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:710
+msgid "This content was not created with blocks. Open it in the editor to translate it."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:718
+msgid "This block was not found in the post. The post may have been modified, please reload the page."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:733
+msgid "This block cannot be edited here. Open it in the block editor to translate it."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:763
+msgid "This text contains formatting that cannot be edited here. Open it in the block editor to translate it."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:774
+msgid "No matching source block"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:832
+msgid "This content cannot be edited here."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:851
+#: modules/frontend-editor/frontend-editor-rest.php:866
+msgid "This block cannot be edited here."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:855
+msgid "This text contains formatting that cannot be edited here."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:860
+msgid "Only inline formatting is allowed in this text."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:919
+msgid "This post contains code that you are not allowed to save (such as scripts or embeds), and saving it from here would remove it. Please use the regular editor or ask an administrator."
+msgstr ""
+
+#. translators: %s: User display name.
+#: modules/frontend-editor/frontend-editor-rest.php:981
+msgid "%s is currently editing this post. Please try again later."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:982
+msgid "Another user"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:1003
+msgid "This field cannot be edited here."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:1142
+msgid "This content has been modified in the meantime. Please reload the page and try again."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:1162
+#: modules/string-discovery/string-discovery-rest.php:300
+#: modules/string-discovery/string-discovery.php:113
+#: modules/string-discovery/string-discovery.php:140
+msgid "Invalid string."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-rest.php:1172
+msgid "Sorry, you are not allowed to translate into this language."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-strings.php:208
+msgid "Theme and plugin strings cannot be translated on this site."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor-strings.php:218
+#: modules/machine-translation/mt-queue.php:330
+msgid "The translation could not be saved."
+msgstr ""
+
+#. translators: %s is a language name.
+#: modules/frontend-editor/frontend-editor.php:201
+msgid "Editing translations: %s"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:202
+msgid "Editing translations"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:210
+msgid "Stop editing"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:214
+msgid "Edit title"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:216
+msgid "Edit excerpt"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:221
+#: modules/frontend-editor/frontend-editor.php:306
+msgid "Strings on this page"
+msgstr ""
+
+#. translators: %s is a language name.
+#: modules/frontend-editor/frontend-editor.php:247
+msgid "Edit translations (%s)"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:248
+#: modules/frontend-editor/frontend-editor.php:303
+msgid "Edit translations"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:304
+msgid "Close"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:305
+#: modules/machine-translation/view-machine-translation.php:53
+#: modules/translation-workflow/table-translation-jobs.php:241
+#: modules/translation-workflow/translation-jobs-admin.php:544
+#: modules/wizard/wizard.php:554
+msgid "Content"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:308
+msgid "Block"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:309
+msgid "Field"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:310
+msgid "Source"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:312
+msgid "Save"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:314
+msgid "Open in editor"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:315
+msgid "Bold"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:316
+msgid "Italic"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:317
+msgid "Inline code"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:318
+msgid "Link"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:319
+msgid "Remove link"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:320
+msgid "Link URL:"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:321
+msgid "Loading…"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:322
+msgid "Saving…"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:323
+msgid "Saved."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:324
+msgid "An error occurred."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:325
+msgid "Click a highlighted text to translate it. Alt+click to follow a link."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:326
+msgid "No text of this page can be edited here. The title and the strings can be edited from the \"Editing translations\" menu in the toolbar, the rest in the editor."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:327
+msgid "Custom field"
+msgstr ""
+
+#. translators: %s is a language name.
+#: modules/frontend-editor/frontend-editor.php:330
+msgid "%s (this page)"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:331
+msgid "not translated"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:332
+msgid "different layout"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:333
+msgid "not allowed"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:334
+#: modules/translation-status/translation-status-admin.php:408
+#: settings/table-languages.php:209
+#: js/build/translation-status-panel.js:67
+msgid "Edit"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:335
+msgid "Open this page"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:336
+msgid "Add translation"
+msgstr ""
+
+#. translators: 1: language name of the edited text, 2: language name of the page.
+#: modules/frontend-editor/frontend-editor.php:338
+msgid "You are editing the %1$s text. This page shows the %2$s text."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:339
+msgid "Edited language"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:340
+msgid "No translatable strings were found on this page."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:341
+msgid "Filter strings"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:342
+msgid "Registered string"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:343
+msgid "Saved. Reload the page to see the change everywhere."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:344
+msgid "This string cannot be translated here."
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:345
+msgid "Discard your unsaved changes?"
+msgstr ""
+
+#: modules/frontend-editor/frontend-editor.php:346
+msgid "Ctrl+Enter to save, Escape to cancel."
+msgstr ""
+
+#: modules/import-export/export/export-bulk-option.php:37
+msgid "Export selected content into a file"
+msgstr ""
+
+#: modules/import-export/export/export-bulk-option.php:135
+#: modules/import-export/export/export-strings-action.php:147
+msgid "Error: invalid target languages."
+msgstr ""
+
+#: modules/import-export/export/export-bulk-option.php:160
+msgid "The posts selected for translation could not be found."
+msgstr ""
+
+#: modules/import-export/export/export-bulk-option.php:171
+msgid "The posts selected for translation have no language."
+msgstr ""
+
+#: modules/import-export/export/export-bulk-option.php:176
+msgid "The posts are already in the target language. Please select a different language for the translation."
+msgstr ""
+
+#. translators: %s is a post title.
+#: modules/import-export/export/export-bulk-option.php:288
+msgctxt "quoted post title"
+msgid "\"%s\""
+msgstr ""
+
+#: modules/import-export/export/export-bulk-option.php:293
+msgid "Ambiguous choice of contents to export. Please do not select contents that are translations of each other."
+msgstr ""
+
+#. translators: %s is a list of post titles.
+#: modules/import-export/export/export-bulk-option.php:301
+msgctxt "ambiguous posts list"
+msgid "- %s."
+msgstr ""
+
+#: modules/import-export/export/export-download.php:90
+msgid "Error: ZipArchive is required to download multiple files. Please contact your host provider."
+msgstr ""
+
+#: modules/import-export/export/export-download.php:97
+msgid "Error: Upload directory must be writable. Please contact your host provider."
+msgstr ""
+
+#: modules/import-export/export/export-download.php:105
+#: modules/import-export/export/export-download.php:123
+msgid "Error: Impossible to create a Zip file."
+msgstr ""
+
+#: modules/import-export/export/export-strings-action.php:70
+msgid "Sorry, some data is missing from the form submission."
+msgstr ""
+
+#: modules/import-export/export/export-strings-action.php:138
+msgid "Error: Please select a target language."
+msgstr ""
+
+#: modules/import-export/export/view-export-file-format.php:15
+msgid "File format"
+msgstr ""
+
+#: modules/import-export/export/view-tab-export-strings.php:42
+msgid "Filter group"
+msgstr ""
+
+#: modules/import-export/export/view-tab-export-strings.php:45
+msgid "Export all groups"
+msgstr ""
+
+#: modules/import-export/export/view-tab-export-strings.php:65
+msgid "Download"
+msgstr ""
+
+#. translators: %s is a file format, for example PO
+#: modules/import-export/file-format/file-format-factory.php:147
+msgid "Error: Wrong file format. The only supported file format is %s."
+msgstr ""
+
+#. translators: %s is a suite of comma separate file formats, for example: PO, XLIFF
+#: modules/import-export/file-format/file-format-factory.php:150
+msgid "Error: Wrong file format. The supported file formats are: %s."
+msgstr ""
+
+#: modules/import-export/import-export.php:121
+msgid "Export string translations"
+msgstr ""
+
+#: modules/import-export/import-export.php:129
+msgid "Import translations"
+msgstr ""
+
+#. translators: %1$s is a language name, %2$s is a list of IDs.
+#: modules/import-export/import/import-action.php:172
+msgid "Error: The target language of the imported file (%1$s) is the language of the source content, which would be overwritten. These contents have not been imported: %2$s."
+msgstr ""
+
+#. translators: placeholders are URLs
+#: modules/import-export/import/import-action.php:242
+msgid "Error: The site targeted in the imported file does not match the current site. Found: %1$s. Expected: %2$s."
+msgstr ""
+
+#. translators: %s is the plugin's name.
+#: modules/import-export/import/import-action.php:264
+msgid "Error: The imported file has not been generated by %s."
+msgstr ""
+
+#: modules/import-export/import/import-action.php:289
+msgid "Error: No target languages have been provided in the imported file."
+msgstr ""
+
+#: modules/import-export/import/import-action.php:296
+msgid "Error: You are trying to import a file in a language which doesn't exist on your site."
+msgstr ""
+
+#: modules/import-export/import/import-action.php:315
+msgid "Error: Please select a file to upload."
+msgstr ""
+
+#: modules/import-export/import/import-action.php:333
+msgid "Upload failed."
+msgstr ""
+
+#. translators: %d is a number of posts translations
+#: modules/import-export/import/import-posts.php:158
+msgid "%d post translation updated."
+msgid_plural "%d posts translations updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s is the post IDs
+#: modules/import-export/import/import-posts.php:180
+msgid "Warning: a matching source wasn't found for post ID: %s"
+msgid_plural "Warning: matching sources weren't found for post IDs: %s"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s is the post IDs
+#: modules/import-export/import/import-posts.php:197
+msgid "Warning: you are not allowed to translate the post ID: %s"
+msgid_plural "Warning: you are not allowed to translate the post IDs: %s"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d is a number of strings translations
+#: modules/import-export/import/import-strings.php:140
+msgid "%d string translation updated."
+msgid_plural "%d string translations updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d is a number of terms translations
+#: modules/import-export/import/import-terms.php:116
+msgid "%d term translation updated."
+msgid_plural "%d terms translations updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s is the term IDs
+#: modules/import-export/import/import-terms.php:139
+msgid "Warning: you are not allowed to translate the term ID: %s"
+msgid_plural "Warning: you are not allowed to translate the term IDs: %s"
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/import-export/import/view-tab-import-translations.php:21
+msgid "Upload a translation file"
+msgstr ""
+
+#: modules/import-export/import/view-tab-import-translations.php:26
+msgid "Select the status of the imported posts"
+msgstr ""
+
+#: modules/import-export/import/view-tab-import-translations.php:28
+msgid "Draft"
+msgstr ""
+
+#: modules/import-export/import/view-tab-import-translations.php:29
+msgid "Publish"
+msgstr ""
+
+#: modules/import-export/import/view-tab-import-translations.php:33
+msgid "Upload"
+msgstr ""
+
+#: modules/import-export/po/po-import.php:56
+msgid "Error: Invalid file."
+msgstr ""
+
+#: modules/import-export/xliff/xliff-format.php:47
+#: modules/import-export/xliff/xliff-import.php:51
+msgid "Your PHP installation appears to be missing the libxml extension which is required by the importer."
+msgstr ""
+
+#: modules/import-export/xliff/xliff-import.php:59
+msgid "Something went wrong during the file import."
+msgstr ""
+
+#: modules/import-export/xliff/xliff-import.php:75
+msgid "An error occurred during the import, please make sure your file is correctly formatted."
+msgstr ""
+
+#. translators: %s is a list of versions.
+#: modules/import-export/xliff/xliff-import.php:194
+msgid "The xliff version is not supported."
+msgstr ""
+
+#: modules/import-polylang/import-polylang.php:158
+msgid "The data have been imported."
+msgstr ""
+
+#: modules/import-polylang/import-polylang.php:170
+msgid "Strope Translate: existing multilingual data found"
+msgstr ""
+
+#: modules/import-polylang/import-polylang.php:172
+msgid "Strope Translate can import the languages, translations, strings translations, settings, language switchers and widgets of your site from Polylang (version 3.4 or later). It stays inactive until the data are imported."
+msgstr ""
+
+#: modules/import-polylang/import-polylang.php:175
+msgid "The data are converted in place: please back up your database before importing."
+msgstr ""
+
+#: modules/import-polylang/import-polylang.php:180
+msgid "Import from Polylang"
+msgstr ""
+
+#: modules/import-polylang/import-polylang.php:195
+msgid "Sorry, you are not allowed to import data."
+msgstr ""
+
+#: modules/import-polylang/import-polylang.php:220
+msgid "There are no data to import."
+msgstr ""
+
+#: modules/import-polylang/import-polylang.php:224
+#: modules/import-polylang/import-polylang.php:243
+msgid "The data have already been imported."
+msgstr ""
+
+#. translators: %s is a version number.
+#: modules/import-polylang/import-polylang.php:231
+msgid "The data can only be imported from version %s or later. Please update the previous plugin, visit its settings once, then import again."
+msgstr ""
+
+#: modules/import-polylang/import-polylang.php:237
+msgid "An import is already running. Please wait a few minutes before trying again."
+msgstr ""
+
+#. translators: %d: number of settings.
+#: modules/import-polylang/import-polylang.php:673
+msgid "Settings: %d"
+msgstr ""
+
+#. translators: %d: number of languages.
+#: modules/import-polylang/import-polylang.php:675
+msgid "Languages: %d"
+msgstr ""
+
+#. translators: %d: number of string translations.
+#: modules/import-polylang/import-polylang.php:677
+msgid "Strings translations: %d"
+msgstr ""
+
+#. translators: %d: number of language switchers in menus.
+#: modules/import-polylang/import-polylang.php:679
+msgid "Menu language switchers: %d"
+msgstr ""
+
+#. translators: %d: number of posts with language switcher blocks.
+#: modules/import-polylang/import-polylang.php:681
+msgid "Contents with language switcher blocks: %d"
+msgstr ""
+
+#. translators: %d: number of widgets.
+#: modules/import-polylang/import-polylang.php:683
+msgid "Widgets: %d"
+msgstr ""
+
+#. translators: %d: number of user preferences.
+#: modules/import-polylang/import-polylang.php:685
+msgid "User preferences: %d"
+msgstr ""
+
+#: modules/legacy-api/settings-legacy-api.php:33
+msgid "Legacy API compatibility"
+msgstr ""
+
+#: modules/legacy-api/settings-legacy-api.php:34
+msgid "Lets themes and plugins written for Polylang keep working: provides the pll_*() functions, PLL(), the class names and the hooks they use. Activate it if you switched from Polylang, or if a theme or plugin needs it."
+msgstr ""
+
+#: modules/locale-fallback/view-locale-fallback.php:13
+msgid "Locale fallback"
+msgstr ""
+
+#: modules/locale-fallback/view-locale-fallback.php:15
+msgid "WordPress locale to use if a translation file is not available in the main locale."
+msgstr ""
+
+#. translators: %s: task type
+#: modules/machine-translation/lib/wasm-worker/php/Queue.php:246
+msgid "Unknown task type: %s"
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Queue.php:274
+msgid "A job this one depends on does not exist."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Queue.php:277
+#: modules/machine-translation/lib/wasm-worker/php/Queue.php:1506
+msgid "A job this one depends on failed or was cancelled."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Queue.php:326
+msgid "The job could not be created."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Queue.php:333
+msgid "The job units could not be created."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Queue.php:366
+msgid "A plan step must return up to 5000 units and a `next` cursor."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Queue.php:377
+msgid "Unit keys must be unique, non-empty, at most 191 bytes, and each unit needs an input."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Queue.php:509
+msgid "Planning paused after a database error, it will be retried."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Queue.php:852
+msgid "The worker is no longer allowed to run this unit."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Queue.php:854
+msgid "The unit ran longer than its maximum runtime."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Queue.php:904
+msgid "You may no longer work on this unit."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Queue.php:987
+msgid "Invalid artifact key."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Queue.php:1021
+msgid "The file could not be recorded."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Queue.php:1101
+msgid "A completion ID and a result are required."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Queue.php:1143
+msgid "The result did not pass validation."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Queue.php:1341
+msgid "The worker stopped answering too many times."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Queue.php:1665
+#: modules/machine-translation/lib/wasm-worker/php/Queue.php:1751
+#: modules/machine-translation/mt-queue.php:492
+msgid "Unknown action."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Queue.php:1755
+msgid "The job cannot do that in its current state."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Queue.php:1861
+msgid "The lease expired, was taken over, or its job stopped."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Queue.php:1885
+msgid "The data is not valid JSON, or too large."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Rest.php:225
+msgid "A checkpoint is required."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Rest.php:241
+msgid "The file did not arrive (check upload_max_filesize and post_max_size)."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Rest.php:458
+#: modules/machine-translation/mt-rest.php:304
+msgid "Not found."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Storage.php:118
+msgid "This plugin stores private files: set its staging_dir to a folder outside the web root."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Storage.php:126
+#: modules/machine-translation/lib/wasm-worker/php/Storage.php:171
+msgid "The staging folder could not be created."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Storage.php:161
+msgid "The file is missing or too large."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Storage.php:166
+msgid "The file was damaged during the upload (checksum mismatch)."
+msgstr ""
+
+#: modules/machine-translation/lib/wasm-worker/php/Storage.php:181
+msgid "The file could not be saved."
+msgstr ""
+
+#: modules/machine-translation/machine-translation.php:244
+msgid "Waiting for work"
+msgstr ""
+
+#: modules/machine-translation/machine-translation.php:245
+msgid "Stopped"
+msgstr ""
+
+#: modules/machine-translation/machine-translation.php:246
+msgid "Starting the translation engine…"
+msgstr ""
+
+#. translators: %s: language pair, e.g. nl-en.
+#: modules/machine-translation/machine-translation.php:248
+msgid "Loading the %s language model…"
+msgstr ""
+
+#. translators: %s: download progress, e.g. 40%.
+#: modules/machine-translation/machine-translation.php:250
+msgid "Downloading the language model: %s"
+msgstr ""
+
+#. translators: %s: number of words per second.
+#: modules/machine-translation/machine-translation.php:252
+msgid "Translating (%s words per second)"
+msgstr ""
+
+#: modules/machine-translation/machine-translation.php:253
+msgid "Translating in another tab of this browser"
+msgstr ""
+
+#. translators: %s: error message.
+#: modules/machine-translation/machine-translation.php:255
+msgid "Error: %s"
+msgstr ""
+
+#: modules/machine-translation/machine-translation.php:256
+msgid "This browser cannot run the translation engine."
+msgstr ""
+
+#. translators: %s: translation speed, e.g. 120 w/s (words per second).
+#: modules/machine-translation/machine-translation.php:258
+msgid "Translating %s"
+msgstr ""
+
+#. translators: %s: language name
+#: modules/machine-translation/machine-translation.php:310
+msgid "Machine translate from %s"
+msgstr ""
+
+#: modules/machine-translation/machine-translation.php:311
+#: modules/machine-translation/mt-admin.php:110
+msgid "Translating…"
+msgstr ""
+
+#: modules/machine-translation/machine-translation.php:312
+msgid "Machine translation: check it, then save."
+msgstr ""
+
+#: modules/machine-translation/machine-translation.php:313
+msgid "This text could not be machine translated."
+msgstr ""
+
+#: modules/machine-translation/machine-translation.php:314
+msgid "Machine translate this page"
+msgstr ""
+
+#: modules/machine-translation/machine-translation.php:315
+msgid "Added to the translation queue…"
+msgstr ""
+
+#. translators: %d: percentage
+#: modules/machine-translation/machine-translation.php:317
+msgid "Translating the page: %d%%"
+msgstr ""
+
+#: modules/machine-translation/machine-translation.php:318
+msgid "Translated: a draft is waiting for your review."
+msgstr ""
+
+#. translators: %s: error message
+#: modules/machine-translation/machine-translation.php:320
+msgid "The page could not be translated: %s"
+msgstr ""
+
+#: modules/machine-translation/machine-translation.php:321
+msgid "Edit the draft"
+msgstr ""
+
+#: modules/machine-translation/machine-translation.php:322
+#: modules/machine-translation/mt-admin.php:190
+msgid "Machine translate"
+msgstr ""
+
+#: modules/machine-translation/machine-translation.php:323
+msgid "Machine translate the empty strings"
+msgstr ""
+
+#. translators: %d: number of strings
+#: modules/machine-translation/machine-translation.php:325
+msgid "%d strings filled: check them, then save each one."
+msgstr ""
+
+#: modules/machine-translation/machine-translation.php:326
+msgid "The machine translation is the same as the original text (already in that language?)."
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:106
+msgid "Machine translation, from:"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:107
+msgid "Translate empty fields"
+msgstr ""
+
+#. translators: %s: language name
+#: modules/machine-translation/mt-admin.php:109
+msgid "Machine translate into %s"
+msgstr ""
+
+#. translators: %d: number of fields
+#: modules/machine-translation/mt-admin.php:112
+msgid "%d fields filled: check them, then save."
+msgstr ""
+
+#. translators: %d: number of strings
+#: modules/machine-translation/mt-admin.php:114
+msgid "%d skipped, already translated by the language files of the theme or plugin."
+msgstr ""
+
+#. translators: %d: number of strings
+#: modules/machine-translation/mt-admin.php:116
+msgid "%d could not be translated."
+msgstr ""
+
+#. translators: %d: number of strings
+#: modules/machine-translation/mt-admin.php:118
+msgid "%d left empty: their machine translation is the same as the original text (already in that language?)."
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:119
+msgid "Machine translation: check it before saving."
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:150
+#: modules/machine-translation/settings-machine-translation.php:33
+msgid "Machine translation"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:256
+msgid "Start translating in this tab"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:257
+msgid "Stop"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:258
+msgid "Install"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:259
+#: settings/view-tab-lang.php:172
+msgid "Update"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:260
+#: modules/wizard/view-wizard-step-languages.php:63
+msgid "Remove"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:261
+msgid "Installed"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:262
+msgid "Not available"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:263
+msgid "Remove the models of this language pair?"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:264
+msgid "Pause"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:265
+msgid "Resume"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:267
+msgid "Retry failed"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:268
+msgid "Details"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:269
+msgid "Edit translation"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:270
+msgid "Nothing translated yet. Select posts or pages in their lists and use the \"Machine translate\" bulk action, or use the form above."
+msgstr ""
+
+#. translators: 1: number of translated posts, 2: total number of posts.
+#: modules/machine-translation/mt-admin.php:272
+msgid "%1$d of %2$d posts"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:274
+#: modules/translation-workflow/translation-jobs.php:120
+msgid "In progress"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:275
+msgid "Paused"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:276
+#: modules/translation-workflow/translation-jobs.php:123
+msgid "Cancelled"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:277
+#: modules/translation-workflow/translation-jobs.php:122
+msgid "Done"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:278
+#: modules/machine-translation/mt-admin.php:279
+msgid "Waiting"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:280
+msgid "Translating"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:281
+msgid "Saving"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:282
+msgid "Skipped"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:283
+msgid "Failed"
+msgstr ""
+
+#. translators: %d: number of skipped translations.
+#: modules/machine-translation/mt-admin.php:286
+msgid "%d skipped"
+msgstr ""
+
+#. translators: %d: number of failed translations.
+#: modules/machine-translation/mt-admin.php:288
+msgid "%d failed"
+msgstr ""
+
+#: modules/machine-translation/mt-admin.php:328
+msgid "Sorry, you are not allowed to translate content."
+msgstr ""
+
+#. translators: %d: number of translations
+#: modules/machine-translation/mt-admin.php:351
+msgid "%d translation was added to the queue."
+msgid_plural "%d translations were added to the queue."
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/machine-translation/mt-admin.php:375
+msgid "Sorry, you are not allowed to manage the glossary."
+msgstr ""
+
+#. translators: %d: number of glossary terms
+#: modules/machine-translation/mt-admin.php:387
+msgid "Glossary saved: %d term."
+msgid_plural "Glossary saved: %d terms."
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/machine-translation/mt-engine-files.php:390
+msgid "The Firefox Translations index could not be read."
+msgstr ""
+
+#: modules/machine-translation/mt-engine-files.php:506
+msgid "This language pair is not available."
+msgstr ""
+
+#: modules/machine-translation/mt-engine-files.php:643
+msgid "The folder for the translation models could not be created in the uploads directory."
+msgstr ""
+
+#: modules/machine-translation/mt-engine-files.php:651
+msgid "Invalid file in the translations index."
+msgstr ""
+
+#: modules/machine-translation/mt-engine-files.php:673
+msgid "A translation model file could not be downloaded. Please try again."
+msgstr ""
+
+#: modules/machine-translation/mt-engine-files.php:678
+msgid "A downloaded translation model file was damaged (its checksum does not match). Please try again."
+msgstr ""
+
+#: modules/machine-translation/mt-engine-files.php:683
+msgid "A translation model file could not be saved."
+msgstr ""
+
+#: modules/machine-translation/mt-queue.php:57
+msgid "Choose at least one language you are allowed to translate into."
+msgstr ""
+
+#. translators: %s: post title
+#: modules/machine-translation/mt-queue.php:75
+msgid "\"%s\" has no language."
+msgstr ""
+
+#. translators: 1: source language, 2: target language
+#: modules/machine-translation/mt-queue.php:92
+msgid "%1$s to %2$s"
+msgstr ""
+
+#. translators: %s: list of language pairs
+#: modules/machine-translation/mt-queue.php:114
+msgid "Install the translation models for these languages first: %s."
+msgstr ""
+
+#: modules/machine-translation/mt-queue.php:121
+msgid "There is nothing to translate."
+msgstr ""
+
+#. translators: %d: maximum number of translations
+#: modules/machine-translation/mt-queue.php:129
+msgid "Choose fewer posts: at most %d translations can be added at once."
+msgstr ""
+
+#: modules/machine-translation/mt-queue.php:150
+msgid "The translation could not be started."
+msgstr ""
+
+#. translators: 1: post title, 2: language name
+#: modules/machine-translation/mt-queue.php:179
+msgid "\"%1$s\" is already being translated into %2$s."
+msgstr ""
+
+#: modules/machine-translation/mt-queue.php:282
+#: modules/machine-translation/mt-task.php:79
+msgid "The post or its language no longer exists."
+msgstr ""
+
+#: modules/machine-translation/mt-queue.php:287
+msgid "The translation was edited by a person in the meantime, it is kept."
+msgstr ""
+
+#: modules/machine-translation/mt-queue.php:292
+msgid "You are not allowed to edit this translation."
+msgstr ""
+
+#: modules/machine-translation/mt-queue.php:481
+msgid "Sorry, you are not allowed to change this translation."
+msgstr ""
+
+#: modules/machine-translation/mt-rest.php:245
+msgid "This language pair is not used by the site."
+msgstr ""
+
+#. translators: 1: post title, 2: language name
+#: modules/machine-translation/mt-task.php:88
+msgid "\"%1$s\" already has a translation into %2$s written or edited by a person, it is kept."
+msgstr ""
+
+#: modules/machine-translation/mt-task.php:215
+msgid "The translation engine returned no text."
+msgstr ""
+
+#. translators: %d: number of text parts
+#: modules/machine-translation/mt-task.php:239
+msgid "%d part of the text could not be translated."
+msgid_plural "%d parts of the text could not be translated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/machine-translation/settings-machine-translation.php:34
+msgid "Translates posts and pages automatically, in the browsers of your editors, with the engine of Firefox Translations. Your server does no translation work and the text is never sent to a translation service. The translations are saved as drafts marked as needing a review, and translations written by a person are never replaced."
+msgstr ""
+
+#: modules/machine-translation/settings-machine-translation.php:51
+msgid "New translations are saved as"
+msgstr ""
+
+#: modules/machine-translation/settings-machine-translation.php:54
+msgid "Drafts, published after a review (recommended)"
+msgstr ""
+
+#: modules/machine-translation/settings-machine-translation.php:58
+msgid "Published posts, still marked as needing a review"
+msgstr ""
+
+#: modules/machine-translation/settings-machine-translation.php:64
+msgid "Editors can let their browser translate in the background while they use the admin (each editor can turn it off)"
+msgstr ""
+
+#: modules/machine-translation/settings-machine-translation.php:68
+msgid "Never translate these words and names (one per line):"
+msgstr ""
+
+#: modules/machine-translation/settings-machine-translation.php:75
+msgid "Terms which must always be translated the same way go in the glossary."
+msgstr ""
+
+#: modules/machine-translation/settings-machine-translation.php:77
+msgid "Edit the glossary"
+msgstr ""
+
+#: modules/machine-translation/settings-machine-translation.php:86
+msgid "Install the language models and translate your content"
+msgstr ""
+
+#: modules/machine-translation/view-machine-translation.php:32
+msgid "Translate the selected content"
+msgstr ""
+
+#: modules/machine-translation/view-machine-translation.php:32
+msgid "Translate your content"
+msgstr ""
+
+#. translators: %d: number of other posts
+#: modules/machine-translation/view-machine-translation.php:46
+msgid "and %d more"
+msgstr ""
+
+#: modules/machine-translation/view-machine-translation.php:51
+msgid "Translates the published content which has no translation yet in the chosen languages."
+msgstr ""
+
+#: modules/machine-translation/view-machine-translation.php:59
+msgid "Translate from"
+msgstr ""
+
+#: modules/machine-translation/view-machine-translation.php:69
+msgid "Into"
+msgstr ""
+
+#: modules/machine-translation/view-machine-translation.php:76
+msgid "Save new translations as"
+msgstr ""
+
+#: modules/machine-translation/view-machine-translation.php:77
+msgid "Drafts"
+msgstr ""
+
+#: modules/machine-translation/view-machine-translation.php:78
+msgid "Published"
+msgstr ""
+
+#: modules/machine-translation/view-machine-translation.php:81
+msgid "Translations written or edited by a person are never replaced. Every machine translation is marked as needing a review until someone saves it in the editor."
+msgstr ""
+
+#: modules/machine-translation/view-machine-translation.php:83
+msgid "Translate missing content"
+msgstr ""
+
+#: modules/machine-translation/view-machine-translation.php:95
+msgid "Glossary"
+msgstr ""
+
+#: modules/machine-translation/view-machine-translation.php:96
+msgid "Terms always translated the same way, e.g. the names of your products or the words of your shop. Write each term in the languages you want, as in the middle of a sentence: a term is used when it has a translation in both languages of a translation. Terms are found whatever their case, and get a capital at the start of a sentence."
+msgstr ""
+
+#: modules/machine-translation/view-machine-translation.php:129
+msgid "Save the glossary"
+msgstr ""
+
+#: modules/machine-translation/view-machine-translation.php:130
+msgid "Add a term"
+msgstr ""
+
+#: modules/machine-translation/view-machine-translation.php:132
+msgid "Applies to the next machine translations, including the texts already in the translation memory. Translations already saved are not changed."
+msgstr ""
+
+#: modules/machine-translation/view-machine-translation.php:140
+msgid "This browser"
+msgstr ""
+
+#: modules/machine-translation/view-machine-translation.php:141
+msgid "The translations are made by your browser. Keep a tab of the admin open until the queue is empty."
+msgstr ""
+
+#: modules/machine-translation/view-machine-translation.php:145
+msgid "Translate in the background while I use the admin"
+msgstr ""
+
+#: modules/machine-translation/view-machine-translation.php:151
+msgid "Language models"
+msgstr ""
+
+#: modules/machine-translation/view-machine-translation.php:153
+msgid "Add a second language to the site first."
+msgstr ""
+
+#: modules/machine-translation/view-machine-translation.php:155
+msgid "Each translation direction needs a model of about 25 MB, downloaded once to your site from Mozilla (Firefox Translations). Languages other than English are translated through English."
+msgstr ""
+
+#. translators: %s: link to Firefox Translations
+#: modules/machine-translation/view-machine-translation.php:179
+msgid "Translation engine: Bergamot, from %s (Mozilla Public License 2.0). Your text is never sent to a translation service."
+msgstr ""
+
+#: modules/media/admin-advanced-media.php:66
+#: modules/sync-post/sync-post.php:91
+msgid "Copy original items to selected languages"
+msgstr ""
+
+#: modules/media/settings-advanced-media.php:34
+#: modules/wizard/view-wizard-step-media.php:21
+#: modules/wizard/wizard.php:497
+#: settings/settings-media.php:33
+msgid "Media"
+msgstr ""
+
+#: modules/media/settings-advanced-media.php:35
+msgid "Activate languages and translations for media. Provides options for multilingual media management."
+msgstr ""
+
+#: modules/media/settings-advanced-media.php:52
+msgid "Automatically duplicate media in all languages when uploading a new file."
+msgstr ""
+
+#: modules/rest/rest-api.php:133
+msgid "Limit results to items of an object type."
+msgstr ""
+
+#: modules/rest/rest-api.php:139
+msgid "Limit results to untranslated items in a language."
+msgstr ""
+
+#: modules/rest/rest-api.php:145
+msgid "Limit results to items in a language."
+msgstr ""
+
+#: modules/rest/rest-api.php:151
+msgid "Scope under which the request is made; determines fields present in response."
+msgstr ""
+
+#: modules/rest/rest-api.php:157
+msgid "Limit results to those matching a string."
+msgstr ""
+
+#: modules/rest/rest-api.php:161
+msgid "Add this post's translation to results."
+msgstr ""
+
+#: modules/rest/rest-filtered-object.php:103
+msgid "Limit results to a specific language. By default, results are not filtered by language."
+msgstr ""
+
+#: modules/rest/rest-post.php:161
+msgid "Sorry, you are not allowed to use this language."
+msgstr ""
+
+#: modules/rest/rest-post.php:200
+msgid "Translations table"
+msgstr ""
+
+#: modules/share-slug/settings-preview-share-slug.php:40
+msgid "Share slugs"
+msgstr ""
+
+#: modules/share-slug/settings-preview-share-slug.php:56
+msgid "Allows to share the same URL slug across languages for posts and terms."
+msgstr ""
+
+#: modules/share-slug/settings-share-slug.php:37
+msgid "The module is automatically deactivated when using plain permalinks or when the language is set from the content in the URL modifications."
+msgstr ""
+
+#: modules/site-health/admin-site-health.php:124
+msgid "Detect browser language deactivated"
+msgstr ""
+
+#: modules/site-health/admin-site-health.php:127
+msgid "Detect browser language activated"
+msgstr ""
+
+#: modules/site-health/admin-site-health.php:131
+#: settings/settings-url.php:152
+msgid "Remove /language/ in pretty permalinks"
+msgstr ""
+
+#: modules/site-health/admin-site-health.php:134
+#: settings/settings-url.php:163
+msgid "Keep /language/ in pretty permalinks"
+msgstr ""
+
+#: modules/site-health/admin-site-health.php:138
+#: settings/settings-url.php:130
+msgid "Hide URL language information for default language"
+msgstr ""
+
+#: modules/site-health/admin-site-health.php:141
+msgid "Display URL language information for default language"
+msgstr ""
+
+#: modules/site-health/admin-site-health.php:146
+#: settings/settings-url.php:63
+msgid "The language is set from content"
+msgstr ""
+
+#: modules/site-health/admin-site-health.php:149
+#: settings/settings-url.php:73
+msgid "The language is set from the directory name in pretty permalinks"
+msgstr ""
+
+#: modules/site-health/admin-site-health.php:152
+#: settings/settings-url.php:84
+msgid "The language is set from the subdomain name in pretty permalinks"
+msgstr ""
+
+#: modules/site-health/admin-site-health.php:155
+#: settings/settings-url.php:95
+msgid "The language is set from different domains"
+msgstr ""
+
+#: modules/site-health/admin-site-health.php:161
+#: settings/settings-url.php:185
+msgid "The front page URL contains the language code instead of the page name or page id"
+msgstr ""
+
+#: modules/site-health/admin-site-health.php:164
+msgid "The front page URL contains the page name or page id instead of the language code"
+msgstr ""
+
+#: modules/site-health/admin-site-health.php:169
+msgid "The media are not translated"
+msgstr ""
+
+#: modules/site-health/admin-site-health.php:172
+msgid "The media are translated"
+msgstr ""
+
+#: modules/site-health/admin-site-health.php:177
+msgid "Synchronization disabled"
+msgstr ""
+
+#. translators: placeholder is the plugin name
+#: modules/site-health/admin-site-health.php:253
+msgid "%s options"
+msgstr ""
+
+#. translators: placeholder is the language name
+#. translators: %s is a language name
+#: modules/site-health/admin-site-health.php:296
+#: modules/translation-workflow/translation-jobs-notifier.php:203
+msgid "Language: %s"
+msgstr ""
+
+#. translators: placeholder is the flag image
+#: modules/site-health/admin-site-health.php:298
+msgid "Flag used in the language switcher: %s"
+msgstr ""
+
+#: modules/site-health/admin-site-health.php:346
+msgid "Undefined"
+msgstr ""
+
+#: modules/site-health/admin-site-health.php:361
+msgid "Homepage translated"
+msgstr ""
+
+#: modules/site-health/admin-site-health.php:377
+msgid "All languages have a translated homepage"
+msgstr ""
+
+#: modules/site-health/admin-site-health.php:385
+msgid "It is mandatory to translate the static front page in all languages."
+msgstr ""
+
+#: modules/site-health/admin-site-health.php:395
+msgid "The homepage is not translated in all languages"
+msgstr ""
+
+#: modules/site-health/admin-site-health.php:416
+msgid "Posts without language"
+msgstr ""
+
+#: modules/site-health/admin-site-health.php:423
+msgid "Terms without language"
+msgstr ""
+
+#: modules/site-health/admin-site-health.php:434
+msgid "PHP SimpleXML extension"
+msgstr ""
+
+#: modules/site-health/admin-site-health.php:435
+msgid "Not loaded. Contact your host provider."
+msgstr ""
+
+#. translators: placeholder is the plugin name
+#: modules/site-health/admin-site-health.php:443
+msgid "%s information"
+msgstr ""
+
+#: modules/sticky-links/settings-sticky-links.php:33
+msgid "Sticky links"
+msgstr ""
+
+#: modules/sticky-links/settings-sticky-links.php:34
+msgid "Keeps the links between your posts, pages and categories working and in the right language. The links are corrected in the saved content: when you save, and in the background when a linked page changes its address or gets a published translation. Each background correction is saved as a revision."
+msgstr ""
+
+#: modules/sticky-links/settings-sticky-links.php:51
+msgid "Existing content"
+msgstr ""
+
+#: modules/sticky-links/settings-sticky-links.php:53
+msgid "The links of the existing content are being updated in the background."
+msgstr ""
+
+#: modules/sticky-links/settings-sticky-links.php:57
+msgid "Update the links in all existing content (in the background, with a revision for each modified post)"
+msgstr ""
+
+#. translators: %d is a number of posts
+#: modules/sticky-links/settings-sticky-links.php:65
+msgid "%d post is waiting for its links to be updated."
+msgid_plural "%d posts are waiting for their links to be updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/sticky-links/settings-sticky-links.php:80
+msgid "Broken links"
+msgstr ""
+
+#: modules/sticky-links/settings-sticky-links.php:81
+msgid "These links point to content which was deleted. Edit the posts to correct or remove them."
+msgstr ""
+
+#: modules/sticky-links/settings-sticky-links.php:86
+#: js/build/sidebar.js:3054
+msgid "(no title)"
+msgstr ""
+
+#: modules/string-discovery/string-discovery-admin.php:83
+msgid "Untranslated strings are now displayed with an empty field, the original text being shown as a placeholder. Leave a field empty to keep a string untranslated: the original text is then displayed on your website."
+msgstr ""
+
+#: modules/string-discovery/string-discovery-admin.php:269
+msgid "Some translations could not be saved."
+msgstr ""
+
+#. translators: %d is a number of translations
+#: modules/string-discovery/string-discovery-admin.php:290
+msgid "%d translation updated."
+msgid_plural "%d translations updated."
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/string-discovery/string-discovery-rest.php:169
+msgid "Sorry, you are not allowed to scan the themes and plugins."
+msgstr ""
+
+#: modules/string-discovery/string-discovery-rest.php:295
+#: modules/string-discovery/string-discovery.php:109
+msgid "Sorry, you are not allowed to translate strings in this language."
+msgstr ""
+
+#: modules/string-discovery/string-discovery-rest.php:320
+#: modules/string-discovery/string-discovery.php:118
+#: modules/string-discovery/string-discovery.php:149
+msgid "The string could not be saved."
+msgstr ""
+
+#: modules/string-discovery/string-discovery.php:178
+msgid "Sorry, you are not allowed to change the WordPress core strings."
+msgstr ""
+
+#: modules/string-discovery/string-scanner.php:251
+msgid "Another scan request is running, please retry in a moment."
+msgstr ""
+
+#: modules/string-discovery/table-discovered-strings.php:91
+#: settings/table-string.php:165
+msgid "String"
+msgstr ""
+
+#: modules/string-discovery/table-discovered-strings.php:92
+#: modules/string-discovery/view-discovered-strings.php:61
+msgid "Text domain"
+msgstr ""
+
+#: modules/string-discovery/table-discovered-strings.php:131
+msgid "No strings found yet. Scan the active theme and plugins to discover their strings."
+msgstr ""
+
+#: modules/string-discovery/table-discovered-strings.php:133
+msgid "No strings found."
+msgstr ""
+
+#: modules/string-discovery/table-discovered-strings.php:226
+msgid "Plural:"
+msgstr ""
+
+#: modules/string-discovery/table-discovered-strings.php:230
+msgid "Context:"
+msgstr ""
+
+#: modules/string-discovery/table-discovered-strings.php:236
+msgid "Sources"
+msgstr ""
+
+#: modules/string-discovery/table-discovered-strings.php:258
+#: modules/string-discovery/table-discovered-strings.php:367
+msgid "Other"
+msgstr ""
+
+#. translators: %s is a language name
+#: modules/string-discovery/table-discovered-strings.php:285
+msgid "%s (override)"
+msgstr ""
+
+#. translators: %s is a language name
+#: modules/string-discovery/table-discovered-strings.php:304
+msgid "%s, singular"
+msgstr ""
+
+#. translators: %s is a language name
+#: modules/string-discovery/table-discovered-strings.php:306
+msgid "%s, plural"
+msgstr ""
+
+#. translators: 1: language name, 2: plural form number
+#: modules/string-discovery/table-discovered-strings.php:309
+msgid "%1$s, form %2$d"
+msgstr ""
+
+#: modules/string-discovery/table-discovered-strings.php:361
+msgid "Filter by theme or plugin"
+msgstr ""
+
+#: modules/string-discovery/table-discovered-strings.php:363
+msgid "All themes and plugins"
+msgstr ""
+
+#: modules/string-discovery/table-discovered-strings.php:371
+msgid "Filter by text domain"
+msgstr ""
+
+#: modules/string-discovery/table-discovered-strings.php:373
+msgid "All text domains"
+msgstr ""
+
+#: modules/string-discovery/table-discovered-strings.php:380
+msgid "Filter by status"
+msgstr ""
+
+#: modules/string-discovery/table-discovered-strings.php:384
+msgid "All strings"
+msgstr ""
+
+#: modules/string-discovery/table-discovered-strings.php:385
+msgid "Missing translations"
+msgstr ""
+
+#: modules/string-discovery/table-discovered-strings.php:386
+msgid "Translated in all languages"
+msgstr ""
+
+#: modules/string-discovery/table-discovered-strings.php:393
+#: modules/translation-workflow/table-translation-jobs.php:361
+#: settings/table-string.php:374
+msgid "Filter"
+msgstr ""
+
+#: modules/string-discovery/view-discovered-strings.php:24
+#: settings/view-tab-strings.php:19
+msgid "Theme and plugin strings"
+msgstr ""
+
+#: modules/string-discovery/view-discovered-strings.php:26
+msgid "Translate or change any text of the active theme and plugins, including in the default language, without editing translation files."
+msgstr ""
+
+#: modules/string-discovery/view-discovered-strings.php:30
+msgid "Scan now"
+msgstr ""
+
+#: modules/string-discovery/view-discovered-strings.php:33
+msgid "Resume the interrupted scan"
+msgstr ""
+
+#. translators: %s is a date
+#: modules/string-discovery/view-discovered-strings.php:40
+msgid "Last scan: %s"
+msgstr ""
+
+#: modules/string-discovery/view-discovered-strings.php:44
+msgid "The active theme and plugins have not been scanned yet."
+msgstr ""
+
+#: modules/string-discovery/view-discovered-strings.php:55
+msgid "Scanned themes and plugins"
+msgstr ""
+
+#: modules/string-discovery/view-discovered-strings.php:59
+#: settings/table-string.php:166
+msgid "Name"
+msgstr ""
+
+#: modules/string-discovery/view-discovered-strings.php:60
+msgid "Type"
+msgstr ""
+
+#: modules/string-discovery/view-discovered-strings.php:62
+msgid "Strings"
+msgstr ""
+
+#: modules/string-discovery/view-discovered-strings.php:63
+msgid "Last scan"
+msgstr ""
+
+#: modules/string-discovery/view-discovered-strings.php:70
+msgid "Theme"
+msgstr ""
+
+#: modules/string-discovery/view-discovered-strings.php:70
+msgid "Plugin"
+msgstr ""
+
+#: modules/string-discovery/view-discovered-strings.php:86
+msgid "Search strings"
+msgstr ""
+
+#: modules/string-discovery/view-discovered-strings.php:96
+msgid "Save translations"
+msgstr ""
+
+#. translators: %s is a list of languages.
+#: modules/switcher-extras/also-available-notice.php:71
+msgid "This content is also available in: %s"
+msgstr ""
+
+#: modules/switcher-extras/floating-switcher.php:72
+msgid "Bottom right"
+msgstr ""
+
+#: modules/switcher-extras/floating-switcher.php:73
+msgid "Bottom left"
+msgstr ""
+
+#: modules/switcher-extras/floating-switcher.php:74
+msgid "Top right"
+msgstr ""
+
+#: modules/switcher-extras/floating-switcher.php:75
+msgid "Top left"
+msgstr ""
+
+#: modules/switcher-extras/floating-switcher.php:88
+#: modules/switcher-extras/settings-also-available.php:90
+msgid "Flags and language names"
+msgstr ""
+
+#: modules/switcher-extras/floating-switcher.php:89
+#: modules/switcher-extras/settings-also-available.php:89
+msgid "Language names"
+msgstr ""
+
+#: modules/switcher-extras/floating-switcher.php:90
+msgid "Flags"
+msgstr ""
+
+#: modules/switcher-extras/load.php:45
+#: modules/switcher-extras/settings-also-available.php:33
+msgid "\"Also available in\" notice"
+msgstr ""
+
+#: modules/switcher-extras/settings-also-available.php:34
+msgid "Displays a notice before or after the content of posts, listing the other languages in which they are published."
+msgstr ""
+
+#: modules/switcher-extras/settings-also-available.php:66
+#: modules/switcher-extras/settings-floating-switcher.php:51
+msgid "Position"
+msgstr ""
+
+#: modules/switcher-extras/settings-also-available.php:70
+msgid "Before the content"
+msgstr ""
+
+#: modules/switcher-extras/settings-also-available.php:71
+msgid "After the content"
+msgstr ""
+
+#: modules/switcher-extras/settings-also-available.php:85
+msgid "Format"
+msgstr ""
+
+#. translators: Do not translate %s, it is a placeholder in the text of the notice.
+#: modules/switcher-extras/settings-also-available.php:109
+msgid "%s is replaced by the list of languages. Leave empty to use the default text. A custom text can be translated in the strings translations."
+msgstr ""
+
+#: modules/switcher-extras/settings-floating-switcher.php:33
+msgid "Floating language switcher"
+msgstr ""
+
+#: modules/switcher-extras/settings-floating-switcher.php:34
+msgid "Displays a language switcher floating in a corner of every page of the site, without having to edit the theme, the menus or the widgets."
+msgstr ""
+
+#: modules/switcher-extras/settings-floating-switcher.php:66
+msgid "Display"
+msgstr ""
+
+#: modules/switcher-extras/settings-floating-switcher.php:81
+msgid "Options"
+msgstr ""
+
+#: modules/switcher-extras/settings-floating-switcher.php:99
+msgid "The dropdown opens from a button showing the current language. The list displays all the languages at once."
+msgstr ""
+
+#: modules/sync-post/sync-post-button.php:42
+#: js/build/sidebar.js:2002
+#: js/build/sidebar.js:2018
+msgid "Synchronize this post"
+msgstr ""
+
+#: modules/sync-post/sync-post-button.php:43
+#: js/build/sidebar.js:2002
+msgid "Don't synchronize this post"
+msgstr ""
+
+#: modules/sync-post/sync-post-rest.php:55
+msgid "Synchronizations"
+msgstr ""
+
+#: modules/sync-post/sync-post.php:81
+msgid "Synchronize translations in selected languages with the original items"
+msgstr ""
+
+#: modules/sync/settings-sync.php:33
+msgid "Synchronization"
+msgstr ""
+
+#: modules/sync/settings-sync.php:34
+msgid "The synchronization options allow to maintain exact same values (or translations in the case of taxonomies and page parent) of meta content between the translations of a post or page."
+msgstr ""
+
+#: modules/sync/settings-sync.php:105
+msgid "Custom fields"
+msgstr ""
+
+#: modules/sync/settings-sync.php:106
+msgid "Comment status"
+msgstr ""
+
+#: modules/sync/settings-sync.php:107
+msgid "Ping status"
+msgstr ""
+
+#: modules/sync/settings-sync.php:108
+msgid "Sticky posts"
+msgstr ""
+
+#: modules/sync/settings-sync.php:109
+msgid "Published date"
+msgstr ""
+
+#: modules/sync/settings-sync.php:110
+msgid "Post format"
+msgstr ""
+
+#: modules/sync/settings-sync.php:111
+msgid "Page parent"
+msgstr ""
+
+#: modules/sync/settings-sync.php:112
+msgid "Page template"
+msgstr ""
+
+#: modules/sync/settings-sync.php:113
+msgid "Page order"
+msgstr ""
+
+#: modules/sync/settings-sync.php:114
+msgid "Featured image"
+msgstr ""
+
+#: modules/translate-slugs/settings-preview-translate-slugs.php:40
+msgid "Translate slugs"
+msgstr ""
+
+#: modules/translate-slugs/settings-preview-translate-slugs.php:56
+msgid "Allows to translate custom post types and taxonomies slugs in URLs."
+msgstr ""
+
+#: modules/translate-slugs/settings-translate-slugs.php:33
+msgid "The module is automatically deactivated when using plain permalinks."
+msgstr ""
+
+#: modules/translate-slugs/translate-slugs-model.php:518
+msgid "URL slugs"
+msgstr ""
+
+#: modules/translation-status/translation-status-admin.php:123
+msgid "Outdated: the source changed since this translation was last updated"
+msgstr ""
+
+#: modules/translation-status/translation-status-admin.php:132
+msgid "Needs review: this content was not written by a human"
+msgstr ""
+
+#. translators: %s is a language name
+#: modules/translation-status/translation-status-admin.php:184
+msgid "Missing in %s"
+msgstr ""
+
+#: modules/translation-status/translation-status-admin.php:187
+#: modules/translation-status/translation-status-dashboard.php:120
+#: modules/translation-status/translation-status.php:1173
+#: js/build/translation-status-panel.js:47
+msgid "Outdated"
+msgstr ""
+
+#: modules/translation-status/translation-status-admin.php:188
+#: modules/translation-status/translation-status-dashboard.php:121
+#: js/build/translation-status-panel.js:120
+msgid "Needs review"
+msgstr ""
+
+#: modules/translation-status/translation-status-admin.php:236
+msgid "Filter by translation status"
+msgstr ""
+
+#: modules/translation-status/translation-status-admin.php:238
+msgid "All translation statuses"
+msgstr ""
+
+#: modules/translation-status/translation-status-admin.php:331
+#: modules/translation-status/translation-status-dashboard.php:66
+#: js/build/translation-status-panel.js:210
+msgid "Translation status"
+msgstr ""
+
+#: modules/translation-status/translation-status-admin.php:373
+#: js/build/translation-status-panel.js:187
+msgid "The translation status will be available once the post is saved."
+msgstr ""
+
+#: modules/translation-status/translation-status-admin.php:392
+#: js/build/translation-status-panel.js:42
+msgid "This post (synchronized)"
+msgstr ""
+
+#: modules/translation-status/translation-status-admin.php:394
+#: js/build/translation-status-panel.js:45
+msgid "This post (original)"
+msgstr ""
+
+#. translators: %s is a status, e.g. Outdated
+#: modules/translation-status/translation-status-admin.php:398
+#: js/build/translation-status-panel.js:50
+msgid "This post: %s"
+msgstr ""
+
+#: modules/translation-status/translation-status-admin.php:411
+#: js/build/translation-status-panel.js:88
+msgid "Mark as up to date"
+msgstr ""
+
+#: modules/translation-status/translation-status-admin.php:414
+#: js/build/translation-status-panel.js:105
+msgid "Mark as reviewed"
+msgstr ""
+
+#: modules/translation-status/translation-status-admin.php:417
+#: js/build/translation-status-panel.js:72
+msgid "Add"
+msgstr ""
+
+#: modules/translation-status/translation-status-admin.php:448
+msgid "Sorry, you are not allowed to edit this item."
+msgstr ""
+
+#: modules/translation-status/translation-status-admin.php:464
+#: modules/translation-status/translation-status-rest.php:235
+msgid "Invalid action."
+msgstr ""
+
+#: modules/translation-status/translation-status-admin.php:489
+msgid "Translation status updated."
+msgstr ""
+
+#: modules/translation-status/translation-status-admin.php:491
+#: js/build/translation-status-panel.js:177
+msgid "The translation status could not be updated."
+msgstr ""
+
+#: modules/translation-status/translation-status-dashboard.php:119
+msgid "Coverage"
+msgstr ""
+
+#: modules/translation-status/translation-status-dashboard.php:122
+msgid "Words to translate"
+msgstr ""
+
+#. translators: 1: coverage percentage, 2: number of translated items, 3: total number of items
+#: modules/translation-status/translation-status-dashboard.php:139
+msgid "%1$s%% (%2$d/%3$d)"
+msgstr ""
+
+#. translators: %s is a number of missing translations
+#: modules/translation-status/translation-status-dashboard.php:152
+msgid "%s missing"
+msgid_plural "%s missing"
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/translation-status/translation-status-dashboard.php:171
+msgid "Some word counts are still being calculated: the numbers of words will be complete in a few minutes."
+msgstr ""
+
+#. translators: 1: number of words in the missing translations, 2: number of words in the outdated translations
+#: modules/translation-status/translation-status-dashboard.php:196
+msgid "%1$s words in missing translations, %2$s words in outdated translations"
+msgstr ""
+
+#: modules/translation-status/translation-status-rest.php:45
+msgid "Translation status of the post in each language."
+msgstr ""
+
+#: modules/translation-status/translation-status-rest.php:79
+msgid "Action to perform on the post."
+msgstr ""
+
+#: modules/translation-status/translation-status-rest.php:260
+msgid "Sorry, you are not allowed to do that."
+msgstr ""
+
+#: modules/translation-status/translation-status.php:748
+msgid "This post is not a translation of another post, it cannot be outdated."
+msgstr ""
+
+#: modules/translation-status/translation-status.php:1171
+#: js/build/translation-status-panel.js:39
+msgid "Missing"
+msgstr ""
+
+#: modules/translation-status/translation-status.php:1175
+#: js/build/translation-status-panel.js:47
+msgid "Up to date"
+msgstr ""
+
+#: modules/translation-workflow/settings-translation-workflow.php:35
+msgid "Translation workflow"
+msgstr ""
+
+#: modules/translation-workflow/settings-translation-workflow.php:36
+msgid "Translator role, translation languages per user (in the user profiles) and translation jobs with email notifications."
+msgstr ""
+
+#: modules/translation-workflow/settings-translation-workflow.php:51
+msgid "Translators can publish translations and edit published content. Otherwise, they submit their translations for review and cannot modify published content."
+msgstr ""
+
+#: modules/translation-workflow/settings-translation-workflow.php:52
+msgid "Send email notifications when a translation job is assigned, ready for review or done."
+msgstr ""
+
+#: modules/translation-workflow/settings-translation-workflow.php:53
+msgid "Send a daily digest of their open translation jobs to translators."
+msgstr ""
+
+#: modules/translation-workflow/table-translation-jobs.php:243
+msgid "Words"
+msgstr ""
+
+#: modules/translation-workflow/table-translation-jobs.php:244
+msgid "Status"
+msgstr ""
+
+#: modules/translation-workflow/table-translation-jobs.php:245
+msgid "Assigned to"
+msgstr ""
+
+#: modules/translation-workflow/table-translation-jobs.php:246
+#: modules/translation-workflow/translation-jobs-admin.php:606
+msgid "Due date"
+msgstr ""
+
+#: modules/translation-workflow/table-translation-jobs.php:247
+msgid "Requested by"
+msgstr ""
+
+#: modules/translation-workflow/table-translation-jobs.php:248
+msgid "Last update"
+msgstr ""
+
+#: modules/translation-workflow/table-translation-jobs.php:289
+msgid "Open"
+msgstr ""
+
+#: modules/translation-workflow/table-translation-jobs.php:293
+msgid "All"
+msgstr ""
+
+#: modules/translation-workflow/table-translation-jobs.php:338
+msgid "Filter by language"
+msgstr ""
+
+#: modules/translation-workflow/table-translation-jobs.php:349
+msgid "Filter by assignee"
+msgstr ""
+
+#: modules/translation-workflow/table-translation-jobs.php:351
+msgid "All assignees"
+msgstr ""
+
+#: modules/translation-workflow/table-translation-jobs.php:352
+msgid "Assigned to me"
+msgstr ""
+
+#: modules/translation-workflow/table-translation-jobs.php:353
+msgid "Unassigned"
+msgstr ""
+
+#. translators: %s: number of words
+#: modules/translation-workflow/table-translation-jobs.php:371
+msgid "At least %s words to translate (still counting)"
+msgstr ""
+
+#. translators: %s: number of words
+#: modules/translation-workflow/table-translation-jobs.php:373
+msgid "%s word to translate"
+msgid_plural "%s words to translate"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s is a language name
+#: modules/translation-workflow/table-translation-jobs.php:401
+msgid "From %s"
+msgstr ""
+
+#: modules/translation-workflow/table-translation-jobs.php:461
+msgid "Not counted yet"
+msgstr ""
+
+#: modules/translation-workflow/table-translation-jobs.php:480
+msgid "Overdue"
+msgstr ""
+
+#: modules/translation-workflow/table-translation-jobs.php:496
+msgid "Any translator"
+msgstr ""
+
+#: modules/translation-workflow/table-translation-jobs.php:500
+msgid "You"
+msgstr ""
+
+#: modules/translation-workflow/table-translation-jobs.php:576
+msgid "No translation jobs found."
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs-admin.php:108
+#: modules/translation-workflow/translation-jobs-admin.php:782
+#: modules/translation-workflow/translation-jobs.php:87
+msgid "Translation jobs"
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs-admin.php:108
+msgid "My translation jobs"
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs-admin.php:168
+msgid "Start"
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs-admin.php:170
+msgid "Open translation"
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs-admin.php:172
+msgid "Mark ready for review"
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs-admin.php:176
+msgid "Mark done"
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs-admin.php:184
+msgid "Reopen"
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs-admin.php:266
+#: settings/settings.php:192
+msgid "Sorry, you are not allowed to do this."
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs-admin.php:326
+msgid "Sorry, you are not allowed to translate this content."
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs-admin.php:333
+msgid "Sorry, you are not allowed to edit the translation."
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs-admin.php:353
+msgid "Sorry, you are not allowed to create this translation."
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs-admin.php:384
+msgid "Sorry, you are not allowed to create translation jobs."
+msgstr ""
+
+#. translators: %d is a number of jobs
+#: modules/translation-workflow/translation-jobs-admin.php:454
+msgid "%d translation job created."
+msgid_plural "%d translation jobs created."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d is a number of jobs
+#: modules/translation-workflow/translation-jobs-admin.php:457
+msgid "%d job skipped (an open job already exists, or the content, language or assignee is invalid)."
+msgid_plural "%d jobs skipped (an open job already exists, or the content, language or assignee is invalid)."
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/translation-workflow/translation-jobs-admin.php:461
+msgid "Translation job updated."
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs-admin.php:463
+#: modules/translation-workflow/translation-jobs.php:227
+msgid "An open translation job already exists for this content and language."
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs-admin.php:505
+msgid "To create translation jobs, select content in the posts or pages lists and use the \"Send to translation\" bulk action."
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs-admin.php:531
+msgid "No content to translate has been selected."
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs-admin.php:538
+#: modules/translation-workflow/translation-jobs-admin.php:614
+#: modules/translation-workflow/translation-jobs-admin.php:650
+msgid "Send to translation"
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs-admin.php:580
+msgid "Content already in a selected language is skipped. Jobs are not duplicated when an open job already exists."
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs-admin.php:585
+msgid "Assign to"
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs-admin.php:588
+msgid "Any translator of the language"
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs-admin.php:602
+msgid "Translators are users with the Translator role or with translation languages set in their profile."
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs-admin.php:610
+msgid "Note"
+msgstr ""
+
+#. translators: %s is a job status
+#: modules/translation-workflow/translation-jobs-admin.php:743
+msgid "Translation job: %s"
+msgstr ""
+
+#. translators: %s is a language name
+#: modules/translation-workflow/translation-jobs-admin.php:756
+msgid "Send to translation into %s"
+msgstr ""
+
+#. translators: 1: number of jobs, 2: job status
+#: modules/translation-workflow/translation-jobs-admin.php:804
+msgid "%1$d %2$s"
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs-admin.php:820
+msgid "Your open jobs"
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs-admin.php:823
+msgid "You have no open translation jobs."
+msgstr ""
+
+#. translators: %s is a date
+#: modules/translation-workflow/translation-jobs-admin.php:836
+msgid "due %s"
+msgstr ""
+
+#. translators: %d is a number of jobs
+#: modules/translation-workflow/translation-jobs-admin.php:847
+msgid "See all (%d open job)"
+msgid_plural "See all (%d open jobs)"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s is a post title
+#: modules/translation-workflow/translation-jobs-notifier.php:201
+msgid "Content: %s"
+msgstr ""
+
+#. translators: %s is a date
+#: modules/translation-workflow/translation-jobs-notifier.php:208
+msgid "Due date: %s"
+msgstr ""
+
+#. translators: %s is a free text
+#: modules/translation-workflow/translation-jobs-notifier.php:213
+msgid "Note: %s"
+msgstr ""
+
+#. translators: %d is a number of jobs
+#: modules/translation-workflow/translation-jobs-notifier.php:245
+msgid "%d translation job has been assigned to you"
+msgid_plural "%d translation jobs have been assigned to you"
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/translation-workflow/translation-jobs-notifier.php:246
+msgid "The following translation job has been assigned to you:"
+msgid_plural "The following translation jobs have been assigned to you:"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d is a number of jobs
+#: modules/translation-workflow/translation-jobs-notifier.php:250
+msgid "%d new translation job is available"
+msgid_plural "%d new translation jobs are available"
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/translation-workflow/translation-jobs-notifier.php:251
+msgid "The following translation job is available in your languages:"
+msgid_plural "The following translation jobs are available in your languages:"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d is a number of jobs
+#: modules/translation-workflow/translation-jobs-notifier.php:255
+msgid "%d translation is ready for review"
+msgid_plural "%d translations are ready for review"
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/translation-workflow/translation-jobs-notifier.php:256
+msgid "The following translation job is ready for review:"
+msgid_plural "The following translation jobs are ready for review:"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d is a number of jobs
+#: modules/translation-workflow/translation-jobs-notifier.php:260
+msgid "%d translation job is done"
+msgid_plural "%d translation jobs are done"
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/translation-workflow/translation-jobs-notifier.php:261
+msgid "The following translation job is done:"
+msgid_plural "The following translation jobs are done:"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %d is a number of jobs
+#: modules/translation-workflow/translation-jobs-notifier.php:265
+msgid "You have %d open translation job"
+msgid_plural "You have %d open translation jobs"
+msgstr[0] ""
+msgstr[1] ""
+
+#: modules/translation-workflow/translation-jobs-notifier.php:266
+msgid "Here are your open translation jobs:"
+msgstr ""
+
+#. translators: %s is a URL
+#: modules/translation-workflow/translation-jobs-notifier.php:278
+msgid "Translation: %s"
+msgstr ""
+
+#. translators: %s is a URL
+#: modules/translation-workflow/translation-jobs-notifier.php:283
+msgid "See the translation jobs: %s"
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs.php:88
+msgid "Translation job"
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs.php:119
+msgid "New"
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs.php:121
+msgid "Ready for review"
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs.php:217
+msgid "This content cannot be translated."
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs.php:223
+msgid "Invalid target language."
+msgstr ""
+
+#: modules/translation-workflow/translation-jobs.php:233
+msgid "The selected user cannot translate into this language."
+msgstr ""
+
+#. translators: %s is a language name
+#: modules/translation-workflow/translator-languages.php:340
+#: modules/translation-workflow/translator-languages.php:465
+msgid "Sorry, you are not allowed to create or edit content in %s."
+msgstr ""
+
+#: modules/translation-workflow/translator-languages.php:344
+msgid "Not allowed"
+msgstr ""
+
+#: modules/translation-workflow/translator-languages.php:441
+msgid "Sorry, you are not allowed to create content in any language."
+msgstr ""
+
+#: modules/translation-workflow/translator-languages.php:635
+#: modules/translation-workflow/translator-languages.php:657
+#: modules/translation-workflow/translator-languages.php:660
+#: modules/translation-workflow/translator-languages.php:738
+msgid "Translation languages"
+msgstr ""
+
+#: modules/translation-workflow/translator-languages.php:646
+msgid "You can only create and edit content in these languages."
+msgstr ""
+
+#: modules/translation-workflow/translator-languages.php:675
+msgid "The user can only create and edit content (and translate strings) in the checked languages. Translators without languages cannot edit any translated content."
+msgstr ""
+
+#: modules/translation-workflow/translator-languages.php:677
+msgid "The user can only create and edit content (and translate strings) in the checked languages. Leave all unchecked for no restriction."
+msgstr ""
+
+#. translators: %s is the plugin name
+#: modules/wizard/html-wizard-notice.php:26
+msgid "Welcome to %s"
+msgstr ""
+
+#: modules/wizard/html-wizard-notice.php:33
+msgid "You&lsquo;re almost ready to translate your contents!"
+msgstr ""
+
+#: modules/wizard/html-wizard-notice.php:41
+msgid "Run the Setup Wizard"
+msgstr ""
+
+#: modules/wizard/html-wizard-notice.php:47
+msgid "Skip setup"
+msgstr ""
+
+#. translators: %s is the plugin name
+#: modules/wizard/view-wizard-page.php:27
+msgid "%s &rsaquo; Setup"
+msgstr ""
+
+#: modules/wizard/view-wizard-page.php:88
+msgid "Continue"
+msgstr ""
+
+#: modules/wizard/view-wizard-page.php:100
+msgid "Not right now"
+msgstr ""
+
+#: modules/wizard/view-wizard-step-home-page.php:33
+#: modules/wizard/wizard.php:617
+#: modules/wizard/wizard.php:650
+msgid "Homepage"
+msgstr ""
+
+#. translators: %s is the post title of the front page
+#: modules/wizard/view-wizard-step-home-page.php:38
+msgid "You defined this page as your static homepage: %s."
+msgstr ""
+
+#. translators: %s is the language of the front page ( flag, native name and locale )
+#: modules/wizard/view-wizard-step-home-page.php:46
+msgid "Its language is : %s."
+msgstr ""
+
+#: modules/wizard/view-wizard-step-home-page.php:51
+msgid "For your site to work correctly, this page must be translated in all available languages."
+msgstr ""
+
+#: modules/wizard/view-wizard-step-home-page.php:54
+msgid "After the pages is created, it is up to you to put the translated content in each page linked to each language."
+msgstr ""
+
+#: modules/wizard/view-wizard-step-home-page.php:60
+msgid "Your static homepage is already translated in"
+msgstr ""
+
+#. translators: accessibility text
+#: modules/wizard/view-wizard-step-home-page.php:77
+#: modules/wizard/view-wizard-step-home-page.php:92
+#: modules/wizard/view-wizard-step-home-page.php:124
+#: modules/wizard/view-wizard-step-languages.php:71
+#: modules/wizard/view-wizard-step-languages.php:86
+#: settings/table-languages.php:135
+#: settings/table-languages.php:154
+msgid "Default language"
+msgstr ""
+
+#: modules/wizard/view-wizard-step-home-page.php:97
+msgid "We are going to prepare this page in"
+msgstr ""
+
+#: modules/wizard/view-wizard-step-home-page.php:103
+msgid "One language is well defined and assigned to your home page."
+msgstr ""
+
+#: modules/wizard/view-wizard-step-home-page.php:107
+msgid "If you add a new language, don't forget to translate your homepage."
+msgstr ""
+
+#: modules/wizard/view-wizard-step-languages.php:23
+msgid "This wizard will help you configure your Strope Translate settings, and get you started quickly with your multilingual website."
+msgstr ""
+
+#: modules/wizard/view-wizard-step-languages.php:26
+msgid "First we are going to define the languages that you will use on your website."
+msgstr ""
+
+#: modules/wizard/view-wizard-step-languages.php:32
+msgid "Select a language to be added"
+msgstr ""
+
+#: modules/wizard/view-wizard-step-languages.php:50
+#: modules/wizard/view-wizard-step-languages.php:54
+#: settings/view-tab-lang.php:32
+#: settings/view-tab-lang.php:172
+msgid "Add new language"
+msgstr ""
+
+#: modules/wizard/view-wizard-step-languages.php:75
+msgid "Languages already defined"
+msgstr ""
+
+#. translators: %1$s: is a language flag image, %2$s: is a language native name
+#: modules/wizard/view-wizard-step-languages.php:98
+msgid "You selected %1$s %2$s but you didn't add it to the list before continuing to the next step."
+msgstr ""
+
+#: modules/wizard/view-wizard-step-languages.php:105
+msgid "Do you want to add this language before continuing to the next step?"
+msgstr ""
+
+#. translators: %s: is the translated label of the 'Yes' button
+#: modules/wizard/view-wizard-step-languages.php:112
+msgid "%s: add this language and continue to the next step"
+msgstr ""
+
+#: modules/wizard/view-wizard-step-languages.php:113
+#: modules/wizard/wizard.php:379
+msgid "Yes"
+msgstr ""
+
+#. translators: %s: is the translated label of the 'No' button
+#: modules/wizard/view-wizard-step-languages.php:121
+msgid "%s: don't add this language and continue to the next step"
+msgstr ""
+
+#: modules/wizard/view-wizard-step-languages.php:122
+#: modules/wizard/wizard.php:380
+msgid "No"
+msgstr ""
+
+#. translators: %s: is the translated label of the 'Ignore' button
+#: modules/wizard/view-wizard-step-languages.php:130
+msgid "%s: stay at this step"
+msgstr ""
+
+#: modules/wizard/view-wizard-step-last.php:15
+msgid "You're ready to translate your contents!"
+msgstr ""
+
+#: modules/wizard/view-wizard-step-last.php:21
+#: modules/wizard/view-wizard-step-last.php:37
+msgid "Next step"
+msgstr ""
+
+#: modules/wizard/view-wizard-step-last.php:22
+msgid "Create menus"
+msgstr ""
+
+#: modules/wizard/view-wizard-step-last.php:24
+msgid "To get your website ready, there are still two steps you need to perform manually: add menus in each language, and add a language switcher to allow your visitors to select their preferred language."
+msgstr ""
+
+#: modules/wizard/view-wizard-step-last.php:30
+msgid "Edit menus"
+msgstr ""
+
+#: modules/wizard/view-wizard-step-last.php:38
+msgid "Translate some pages"
+msgstr ""
+
+#: modules/wizard/view-wizard-step-last.php:39
+msgid "You're ready to translate the posts on your website."
+msgstr ""
+
+#: modules/wizard/view-wizard-step-last.php:44
+msgid "View pages"
+msgstr ""
+
+#: modules/wizard/view-wizard-step-last.php:53
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: modules/wizard/view-wizard-step-media.php:23
+msgid "Strope Translate allows you to translate the text attached to your media, for example the title, the alternative text, the caption, or the description."
+msgstr ""
+
+#: modules/wizard/view-wizard-step-media.php:24
+msgid "When you translate a media, the file is not duplicated on your disk, however you will see one entry per language in the media library."
+msgstr ""
+
+#: modules/wizard/view-wizard-step-media.php:25
+msgid "When you want to insert media in a post, only the media in the language of the current post will be displayed."
+msgstr ""
+
+#: modules/wizard/view-wizard-step-media.php:28
+msgid "You must activate media translation if you want to translate the title, the alternative text, the caption, or the description. Otherwise you can safely deactivate it."
+msgstr ""
+
+#: modules/wizard/view-wizard-step-media.php:45
+msgid "Allow Strope Translate to translate media"
+msgstr ""
+
+#: modules/wizard/view-wizard-step-media.php:54
+msgid "Help"
+msgstr ""
+
+#: modules/wizard/view-wizard-step-untranslated-contents.php:16
+msgid "Content without language"
+msgstr ""
+
+#: modules/wizard/view-wizard-step-untranslated-contents.php:18
+#: settings/settings.php:365
+msgid "There are posts, pages, categories or tags without language."
+msgstr ""
+
+#: modules/wizard/view-wizard-step-untranslated-contents.php:19
+msgid "For your site to work correctly, you need to assign a language to all your contents."
+msgstr ""
+
+#: modules/wizard/view-wizard-step-untranslated-contents.php:20
+msgid "The selected language below will be applied to all your content without an assigned language."
+msgstr ""
+
+#: modules/wizard/view-wizard-step-untranslated-contents.php:23
+msgid "Choose the language to be assigned"
+msgstr ""
+
+#: modules/wizard/wizard.php:138
+msgid "Setup"
+msgstr ""
+
+#: modules/wizard/wizard.php:185
+msgid "Sorry, you are not allowed to manage options for this site."
+msgstr ""
+
+#: modules/wizard/wizard.php:368
+msgid "You need to select a language to be added."
+msgstr ""
+
+#: modules/wizard/wizard.php:369
+msgid "You already added this language."
+msgstr ""
+
+#: modules/wizard/wizard.php:370
+msgid "You need to add at least one language."
+msgstr ""
+
+#: modules/wizard/wizard.php:371
+msgid "You selected a language, however, to be able to continue, you need to add it."
+msgstr ""
+
+#: modules/wizard/wizard.php:378
+msgid "A language wasn't added."
+msgstr ""
+
+#: modules/wizard/wizard.php:382
+msgid "Remove this language"
+msgstr ""
+
+#: modules/wizard/wizard.php:713
+msgid "Ready!"
+msgstr ""
+
+#: modules/xdata/xdata-session-manager.php:68
+msgid "An error has occurred."
+msgstr ""
+
+#: services/exporter/export-data-from-strings.php:46
+msgid "Error: Default language not defined."
+msgstr ""
+
+#: services/exporter/export-data-from-strings.php:62
+msgid "Error: No strings found."
+msgstr ""
+
+#: services/metabox-button/metabox-button.php:201
+#: js/build/sidebar.js:2021
+msgid "You are about to overwrite an existing translation. Are you sure you want to proceed?"
+msgstr ""
+
+#: settings/flags.php:18
+msgid "Andorra"
+msgstr ""
+
+#: settings/flags.php:19
+msgid "United Arab Emirates"
+msgstr ""
+
+#: settings/flags.php:20
+msgid "Afghanistan"
+msgstr ""
+
+#: settings/flags.php:21
+msgid "Antigua and Barbuda"
+msgstr ""
+
+#: settings/flags.php:22
+msgid "Anguilla"
+msgstr ""
+
+#: settings/flags.php:23
+msgid "Albania"
+msgstr ""
+
+#: settings/flags.php:24
+msgid "Armenia"
+msgstr ""
+
+#: settings/flags.php:25
+msgid "Netherlands Antilles"
+msgstr ""
+
+#: settings/flags.php:26
+msgid "Angola"
+msgstr ""
+
+#: settings/flags.php:27
+msgid "Argentina"
+msgstr ""
+
+#: settings/flags.php:28
+msgid "Arab league"
+msgstr ""
+
+#: settings/flags.php:29
+msgid "American Samoa"
+msgstr ""
+
+#: settings/flags.php:30
+msgid "Austria"
+msgstr ""
+
+#: settings/flags.php:31
+msgid "Australia"
+msgstr ""
+
+#: settings/flags.php:32
+msgid "Aruba"
+msgstr ""
+
+#: settings/flags.php:33
+msgid "Åland Islands"
+msgstr ""
+
+#: settings/flags.php:34
+msgid "Azerbaijan"
+msgstr ""
+
+#: settings/flags.php:35
+msgid "Bosnia and Herzegovina"
+msgstr ""
+
+#: settings/flags.php:36
+msgid "Basque Country"
+msgstr ""
+
+#: settings/flags.php:37
+msgid "Barbados"
+msgstr ""
+
+#: settings/flags.php:38
+msgid "Bangladesh"
+msgstr ""
+
+#: settings/flags.php:39
+msgid "Belgium"
+msgstr ""
+
+#: settings/flags.php:40
+msgid "Burkina Faso"
+msgstr ""
+
+#: settings/flags.php:41
+msgid "Bulgaria"
+msgstr ""
+
+#: settings/flags.php:42
+msgid "Bahrain"
+msgstr ""
+
+#: settings/flags.php:43
+msgid "Burundi"
+msgstr ""
+
+#: settings/flags.php:44
+msgid "Benin"
+msgstr ""
+
+#: settings/flags.php:45
+msgid "Bermuda"
+msgstr ""
+
+#: settings/flags.php:46
+msgid "Brunei"
+msgstr ""
+
+#: settings/flags.php:47
+msgid "Bolivia"
+msgstr ""
+
+#: settings/flags.php:48
+msgid "Brazil"
+msgstr ""
+
+#: settings/flags.php:49
+msgid "Bahamas"
+msgstr ""
+
+#: settings/flags.php:50
+msgid "Bhutan"
+msgstr ""
+
+#: settings/flags.php:51
+msgid "Botswana"
+msgstr ""
+
+#: settings/flags.php:52
+msgid "Belarus"
+msgstr ""
+
+#: settings/flags.php:53
+msgid "Belize"
+msgstr ""
+
+#: settings/flags.php:54
+msgid "Canada"
+msgstr ""
+
+#: settings/flags.php:55
+msgid "Catalonia"
+msgstr ""
+
+#: settings/flags.php:56
+msgid "Cocos"
+msgstr ""
+
+#: settings/flags.php:57
+msgid "Democratic Republic of the Congo"
+msgstr ""
+
+#: settings/flags.php:58
+msgid "Central African Republic"
+msgstr ""
+
+#: settings/flags.php:59
+msgid "Congo"
+msgstr ""
+
+#: settings/flags.php:60
+msgid "Switzerland"
+msgstr ""
+
+#: settings/flags.php:61
+msgid "Ivory Coast"
+msgstr ""
+
+#: settings/flags.php:62
+msgid "Cook Islands"
+msgstr ""
+
+#: settings/flags.php:63
+msgid "Chile"
+msgstr ""
+
+#: settings/flags.php:64
+msgid "Cameroon"
+msgstr ""
+
+#: settings/flags.php:65
+msgid "China"
+msgstr ""
+
+#: settings/flags.php:66
+msgid "Colombia"
+msgstr ""
+
+#: settings/flags.php:67
+msgid "Costa Rica"
+msgstr ""
+
+#: settings/flags.php:68
+msgid "Cuba"
+msgstr ""
+
+#: settings/flags.php:69
+msgid "Cape Verde"
+msgstr ""
+
+#: settings/flags.php:70
+msgid "Christmas Island"
+msgstr ""
+
+#: settings/flags.php:71
+msgid "Cyprus"
+msgstr ""
+
+#: settings/flags.php:72
+msgid "Czech Republic"
+msgstr ""
+
+#: settings/flags.php:73
+msgid "Germany"
+msgstr ""
+
+#: settings/flags.php:74
+msgid "Djibouti"
+msgstr ""
+
+#: settings/flags.php:75
+msgid "Denmark"
+msgstr ""
+
+#: settings/flags.php:76
+msgid "Dominica"
+msgstr ""
+
+#: settings/flags.php:77
+msgid "Dominican Republic"
+msgstr ""
+
+#: settings/flags.php:78
+msgid "Algeria"
+msgstr ""
+
+#: settings/flags.php:79
+msgid "Ecuador"
+msgstr ""
+
+#: settings/flags.php:80
+msgid "Estonia"
+msgstr ""
+
+#: settings/flags.php:81
+msgid "Egypt"
+msgstr ""
+
+#: settings/flags.php:82
+msgid "Western Sahara"
+msgstr ""
+
+#: settings/flags.php:83
+msgid "England"
+msgstr ""
+
+#: settings/flags.php:84
+msgid "Eritrea"
+msgstr ""
+
+#: settings/flags.php:85
+msgid "Spain"
+msgstr ""
+
+#: settings/flags.php:86
+msgid "Esperanto"
+msgstr ""
+
+#: settings/flags.php:87
+msgid "Ethiopia"
+msgstr ""
+
+#: settings/flags.php:88
+msgid "Finland"
+msgstr ""
+
+#: settings/flags.php:89
+msgid "Fiji"
+msgstr ""
+
+#: settings/flags.php:90
+msgid "Falkland Islands"
+msgstr ""
+
+#: settings/flags.php:91
+msgid "Micronesia"
+msgstr ""
+
+#: settings/flags.php:92
+msgid "Faroe Islands"
+msgstr ""
+
+#: settings/flags.php:93
+msgid "France"
+msgstr ""
+
+#: settings/flags.php:94
+msgid "Gabon"
+msgstr ""
+
+#: settings/flags.php:95
+msgid "Galicia"
+msgstr ""
+
+#: settings/flags.php:96
+msgid "United Kingdom"
+msgstr ""
+
+#: settings/flags.php:97
+msgid "Grenada"
+msgstr ""
+
+#: settings/flags.php:98
+msgid "Georgia"
+msgstr ""
+
+#: settings/flags.php:99
+msgid "Ghana"
+msgstr ""
+
+#: settings/flags.php:100
+msgid "Gibraltar"
+msgstr ""
+
+#: settings/flags.php:101
+msgid "Greenland"
+msgstr ""
+
+#: settings/flags.php:102
+msgid "Gambia"
+msgstr ""
+
+#: settings/flags.php:103
+msgid "Guinea"
+msgstr ""
+
+#: settings/flags.php:104
+msgid "Guadeloupe"
+msgstr ""
+
+#: settings/flags.php:105
+msgid "Equatorial Guinea"
+msgstr ""
+
+#: settings/flags.php:106
+msgid "Greece"
+msgstr ""
+
+#: settings/flags.php:107
+msgid "South Georgia and the South Sandwich Islands"
+msgstr ""
+
+#: settings/flags.php:108
+msgid "Guatemala"
+msgstr ""
+
+#: settings/flags.php:109
+msgid "Guam"
+msgstr ""
+
+#: settings/flags.php:110
+msgid "Guinea-Bissau"
+msgstr ""
+
+#: settings/flags.php:111
+msgid "Guyana"
+msgstr ""
+
+#: settings/flags.php:112
+msgid "Hong Kong"
+msgstr ""
+
+#: settings/flags.php:113
+msgid "Heard Island and McDonald Islands"
+msgstr ""
+
+#: settings/flags.php:114
+msgid "Honduras"
+msgstr ""
+
+#: settings/flags.php:115
+msgid "Croatia"
+msgstr ""
+
+#: settings/flags.php:116
+msgid "Haiti"
+msgstr ""
+
+#: settings/flags.php:117
+msgid "Hungary"
+msgstr ""
+
+#: settings/flags.php:118
+msgid "Indonesia"
+msgstr ""
+
+#: settings/flags.php:119
+msgid "Republic of Ireland"
+msgstr ""
+
+#: settings/flags.php:120
+msgid "Israel"
+msgstr ""
+
+#: settings/flags.php:121
+msgid "India"
+msgstr ""
+
+#: settings/flags.php:122
+msgid "British Indian Ocean Territory"
+msgstr ""
+
+#: settings/flags.php:123
+msgid "Iraq"
+msgstr ""
+
+#: settings/flags.php:124
+msgid "Iran"
+msgstr ""
+
+#: settings/flags.php:125
+msgid "Iceland"
+msgstr ""
+
+#: settings/flags.php:126
+msgid "Italy"
+msgstr ""
+
+#: settings/flags.php:127
+msgid "Jamaica"
+msgstr ""
+
+#: settings/flags.php:128
+msgid "Jordan"
+msgstr ""
+
+#: settings/flags.php:129
+msgid "Japan"
+msgstr ""
+
+#: settings/flags.php:130
+msgid "Kenya"
+msgstr ""
+
+#: settings/flags.php:131
+msgid "Kyrgyzstan"
+msgstr ""
+
+#: settings/flags.php:132
+msgid "Cambodia"
+msgstr ""
+
+#: settings/flags.php:133
+msgid "Kiribati"
+msgstr ""
+
+#: settings/flags.php:134
+msgid "Comoros"
+msgstr ""
+
+#: settings/flags.php:135
+msgid "Saint Kitts and Nevis"
+msgstr ""
+
+#: settings/flags.php:136
+msgid "North Korea"
+msgstr ""
+
+#: settings/flags.php:137
+msgid "South Korea"
+msgstr ""
+
+#: settings/flags.php:138
+msgid "Kurdistan"
+msgstr ""
+
+#: settings/flags.php:139
+msgid "Kuwait"
+msgstr ""
+
+#: settings/flags.php:140
+msgid "Cayman Islands"
+msgstr ""
+
+#: settings/flags.php:141
+msgid "Kazakhstan"
+msgstr ""
+
+#: settings/flags.php:142
+msgid "Laos"
+msgstr ""
+
+#: settings/flags.php:143
+msgid "Lebanon"
+msgstr ""
+
+#: settings/flags.php:144
+msgid "Saint Lucia"
+msgstr ""
+
+#: settings/flags.php:145
+msgid "Liechtenstein"
+msgstr ""
+
+#: settings/flags.php:146
+msgid "Sri Lanka"
+msgstr ""
+
+#: settings/flags.php:147
+msgid "Liberia"
+msgstr ""
+
+#: settings/flags.php:148
+msgid "Lesotho"
+msgstr ""
+
+#: settings/flags.php:149
+msgid "Lithuania"
+msgstr ""
+
+#: settings/flags.php:150
+msgid "Luxembourg"
+msgstr ""
+
+#: settings/flags.php:151
+msgid "Latvia"
+msgstr ""
+
+#: settings/flags.php:152
+msgid "Libya"
+msgstr ""
+
+#: settings/flags.php:153
+msgid "Morocco"
+msgstr ""
+
+#: settings/flags.php:154
+msgid "Monaco"
+msgstr ""
+
+#: settings/flags.php:155
+msgid "Moldova"
+msgstr ""
+
+#: settings/flags.php:156
+msgid "Montenegro"
+msgstr ""
+
+#: settings/flags.php:157
+msgid "Madagascar"
+msgstr ""
+
+#: settings/flags.php:158
+msgid "Marshall Islands"
+msgstr ""
+
+#: settings/flags.php:159
+msgid "North Macedonia"
+msgstr ""
+
+#: settings/flags.php:160
+msgid "Mali"
+msgstr ""
+
+#: settings/flags.php:161
+msgid "Myanmar"
+msgstr ""
+
+#: settings/flags.php:162
+msgid "Mongolia"
+msgstr ""
+
+#: settings/flags.php:163
+msgid "Macao"
+msgstr ""
+
+#: settings/flags.php:164
+msgid "Northern Mariana Islands"
+msgstr ""
+
+#: settings/flags.php:165
+msgid "Martinique"
+msgstr ""
+
+#: settings/flags.php:166
+msgid "Mauritania"
+msgstr ""
+
+#: settings/flags.php:167
+msgid "Montserrat"
+msgstr ""
+
+#: settings/flags.php:168
+msgid "Malta"
+msgstr ""
+
+#: settings/flags.php:169
+msgid "Mauritius"
+msgstr ""
+
+#: settings/flags.php:170
+msgid "Maldives"
+msgstr ""
+
+#: settings/flags.php:171
+msgid "Malawi"
+msgstr ""
+
+#: settings/flags.php:172
+msgid "Mexico"
+msgstr ""
+
+#: settings/flags.php:173
+msgid "Malaysia"
+msgstr ""
+
+#: settings/flags.php:174
+msgid "Mozambique"
+msgstr ""
+
+#: settings/flags.php:175
+msgid "Namibia"
+msgstr ""
+
+#: settings/flags.php:176
+msgid "New Caledonia"
+msgstr ""
+
+#: settings/flags.php:177
+msgid "Niger"
+msgstr ""
+
+#: settings/flags.php:178
+msgid "Norfolk Island"
+msgstr ""
+
+#: settings/flags.php:179
+msgid "Nigeria"
+msgstr ""
+
+#: settings/flags.php:180
+msgid "Nicaragua"
+msgstr ""
+
+#: settings/flags.php:181
+msgid "Netherlands"
+msgstr ""
+
+#: settings/flags.php:182
+msgid "Norway"
+msgstr ""
+
+#: settings/flags.php:183
+msgid "Nepal"
+msgstr ""
+
+#: settings/flags.php:184
+msgid "Nauru"
+msgstr ""
+
+#: settings/flags.php:185
+msgid "Niue"
+msgstr ""
+
+#: settings/flags.php:186
+msgid "New Zealand"
+msgstr ""
+
+#: settings/flags.php:187
+msgid "Occitania"
+msgstr ""
+
+#: settings/flags.php:188
+msgid "Oman"
+msgstr ""
+
+#: settings/flags.php:189
+msgid "Panama"
+msgstr ""
+
+#: settings/flags.php:190
+msgid "Peru"
+msgstr ""
+
+#: settings/flags.php:191
+msgid "French Polynesia"
+msgstr ""
+
+#: settings/flags.php:192
+msgid "Papua New Guinea"
+msgstr ""
+
+#: settings/flags.php:193
+msgid "Philippines"
+msgstr ""
+
+#: settings/flags.php:194
+msgid "Pakistan"
+msgstr ""
+
+#: settings/flags.php:195
+msgid "Poland"
+msgstr ""
+
+#: settings/flags.php:196
+msgid "Saint Pierre and Miquelon"
+msgstr ""
+
+#: settings/flags.php:197
+msgid "Pitcairn"
+msgstr ""
+
+#: settings/flags.php:198
+msgid "Puerto Rico"
+msgstr ""
+
+#: settings/flags.php:199
+msgid "Palestinian Territory"
+msgstr ""
+
+#: settings/flags.php:200
+msgid "Portugal"
+msgstr ""
+
+#: settings/flags.php:201
+msgid "Belau"
+msgstr ""
+
+#: settings/flags.php:202
+msgid "Paraguay"
+msgstr ""
+
+#: settings/flags.php:203
+msgid "Qatar"
+msgstr ""
+
+#: settings/flags.php:204
+msgid "Quebec"
+msgstr ""
+
+#: settings/flags.php:205
+msgid "Romania"
+msgstr ""
+
+#: settings/flags.php:206
+msgid "Serbia"
+msgstr ""
+
+#: settings/flags.php:207
+msgid "Russia"
+msgstr ""
+
+#: settings/flags.php:208
+msgid "Rwanda"
+msgstr ""
+
+#: settings/flags.php:209
+msgid "Saudi Arabia"
+msgstr ""
+
+#: settings/flags.php:210
+msgid "Solomon Islands"
+msgstr ""
+
+#: settings/flags.php:211
+msgid "Seychelles"
+msgstr ""
+
+#: settings/flags.php:212
+msgid "Scotland"
+msgstr ""
+
+#: settings/flags.php:213
+msgid "Sudan"
+msgstr ""
+
+#: settings/flags.php:214
+msgid "Sweden"
+msgstr ""
+
+#: settings/flags.php:215
+msgid "Singapore"
+msgstr ""
+
+#: settings/flags.php:216
+msgid "Saint Helena"
+msgstr ""
+
+#: settings/flags.php:217
+msgid "Slovenia"
+msgstr ""
+
+#: settings/flags.php:218
+msgid "Slovakia"
+msgstr ""
+
+#: settings/flags.php:219
+msgid "Sierra Leone"
+msgstr ""
+
+#: settings/flags.php:220
+msgid "San Marino"
+msgstr ""
+
+#: settings/flags.php:221
+msgid "Senegal"
+msgstr ""
+
+#: settings/flags.php:222
+msgid "Somalia"
+msgstr ""
+
+#: settings/flags.php:223
+msgid "Suriname"
+msgstr ""
+
+#: settings/flags.php:224
+msgid "South Sudan"
+msgstr ""
+
+#: settings/flags.php:225
+msgid "São Tomé and Príncipe"
+msgstr ""
+
+#: settings/flags.php:226
+msgid "El Salvador"
+msgstr ""
+
+#: settings/flags.php:227
+msgid "Syria"
+msgstr ""
+
+#: settings/flags.php:228
+msgid "Swaziland"
+msgstr ""
+
+#: settings/flags.php:229
+msgid "Turks and Caicos Islands"
+msgstr ""
+
+#: settings/flags.php:230
+msgid "Chad"
+msgstr ""
+
+#: settings/flags.php:231
+msgid "French Southern Territories"
+msgstr ""
+
+#: settings/flags.php:232
+msgid "Togo"
+msgstr ""
+
+#: settings/flags.php:233
+msgid "Thailand"
+msgstr ""
+
+#: settings/flags.php:234
+msgid "Tibet"
+msgstr ""
+
+#: settings/flags.php:235
+msgid "Tajikistan"
+msgstr ""
+
+#: settings/flags.php:236
+msgid "Tokelau"
+msgstr ""
+
+#: settings/flags.php:237
+msgid "Timor-Leste"
+msgstr ""
+
+#: settings/flags.php:238
+msgid "Turkmenistan"
+msgstr ""
+
+#: settings/flags.php:239
+msgid "Tunisia"
+msgstr ""
+
+#: settings/flags.php:240
+msgid "Tonga"
+msgstr ""
+
+#: settings/flags.php:241
+msgid "Turkey"
+msgstr ""
+
+#: settings/flags.php:242
+msgid "Trinidad and Tobago"
+msgstr ""
+
+#: settings/flags.php:243
+msgid "Tuvalu"
+msgstr ""
+
+#: settings/flags.php:244
+msgid "Taiwan"
+msgstr ""
+
+#: settings/flags.php:245
+msgid "Tanzania"
+msgstr ""
+
+#: settings/flags.php:246
+msgid "Ukraine"
+msgstr ""
+
+#: settings/flags.php:247
+msgid "Uganda"
+msgstr ""
+
+#: settings/flags.php:248
+msgid "United States"
+msgstr ""
+
+#: settings/flags.php:249
+msgid "Uruguay"
+msgstr ""
+
+#: settings/flags.php:250
+msgid "Uzbekistan"
+msgstr ""
+
+#: settings/flags.php:251
+msgid "Vatican"
+msgstr ""
+
+#: settings/flags.php:252
+msgid "Saint Vincent and the Grenadines"
+msgstr ""
+
+#: settings/flags.php:253
+msgid "Venezuela"
+msgstr ""
+
+#: settings/flags.php:254
+msgid "Veneto"
+msgstr ""
+
+#: settings/flags.php:255
+msgid "British Virgin Islands"
+msgstr ""
+
+#: settings/flags.php:256
+msgid "United States Virgin Islands"
+msgstr ""
+
+#: settings/flags.php:257
+msgid "Vietnam"
+msgstr ""
+
+#: settings/flags.php:258
+msgid "Vanuatu"
+msgstr ""
+
+#: settings/flags.php:259
+msgid "Wales"
+msgstr ""
+
+#: settings/flags.php:260
+msgid "Wallis and Futuna"
+msgstr ""
+
+#: settings/flags.php:261
+msgid "Western Samoa"
+msgstr ""
+
+#: settings/flags.php:262
+msgid "Yemen"
+msgstr ""
+
+#: settings/flags.php:263
+msgid "Mayotte"
+msgstr ""
+
+#: settings/flags.php:264
+msgid "South Africa"
+msgstr ""
+
+#: settings/flags.php:265
+msgid "Zambia"
+msgstr ""
+
+#: settings/flags.php:266
+msgid "Zimbabwe"
+msgstr ""
+
+#: settings/settings-browser.php:36
+msgid "Detect browser language"
+msgstr ""
+
+#: settings/settings-browser.php:37
+msgid "When the front page is visited, redirects to itself in the browser preferred language. As this doesn't work if it is cached, Strope Translate will attempt to disable the front page cache for known cache plugins."
+msgstr ""
+
+#: settings/settings-cpt.php:61
+msgid "Custom post types and Taxonomies"
+msgstr ""
+
+#: settings/settings-cpt.php:62
+msgid "Activate languages and translations management for the custom post types and the taxonomies."
+msgstr ""
+
+#: settings/settings-cpt.php:102
+msgid "Custom post types"
+msgstr ""
+
+#: settings/settings-cpt.php:127
+msgid "Activate languages and translations for custom post types."
+msgstr ""
+
+#: settings/settings-cpt.php:133
+msgid "Custom taxonomies"
+msgstr ""
+
+#: settings/settings-cpt.php:158
+msgid "Activate languages and translations for custom taxonomies."
+msgstr ""
+
+#: settings/settings-media.php:34
+msgid "Activate languages and translations for media only if you need to translate the text attached to the media: the title, the alternative text, the caption, the description... Note that the file is not duplicated."
+msgstr ""
+
+#: settings/settings-module.php:150
+msgid "Configure this module"
+msgstr ""
+
+#: settings/settings-module.php:156
+msgid "Deactivate this module"
+msgstr ""
+
+#: settings/settings-module.php:162
+msgid "Activate this module"
+msgstr ""
+
+#: settings/settings-module.php:166
+msgid "Activated"
+msgstr ""
+
+#: settings/settings-module.php:167
+msgid "Deactivated"
+msgstr ""
+
+#: settings/settings-module.php:172
+msgid "Save Changes"
+msgstr ""
+
+#: settings/settings-module.php:295
+msgid "Settings saved."
+msgstr ""
+
+#: settings/settings-url.php:40
+msgid "URL modifications"
+msgstr ""
+
+#: settings/settings-url.php:41
+msgid "Decide how your URLs will look like."
+msgstr ""
+
+#: settings/settings-url.php:57
+msgid "Some themes or plugins may not be fully compatible with the language defined by the content or by domains."
+msgstr ""
+
+#: settings/settings-url.php:67
+msgid "Posts, pages, categories and tags URLs will not be modified."
+msgstr ""
+
+#: settings/settings-url.php:73
+msgid "The language is set from the code in the URL"
+msgstr ""
+
+#: settings/settings-url.php:77
+#: settings/settings-url.php:88
+#: settings/settings-url.php:156
+#: settings/settings-url.php:167
+msgid "Example:"
+msgstr ""
+
+#. translators: %1$s example url when the option is active. %2$s example url when the option is not active
+#: settings/settings-url.php:197
+msgid "Example: %1$s instead of %2$s"
+msgstr ""
+
+#. translators: %s is a native language name
+#: settings/settings-url.php:287
+msgid "Please enter a valid URL for %s."
+msgstr ""
+
+#. translators: %s is an url
+#: settings/settings-url.php:348
+msgid "Strope Translate was unable to access the %s URL. Please check that the URL is valid."
+msgstr ""
+
+#: settings/settings.php:117
+msgid "About Strope Translate"
+msgstr ""
+
+#: settings/settings.php:147
+msgid "Strings translations"
+msgstr ""
+
+#: settings/settings.php:204
+msgid "Language added."
+msgstr ""
+
+#: settings/settings.php:211
+msgid "The language was created, but the WordPress language file was not downloaded. Please install it manually."
+msgstr ""
+
+#: settings/settings.php:226
+msgid "Language deleted."
+msgstr ""
+
+#: settings/settings.php:239
+msgid "Language updated."
+msgstr ""
+
+#: settings/settings.php:367
+msgid "You can set them all to the default language."
+msgstr ""
+
+#: settings/table-languages.php:95
+#: settings/table-languages.php:207
+msgid "Edit this language"
+msgstr ""
+
+#: settings/table-languages.php:116
+msgid "Select as default language"
+msgstr ""
+
+#. translators: accessibility text, %s is a native language name
+#: settings/table-languages.php:119
+msgid "Choose %s as default language"
+msgstr ""
+
+#: settings/table-languages.php:151
+#: settings/view-tab-lang.php:74
+msgid "Full name"
+msgstr ""
+
+#: settings/table-languages.php:152
+#: settings/view-tab-lang.php:85
+msgid "Locale"
+msgstr ""
+
+#: settings/table-languages.php:153
+msgid "Code"
+msgstr ""
+
+#: settings/table-languages.php:155
+#: settings/view-tab-lang.php:144
+msgid "Order"
+msgstr ""
+
+#: settings/table-languages.php:156
+#: settings/view-tab-lang.php:124
+msgid "Flag"
+msgstr ""
+
+#: settings/table-languages.php:157
+msgid "Posts"
+msgstr ""
+
+#: settings/table-languages.php:213
+msgid "Delete this language and all its associated data"
+msgstr ""
+
+#: settings/table-languages.php:215
+msgid "You are about to permanently delete this language. Are you sure?"
+msgstr ""
+
+#: settings/table-languages.php:216
+#: settings/table-string.php:323
+#: js/build/sidebar.js:3319
+msgid "Delete"
+msgstr ""
+
+#: settings/table-settings.php:150
+msgid "Module"
+msgstr ""
+
+#: settings/table-settings.php:151
+msgid "Description"
+msgstr ""
+
+#. translators:  accessibility text, %s is a string potentially in any language
+#: settings/table-string.php:104
+msgid "Select %s"
+msgstr ""
+
+#: settings/table-string.php:167
+msgid "Group"
+msgstr ""
+
+#. translators: accessibility text
+#: settings/table-string.php:355
+msgid "Filter by group"
+msgstr ""
+
+#: settings/table-string.php:361
+msgid "View all groups"
+msgstr ""
+
+#: settings/table-string.php:463
+msgid "Translations updated."
+msgstr ""
+
+#. translators: %s is the plugin version.
+#: settings/view-about.php:16
+msgid "Strope Translate %s. Free software released under the GNU General Public License v3 or later."
+msgstr ""
+
+#: settings/view-tab-lang.php:32
+msgid "Edit language"
+msgstr ""
+
+#: settings/view-tab-lang.php:70
+msgid "You can choose a language in the list or directly edit it below."
+msgstr ""
+
+#: settings/view-tab-lang.php:81
+msgid "The name is how it is displayed on your site (for example: English)."
+msgstr ""
+
+#: settings/view-tab-lang.php:92
+msgid "WordPress Locale for the language (for example: en_US). You will need to install the .mo file for this language."
+msgstr ""
+
+#: settings/view-tab-lang.php:96
+msgid "Language code"
+msgstr ""
+
+#: settings/view-tab-lang.php:103
+msgid "Language code - preferably 2-letters ISO 639-1  (for example: en)"
+msgstr ""
+
+#: settings/view-tab-lang.php:107
+msgid "Text direction"
+msgstr ""
+
+#: settings/view-tab-lang.php:112
+msgid "left to right"
+msgstr ""
+
+#: settings/view-tab-lang.php:117
+msgid "right to left"
+msgstr ""
+
+#: settings/view-tab-lang.php:120
+msgid "Choose the text direction for the language"
+msgstr ""
+
+#: settings/view-tab-lang.php:140
+msgid "Choose a flag for the language."
+msgstr ""
+
+#: settings/view-tab-lang.php:151
+msgid "Position of the language in the language switcher"
+msgstr ""
+
+#: settings/view-tab-strings.php:16
+msgid "Registered strings"
+msgstr ""
+
+#: settings/view-tab-strings.php:38
+msgid "Search translations"
+msgstr ""
+
+#: settings/view-tab-strings.php:41
+msgid "Clean strings translation database"
+msgstr ""
+
+#: settings/view-tab-strings.php:43
+msgid "Use this to remove unused strings from database, for example after a plugin has been uninstalled."
+msgstr ""
+
+#: strope-translate.php:72
+msgid "Strope Translate is inactive while Polylang is active, as both plugins use the same language data. Deactivate Polylang: Strope Translate will then offer to import its data."
+msgstr ""
+
+#: js/build/block-editor.js:11
+#: js/build/classic-editor.js:11
+#: js/build/sidebar.js:3804
+msgid "Are you sure you want to change the language of the current content?"
+msgstr ""
+
+#: js/build/block-editor.js:34
+#: js/build/classic-editor.js:34
+#: js/build/sidebar.js:3801
+msgid "Change language"
+msgstr ""
+
+#: js/build/block-editor.js:52
+#: js/build/classic-editor.js:52
+#: js/build/sidebar.js:1817
+msgid "OK"
+msgstr ""
+
+#: js/build/block-visibility.js:152
+#: js/build/blocks.js:1127
+msgid "The block is displayed for:"
+msgstr ""
+
+#: js/build/block-visibility.js:156
+msgid "This content is shared by all languages."
+msgstr ""
+
+#: js/build/block-visibility.js:157
+msgid "The block is hidden in the other languages."
+msgstr ""
+
+#: js/build/blocks.js:1307
+msgid "Add a language switcher to allow your visitors to select their preferred language."
+msgstr ""
+
+#: js/build/sidebar.js:1281
+msgid "Default language."
+msgstr ""
+
+#: js/build/sidebar.js:1324
+msgid "This template part is used for languages that have not yet been translated."
+msgstr ""
+
+#: js/build/sidebar.js:1366
+msgid "Templates are not translatable, only template parts are."
+msgstr ""
+
+#: js/build/sidebar.js:1371
+msgid "This entity is not translatable."
+msgstr ""
+
+#: js/build/sidebar.js:1408
+msgid "Unable to retrieve the content language"
+msgstr ""
+
+#. translators: %s is a native language name.
+#: js/build/sidebar.js:1618
+msgid "Delete the translation in %s"
+msgstr ""
+
+#. translators: accessibility text
+#: js/build/sidebar.js:1713
+msgid "Deactivate the content duplication"
+msgstr ""
+
+#. translators: accessibility text
+#: js/build/sidebar.js:1715
+msgid "Activate the content duplication"
+msgstr ""
+
+#. translators: accessibility text. %d is a number of posts.
+#: js/build/sidebar.js:2870
+msgid "%d result found, use up and down arrow keys to navigate."
+msgid_plural "%d results found, use up and down arrow keys to navigate."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: accessibility text
+#: js/build/sidebar.js:2873
+msgid "No results."
+msgstr ""
+
+#. translators: accessibility text
+#: js/build/sidebar.js:3022
+msgid "URL"
+msgstr ""
+
+#: js/build/sidebar.js:3027
+msgid "Start typing the post title"
+msgstr ""
+
+#: js/build/sidebar.js:3172
+msgid "You are about to delete an entity in the default language."
+msgstr ""
+
+#: js/build/sidebar.js:3172
+msgid "This will delete its customizations and all its corresponding translations."
+msgstr ""
+
+#: js/build/sidebar.js:3177
+msgid "Are you sure you want to delete this translation?"
+msgstr ""
+
+#: js/build/sidebar.js:3212
+msgid "The translation has been deleted."
+msgstr ""
+
+#. translators: %s: Error message describing why the post could not be deleted.
+#: js/build/sidebar.js:3217
+msgid "Unable to delete the translation. %s"
+msgstr ""
+
+#: js/build/sidebar.js:3374
+msgid "The translation is created, you will be redirected."
+msgstr ""
+
+#: js/build/sidebar.js:3382
+msgid "An error occurred while creating the translation."
+msgstr ""
+
+#: js/build/string-discovery.js:28
+msgid "Preparing the scan…"
+msgstr ""
+
+#. translators: 1: percentage, 2: number of scanned files, 3: total number of files, 4: theme or plugin name
+#: js/build/string-discovery.js:57
+msgid "%1$d%% (%2$d / %3$d files) – %4$s"
+msgstr ""
+
+#: js/build/string-discovery.js:67
+msgid "Scan complete. Reloading…"
+msgstr ""
+
+#. translators: %s is an error message
+#: js/build/string-discovery.js:72
+msgid "The scan failed: %s. You can resume it."
+msgstr ""
+
+#: js/build/string-discovery.js:73
+msgid "unknown error"
+msgstr ""

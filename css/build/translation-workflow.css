@@ -1,0 +1,124 @@
+/**
+ * Translation jobs.
+ *
+ * @package Strope-Translate
+ */
+
+.strope-send-to-translation,
+.strope-job-indicator {
+	display: inline-block;
+	width: 20px;
+	height: 16px;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+.strope-send-to-translation::before,
+.strope-job-indicator::before {
+	font: normal 16px/1 dashicons;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* In the narrow language columns, one marker per line, centred under the add / edit icon. */
+.wp-list-table td[class*='column-language_'] .strope-send-to-translation,
+.wp-list-table td[class*='column-language_'] .strope-job-indicator {
+	display: block;
+	margin-top: 4px;
+}
+
+.strope-send-to-translation::before {
+	content: "\f237"; /* dashicons-share-alt2 */
+	color: #a7aaad;
+}
+
+.strope-send-to-translation:hover::before,
+.strope-send-to-translation:focus::before {
+	color: #2271b1;
+}
+
+/* Open job: new or in progress. */
+.strope-job-indicator::before {
+	content: "\f469"; /* dashicons-clock */
+	color: #2271b1;
+}
+
+/* Job done by the translator, waiting for the editor's review. */
+.strope-job-indicator-review::before {
+	content: "\f12a"; /* dashicons-yes-alt */
+	color: #996800;
+}
+
+.strope-job-status {
+	display: inline-block;
+	padding: 1px 8px;
+	border-radius: 10px;
+	background: #f0f0f1;
+	font-size: 12px;
+	white-space: nowrap;
+}
+
+.strope-job-status-new {
+	background: #e5f0fa;
+	color: #135e96;
+}
+
+.strope-job-status-in_progress {
+	background: #fcf9e8;
+	color: #6e5600;
+}
+
+.strope-job-status-review {
+	background: #fef1e6;
+	color: #8a4a00;
+}
+
+.strope-job-status-done {
+	background: #edfaef;
+	color: #00631c;
+}
+
+.strope-job-status-cancelled {
+	background: #f0f0f1;
+	color: #50575e;
+}
+
+.strope-job-overdue {
+	color: #b32d2e;
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.strope-job-note {
+	margin: 4px 0 0;
+	color: #50575e;
+	font-style: italic;
+}
+
+.strope-jobs-posts {
+	margin: 0;
+	max-height: 240px;
+	overflow-y: auto;
+}
+
+.strope-jobs-counts {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px 16px;
+	margin: 0;
+}
+
+#strope_translation_jobs h3 {
+	margin-top: 12px;
+	font-weight: 600;
+}
+
+.translation-jobs .column-words {
+	width: 6em;
+	text-align: right;
+}
+
+.strope-job-words {
+	line-height: 30px;
+	color: #50575e;
+}

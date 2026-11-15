@@ -1,0 +1,145 @@
+/**
+ * Translation status: list table badges, classic editor metabox, block editor panel, dashboard widget.
+ *
+ * @package Strope-Translate
+ * @since 4.1.0
+ */
+
+/*
+ * Badges displayed next to the language icons (list tables, metabox). Plain glyphs, in the same style as the
+ * translation job markers.
+ */
+.strope-ts-badge {
+	display: inline-block;
+	width: 20px;
+	height: 16px;
+	vertical-align: middle;
+	font: 16px/1 dashicons;
+	-webkit-font-smoothing: antialiased;
+	text-align: center;
+	cursor: help;
+}
+
+.strope-ts-badge:before {
+	display: inline-block;
+}
+
+.strope-ts-badge-outdated {
+	color: #b26200;
+}
+
+.strope-ts-badge-outdated:before {
+	content: "\f463"; /* dashicons-update */
+}
+
+.strope-ts-badge-review {
+	color: #2271b1;
+}
+
+.strope-ts-badge-review:before {
+	content: "\f177"; /* dashicons-visibility */
+}
+
+/* In the narrow language columns, one marker per line, centred under the add / edit icon. */
+.wp-list-table td[class*='column-language_'] .strope-ts-badge {
+	display: block;
+	margin-top: 4px;
+}
+
+/* Classic editor metabox and block editor panel. */
+.strope-ts-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.strope-ts-list .strope-ts-item {
+	margin: 0 0 8px;
+	line-height: 1.6;
+}
+
+.strope-ts-list .strope-ts-badge {
+	margin-left: 2px;
+	vertical-align: middle;
+}
+
+.strope-ts-list .strope-ts-actions {
+	display: block;
+	margin-top: 2px;
+}
+
+.strope-ts-row {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 6px;
+}
+
+.strope-ts-flag-img {
+	width: 16px;
+	height: auto;
+}
+
+.strope-ts-label,
+.strope-ts-review {
+	color: #50575e;
+}
+
+.strope-ts-outdated .strope-ts-label {
+	color: #b26200;
+	font-weight: 600;
+}
+
+.strope-ts-missing .strope-ts-label {
+	color: #757575;
+	font-style: italic;
+}
+
+.strope-ts-review {
+	padding: 0 6px;
+	border-radius: 2px;
+	background: #e7f0f8;
+	color: #135e96;
+}
+
+.strope-translation-status-panel .strope-ts-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px 8px;
+	margin-top: 4px;
+}
+
+/* Dashboard widget. */
+.strope-ts-dashboard-title {
+	margin: 12px 0 6px;
+	font-weight: 600;
+}
+
+#strope_translation_status .strope-ts-dashboard-title:first-child {
+	margin-top: 0;
+}
+
+.strope-ts-dashboard td,
+.strope-ts-dashboard th {
+	vertical-align: middle;
+}
+
+.strope-ts-dashboard .num {
+	text-align: right;
+}
+
+.strope-ts-meter {
+	display: inline-block;
+	width: 48px;
+	height: 6px;
+	border-radius: 3px;
+	background: #dcdcde;
+	overflow: hidden;
+	vertical-align: middle;
+}
+
+.strope-ts-meter span {
+	display: block;
+	height: 100%;
+	background: #00a32a;
+}

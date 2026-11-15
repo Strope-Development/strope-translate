@@ -1,0 +1,90 @@
+/* Theme and plugin strings, Languages > Translations. */
+.strope-sd-scan {
+	margin-top: 16px;
+	max-width: 1200px;
+}
+
+.strope-sd-scan h2 {
+	margin: 0.5em 0;
+	padding: 0;
+	font-size: 1.3em;
+}
+
+.strope-sd-actions .button {
+	margin-right: 8px;
+	vertical-align: middle;
+}
+
+.strope-sd-last-scan {
+	color: #646970;
+	vertical-align: middle;
+}
+
+.strope-sd-progress {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	margin: 8px 0 12px;
+}
+
+.strope-sd-progress[hidden] {
+	display: none;
+}
+
+.strope-sd-progress progress {
+	width: 300px;
+	max-width: 100%;
+}
+
+.strope-sd-components {
+	margin: 8px 0;
+}
+
+.strope-sd-components summary,
+.strope-sd-sources summary {
+	cursor: pointer;
+}
+
+.strope-sd-components table {
+	margin-top: 8px;
+}
+
+.discovered-strings .column-string {
+	width: 30%;
+}
+
+.discovered-strings .column-domain {
+	width: 15%;
+}
+
+.strope-sd-label,
+.strope-sd-component {
+	color: #646970;
+}
+
+.strope-sd-sources {
+	margin-top: 4px;
+	font-size: 12px;
+}
+
+.strope-sd-sources code {
+	display: block;
+	margin-top: 4px;
+	word-break: break-all;
+}
+
+.discovered-strings .translation input,
+.discovered-strings .translation textarea {
+	width: 100%;
+}
+
+@media screen and (max-width: 782px) {
+	.strope-sd-progress {
+		flex-wrap: wrap;
+	}
+
+	.discovered-strings .column-string,
+	.discovered-strings .column-domain {
+		width: auto;
+	}
+}

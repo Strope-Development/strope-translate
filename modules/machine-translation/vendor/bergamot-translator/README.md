@@ -11,24 +11,27 @@ The Bergamot translation engine, unmodified: its JavaScript loader (Emscripten o
 - SHA-256: faff1ef6285b0d26f01787776fd49299dfb756ecb9688aa990c250e66797b47d
 - License: Mozilla Public License 2.0, see `LICENSE`.
 
-## bergamot-translator.wasm.zst
+## bergamot-translator.wasm
 
-The WebAssembly binary of the engine, unmodified, zstd compressed as distributed by Mozilla.
+The WebAssembly binary of the engine, unmodified. Mozilla distributes it zstd compressed
+(`bergamot-translator.wasm.zst`); it is shipped decompressed, because WordPress.org does not accept compressed
+files in plugins.
 
 - Record `bergamot-translator`, release v0.6.0, version 4.0 of the Firefox Remote Settings collection `translations-wasm-v2`
   (https://firefox.settings.services.mozilla.com/v1/buckets/main/collections/translations-wasm-v2/records)
 - Source code: https://github.com/mozilla/translations (`inference/`, built by `inference/scripts/build-wasm.py`),
   itself based on https://github.com/browsermt/bergamot-translator
-- Size: 1211955 bytes (4960506 bytes decompressed)
-- SHA-256: 327fcfc7b7e9d95f6fa0844ebf899cfc05469872ef02d3aef5783182839a6255
-  (decompressed: f38ef807636a7c994afedaab7ff8ffe0d590d21897f05139f747b80fd7bbe926)
+- Size: 4960506 bytes (1211955 bytes compressed, as distributed)
+- SHA-256: f38ef807636a7c994afedaab7ff8ffe0d590d21897f05139f747b80fd7bbe926
+  (compressed, as distributed: 327fcfc7b7e9d95f6fa0844ebf899cfc05469872ef02d3aef5783182839a6255)
 - License: Mozilla Public License 2.0, see `LICENSE`.
 
 The language models are not shipped: the site downloads them on request from the collection
 `translations-models-v2` (version 3.x) and checks their SHA-256 hashes. See
 `modules/machine-translation/mt-engine-files.php`.
 
-When updating the engine, replace both files with those of the same Firefox revision, then update
-`Strope_MT_Engine_Files::ENGINE_RELEASE`, `ENGINE_FILE` (version, sizes and both hashes) and
+When updating the engine, replace both files with those of the same Firefox revision (decompress the binary
+and check that its SHA-256 is the record's `decompressedHash`), then update
+`Strope_MT_Engine_Files::ENGINE_RELEASE`, `ENGINE_FILE` (version, size and hash of the decompressed file) and
 `MODEL_MAJOR_VERSION` (`LANGUAGE_MODEL_MAJOR_VERSION_MIN/MAX` of that revision), the hashes above, and the
 entry in `THIRD-PARTY-NOTICES.txt`.

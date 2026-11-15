@@ -81,7 +81,8 @@ Source: https://github.com/mozilla/translations and
 https://github.com/mozilla-firefox/firefox
 License: Mozilla Public License 2.0, see the LICENSE file in that folder.
 bergamot-translator.js: the JavaScript loader, unmodified.
-bergamot-translator.wasm.zst: the WebAssembly binary of the same release (v0.6.0, record version 4.0), unmodified.
+bergamot-translator.wasm: the WebAssembly binary of the same release (v0.6.0, record version 4.0), unmodified
+(decompressed from the zstd file distributed by Mozilla).
 
 6. Flag icons (flags/)
 ----------------------

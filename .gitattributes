@@ -4,7 +4,7 @@
 *.jpg binary
 *.gif binary
 *.ico binary
-*.zst binary
+*.wasm binary
 
 # Development files, excluded from the archives that Composer and git hosting services build.
 /.distignore export-ignore

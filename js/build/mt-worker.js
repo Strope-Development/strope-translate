@@ -1231,7 +1231,7 @@ async function getFile(file, label, report) {
       });
     }
   }
-  const data = decompress(bytes);
+  const data = false === file.compressed ? bytes : decompress(bytes);
   if (file.decompressed_hash) {
     const digest = new Uint8Array(await self.crypto.subtle.digest("SHA-256", data));
     const hash = Array.from(digest, (byte) => byte.toString(16).padStart(2, "0")).join("");

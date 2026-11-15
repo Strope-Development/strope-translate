@@ -37,19 +37,18 @@ class Strope_MT_Engine_Files {
 
 	/**
 	 * The WebAssembly binary of the engine, shipped with the plugin next to its JavaScript loader: the record
-	 * `bergamot-translator` 4.0 (release v0.6.0) of the Firefox collection `translations-wasm-v2`, zstd
-	 * compressed. The hashes are SHA-256. See `vendor/bergamot-translator/README.md` to update it.
+	 * `bergamot-translator` 4.0 (release v0.6.0) of the Firefox collection `translations-wasm-v2`,
+	 * decompressed (WordPress.org does not accept compressed files in plugins). The hash is SHA-256. See
+	 * `vendor/bergamot-translator/README.md` to update it.
 	 *
 	 * @since 4.3.0
 	 */
 	const ENGINE_FILE = array(
-		'name'              => 'bergamot-translator',
-		'version'           => '4.0',
-		'file'              => 'bergamot-translator.wasm.zst',
-		'hash'              => '327fcfc7b7e9d95f6fa0844ebf899cfc05469872ef02d3aef5783182839a6255',
-		'size'              => 1211955,
-		'decompressed_hash' => 'f38ef807636a7c994afedaab7ff8ffe0d590d21897f05139f747b80fd7bbe926',
-		'decompressed_size' => 4960506,
+		'name'    => 'bergamot-translator',
+		'version' => '4.0',
+		'file'    => 'bergamot-translator.wasm',
+		'hash'    => 'f38ef807636a7c994afedaab7ff8ffe0d590d21897f05139f747b80fd7bbe926',
+		'size'    => 4960506,
 	);
 
 	/**
@@ -713,12 +712,14 @@ class Strope_MT_Engine_Files {
 		};
 
 		// The engine is a file of the plugin; its hash in the URL never lets a browser reuse another version.
+		// It is not compressed, so its content is checked against the hash of the file itself.
 		$out['wasm'] = array(
 			'url'               => plugins_url( 'vendor/bergamot-translator/' . self::ENGINE_FILE['file'], __FILE__ ) . '?ver=' . substr( self::ENGINE_FILE['hash'], 0, 12 ),
 			'name'              => self::ENGINE_FILE['name'],
 			'size'              => self::ENGINE_FILE['size'],
-			'decompressed_hash' => self::ENGINE_FILE['decompressed_hash'],
-			'decompressed_size' => self::ENGINE_FILE['decompressed_size'],
+			'compressed'        => false,
+			'decompressed_hash' => self::ENGINE_FILE['hash'],
+			'decompressed_size' => self::ENGINE_FILE['size'],
 		);
 
 		foreach ( $installed['models'] as $direction => $model ) {

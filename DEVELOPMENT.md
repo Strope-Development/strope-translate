@@ -34,9 +34,9 @@ Third-party code: every library bundled into a built file or copied into the plu
 ## Machine translation engine
 
 - `modules/machine-translation/vendor/bergamot-translator/` holds Mozilla's JavaScript loader of the engine and its WebAssembly binary, unmodified (MPL-2.0); the loader is loaded by the worker with `importScripts()`. They are not built. See its `README.md` for their origin and how to update them together with the version constants of `Strope_MT_Engine_Files`.
-- The WebAssembly binary of the engine is shipped in the same folder (`bergamot-translator.wasm.zst`, unmodified, MPL-2.0); its SHA-256 hashes are in `Strope_MT_Engine_Files::ENGINE_FILE`. Nothing executable is downloaded at run time.
+- The WebAssembly binary of the engine is shipped in the same folder (`bergamot-translator.wasm`, unmodified, MPL-2.0, decompressed because WordPress.org does not accept compressed files in plugins); its SHA-256 hash is in `Strope_MT_Engine_Files::ENGINE_FILE`. Nothing executable is downloaded at run time.
 - The language models are not shipped: the site downloads them from the Firefox Remote Settings collection `translations-models-v2`, checks their SHA-256 hashes, and serves them from the uploads directory.
-- The files are zstd compressed. The worker (`modules/machine-translation/js/mt-worker.js`) bundles the [fzstd](https://github.com/101arrowz/fzstd) decoder (MIT, dev dependency).
+- The model files are zstd compressed. The worker (`modules/machine-translation/js/mt-worker.js`) bundles the [fzstd](https://github.com/101arrowz/fzstd) decoder (MIT, dev dependency).
 
 ## Machine translation queue (WASM worker kit)
 

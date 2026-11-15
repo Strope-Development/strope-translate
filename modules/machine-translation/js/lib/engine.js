@@ -301,7 +301,8 @@ function buildModel( b, direction, files ) {
 /**
  * Returns the decompressed content of an engine or model file, from the browser cache or the site.
  *
- * @param {Object}   file   File descriptor: `url`, `size`, `decompressed_hash`.
+ * @param {Object}   file   File descriptor: `url`, `size`, `decompressed_hash`, and `compressed: false` for a file
+ *                          that is not zstd compressed.
  * @param {string}   label  What is downloaded, for the progress.
  * @param {Function} report Posts a status.
  * @return {Promise<Uint8Array>}
@@ -324,7 +325,8 @@ async function getFile( file, label, report ) {
 		}
 	}
 
-	const data = decompress( bytes );
+	// The model files are zstd compressed; the engine is shipped decompressed (`compressed: false`).
+	const data = false === file.compressed ? bytes : decompress( bytes );
 
 	if ( file.decompressed_hash ) {
 		const digest = new Uint8Array( await self.crypto.subtle.digest( 'SHA-256', data ) );

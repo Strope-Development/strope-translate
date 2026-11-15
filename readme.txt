@@ -70,6 +70,10 @@ Strope Translate is a fork of [Polylang](https://wordpress.org/plugins/polylang/
 
 Machine translation uses [Bergamot](https://github.com/mozilla/translations), the engine of Firefox Translations by Mozilla (MPL 2.0), and [fzstd](https://github.com/101arrowz/fzstd) (MIT). Most flags come from [famfamfam](http://famfamfam.com/) and are in the public domain. All third-party notices are in `THIRD-PARTY-NOTICES.txt`.
 
+= Source code =
+
+The full source code, including the build tools, is on [GitHub](https://github.com/Strope-Development/strope-translate). See `DEVELOPMENT.md` there for how to build the plugin.
+
 == Installation ==
 
 1. You need WordPress 6.5 or newer and PHP 7.4 or newer.

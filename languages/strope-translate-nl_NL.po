@@ -4641,8 +4641,8 @@ msgstr "onbekende fout"
 
 #. Plugin URI of the plugin
 #: strope-translate.php
-msgid "https://strope.io/downloads/strope-translate/"
-msgstr "https://strope.io/downloads/strope-translate/"
+msgid "https://github.com/Strope-Development/strope-translate"
+msgstr "https://github.com/Strope-Development/strope-translate"
 
 #. Author URI of the plugin
 #: strope-translate.php

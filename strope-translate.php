@@ -8,7 +8,7 @@
  *
  * @wordpress-plugin
  * Plugin Name:       Strope Translate
- * Plugin URI:        https://strope.io/downloads/strope-translate/
+ * Plugin URI:        https://github.com/Strope-Development/strope-translate
  * Description:       Translate your whole site into as many languages as you like, with private machine translation in your browser.
  * Version:           1.0.0
  * Requires at least: 6.5

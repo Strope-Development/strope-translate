@@ -21,7 +21,7 @@ msgstr ""
 
 #. Plugin URI of the plugin
 #: strope-translate.php
-msgid "https://strope.io/downloads/strope-translate/"
+msgid "https://github.com/Strope-Development/strope-translate"
 msgstr ""
 
 #. Description of the plugin
